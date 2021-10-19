@@ -1,11 +1,28 @@
-import Head from "next/head";
+import { Flex, Box, useColorMode, Stack } from "@chakra-ui/react";
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
+import { bgColor, textColor } from "@styles/colorModeStyles";
 
-export default function Home() {
+const Home = () => {
+  const { colorMode } = useColorMode();
   return (
-    <div className={styles.container}>
-      <h1 className={styles.title}>Welcome to ThunderDome</h1>
-    </div>
+    <>
+      <Stack alignItems="center">
+        <Image src="/Signature.svg" height={500} width={500} />
+
+        <Flex
+          as="main"
+          justifyContent="center"
+          flexDirection="column"
+          bg={bgColor[colorMode]}
+          color={textColor[colorMode]}
+          px={[4, 4, 4]}
+          mt={[4, 8, 8]}
+        >
+          Welcome to ThunderDome
+        </Flex>
+      </Stack>
+    </>
   );
-}
+};
+
+export default Home;
