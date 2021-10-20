@@ -52,3 +52,7 @@ export const editorBg = {
   light: "backgroundLight",
   dark: "backgroundDark",
 };
+export const dmIconColor = {
+  light: "secondary",
+  dark: "yellow",
+};

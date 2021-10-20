@@ -28,12 +28,17 @@ const GlobalStyle = ({ children }) => {
             color: #fefefe;
           }
           html {
+            position: relative;
+
+            background: ${colorMode === "light"
+              ? backgroundLight
+              : backgroundDark};
+
             min-width: 356px;
             scroll-behavior: smooth;
           }
           #__next {
-            display: flex;
-            flex-direction: column;
+            position: relative;
             min-height: 100vh;
             background: ${colorMode === "light"
               ? backgroundLight
