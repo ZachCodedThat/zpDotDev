@@ -44,8 +44,9 @@ const colors = {
   accentColor: "#15616D",
 };
 
-// const shadows = {
-//   outline: isKeyboardNavigating ? theme.shadows.outline : "none",
+// const config = {
+//   initialColorMode: "dark",
+//   useSystemColorMode: false,
 // };
 
 const overrides = {
@@ -53,7 +54,7 @@ const overrides = {
   fonts,
   colors,
   breakpoints,
-  // shadows,
+  // config,
 };
 
 const Button = {

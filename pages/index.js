@@ -12,7 +12,9 @@ import {
 } from "@chakra-ui/react";
 import DarkModeSwitch from "@components/DarkModeSwitch";
 
-import NextLink from "next/link";
+import Link from "next/link";
+
+import { useRef, useEffect } from "react";
 
 import {
   bgColor,
@@ -23,12 +25,18 @@ import {
   accentColor,
 } from "@styles/colorModeStyles";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 const Home = () => {
-  const MotionButton = motion(Button);
-  // const MotionHeading = motion(Heading);
-  const MotionBox = motion(Box);
+  const rendered = useRef(false);
+  const MotionButton = rendered.current ? Button : motion(Button);
+  const MotionBox = rendered.current ? Box : motion(Box);
+  const SigImage = rendered.current ? "/SignatureStatic.svg" : "/Signature.svg";
+
+  useEffect(() => {
+    rendered.current = true;
+  }, []);
+
   const { colorMode } = useColorMode();
 
   const buttonAnimation = {
@@ -79,7 +87,7 @@ const Home = () => {
     <>
       <Container maxW={"3xl"}>
         <Image
-          srcSet="/Signature.svg"
+          srcSet={SigImage}
           height={[500, 500, 600, 700, 900]}
           width={[500, 500, 600, 700, 900]}
           marginTop={["-25", "-25", "-25", "-15", "-10"]}
@@ -88,13 +96,14 @@ const Home = () => {
           as={Box}
           textAlign={"center"}
           spacing={{ base: 8, md: 14 }}
-          marginTop="-32"
+          // marginTop="-32"
         >
           <MotionBox
             variants={headerAnimation}
             initial="hidden"
             animate="visible"
             exit="exit"
+            marginTop="-32"
           >
             <Heading
               fontWeight={600}
@@ -105,15 +114,14 @@ const Home = () => {
               Front End Web Developer
             </Heading>
           </MotionBox>
-          <br />
+
           <Flex
             flexDirection={"row"}
-            spacing={20}
             justifyContent={"center"}
             alignSelf={"center"}
-            position={"relative"}
+            marginTop="-10"
           >
-            <NextLink href="/about" passHref>
+            <Link href="./about" passHref>
               <MotionButton
                 color={textColor[colorMode]}
                 // margin={0}
@@ -130,8 +138,8 @@ const Home = () => {
               >
                 About
               </MotionButton>
-            </NextLink>
-            <NextLink href="/projects" passHref>
+            </Link>
+            <Link href="/projects" passHref>
               <MotionButton
                 color={textColor[colorMode]}
                 whileTap={{ scale: 0.9 }}
@@ -147,8 +155,8 @@ const Home = () => {
               >
                 Projects
               </MotionButton>
-            </NextLink>
-            <NextLink href="/contact" passHref>
+            </Link>
+            <Link href="/contact" passHref>
               <MotionButton
                 color={textColor[colorMode]}
                 variant="nav"
@@ -164,7 +172,7 @@ const Home = () => {
               >
                 Contact
               </MotionButton>
-            </NextLink>
+            </Link>
 
             <DarkModeSwitch />
           </Flex>

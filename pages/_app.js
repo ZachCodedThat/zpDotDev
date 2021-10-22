@@ -6,16 +6,9 @@ import "focus-visible/dist/focus-visible";
 function MyApp({ Component, pageProps }) {
   return (
     <ChakraProvider resetCSS theme={customTheme}>
-      <ColorModeProvider
-        options={{
-          initialColorMode: "dark",
-          useSystemColorMode: false,
-        }}
-      >
-        <GlobalStyle>
-          <Component {...pageProps} />
-        </GlobalStyle>
-      </ColorModeProvider>
+      <GlobalStyle>
+        <Component {...pageProps} />
+      </GlobalStyle>
     </ChakraProvider>
   );
 }

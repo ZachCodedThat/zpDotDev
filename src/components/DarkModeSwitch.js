@@ -2,11 +2,19 @@ import { useColorMode, IconButton, useBoolean } from "@chakra-ui/react";
 import { SunIcon, MoonIcon } from "@chakra-ui/icons";
 import { dmIconColor } from "@styles/colorModeStyles";
 import { motion } from "framer-motion";
+import { useRef, useEffect } from "react";
 
 const DarkModeSwitch = () => {
   const { colorMode, toggleColorMode } = useColorMode();
 
-  const MotionIconButton = motion(IconButton);
+  const rendered = useRef(false);
+  const MotionIconButton = rendered.current ? IconButton : motion(IconButton);
+
+  useEffect(() => {
+    rendered.current = true;
+  }, []);
+
+  // const MotionIconButton = motion(IconButton);
 
   const buttonAnimation = {
     hidden: {
