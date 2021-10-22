@@ -40,6 +40,7 @@ const GlobalStyle = ({ children }) => {
           #__next {
             position: relative;
             min-height: 100vh;
+
             background: ${colorMode === "light"
               ? backgroundLight
               : backgroundDark};
