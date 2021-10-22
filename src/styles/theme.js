@@ -44,10 +44,10 @@ const colors = {
   accentColor: "#15616D",
 };
 
-// const config = {
-//   initialColorMode: "dark",
-//   useSystemColorMode: false,
-// };
+const config = {
+  initialColorMode: "dark",
+  useSystemColorMode: false,
+};
 
 const overrides = {
   ...chakraTheme,
@@ -105,6 +105,7 @@ const Button = {
 };
 
 const customTheme = extendTheme(overrides, {
+  config,
   components: {
     Button,
   },

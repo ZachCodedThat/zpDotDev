@@ -31,7 +31,7 @@ const Home = () => {
   const rendered = useRef(false);
   const MotionButton = rendered.current ? Button : motion(Button);
   const MotionBox = rendered.current ? Box : motion(Box);
-  const SigImage = rendered.current ? "/SignatureStatic.svg" : "/Signature.svg";
+  // const SigImage = rendered.current ? "/SignatureStatic.svg" : "/Signature.svg";
 
   useEffect(() => {
     rendered.current = true;
@@ -87,7 +87,7 @@ const Home = () => {
     <>
       <Container maxW={"3xl"}>
         <Image
-          srcSet={SigImage}
+          srcSet="/Signature.svg"
           height={[500, 500, 600, 700, 900]}
           width={[500, 500, 600, 700, 900]}
           marginTop={["-25", "-25", "-25", "-15", "-10"]}
