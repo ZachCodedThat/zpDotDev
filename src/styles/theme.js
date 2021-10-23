@@ -45,8 +45,7 @@ const colors = {
 };
 
 const config = {
-  initialColorMode: "dark",
-  useSystemColorMode: false,
+  useSystemColorMode: true,
 };
 
 const overrides = {
@@ -104,8 +103,7 @@ const Button = {
   },
 };
 
-const customTheme = extendTheme(overrides, {
-  config,
+const customTheme = extendTheme(overrides, config, {
   components: {
     Button,
   },
