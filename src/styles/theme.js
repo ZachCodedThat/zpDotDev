@@ -45,7 +45,8 @@ const colors = {
 };
 
 const config = {
-  useSystemColorMode: true,
+  initialColorMode: "light",
+  useSystemColorMode: false,
 };
 
 const overrides = {
