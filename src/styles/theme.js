@@ -53,7 +53,7 @@ const overrides = {
   fonts,
   colors,
   breakpoints,
-  // config,
+  config,
 };
 
 const Button = {
@@ -103,7 +103,7 @@ const Button = {
   },
 };
 
-const customTheme = extendTheme(overrides, config, {
+const customTheme = extendTheme(overrides, {
   components: {
     Button,
   },
