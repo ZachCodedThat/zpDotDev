@@ -26,7 +26,7 @@ import {
 } from "@styles/colorModeStyles";
 
 import { motion } from "framer-motion";
-
+import Background from "@styles/Background/AnimatedBG";
 const Home = () => {
   const rendered = useRef(false);
   const MotionButton = rendered.current ? Button : motion(Button);

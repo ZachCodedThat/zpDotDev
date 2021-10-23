@@ -56,3 +56,7 @@ export const dmIconColor = {
   light: "secondary",
   dark: "yellow",
 };
+export const animatedBGColor = {
+  light: "secondary",
+  dark: "primary",
+};
