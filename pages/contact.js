@@ -17,7 +17,18 @@ import {
   InputLeftElement,
   Textarea,
   useColorMode,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+  useDisclosure,
+  useClipboard,
+  Link as ChakraLink,
 } from "@chakra-ui/react";
+import React from "react";
 import {
   MdPhone,
   MdEmail,
@@ -40,43 +51,54 @@ import {
 import DarkModeSwitchNA from "@components/DarkModeSwitchNA";
 
 export default function Contact() {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const initialRef = React.useRef();
+  const finalRef = React.useRef();
   const { colorMode } = useColorMode();
+  const [value, setValue] = React.useState("ZachStrikesBack#3732");
+  const { hasCopied, onCopy } = useClipboard(value);
   return (
     <>
-      <Container maxH="full" maxW="full" mt={0} centerContent overflow="hidden">
+      <Container maxH="full" maxW="full" mt={0} overflow="hidden">
         <Background />
-        <Link href="/" passHref>
-          <Button
-            as="a"
-            color={textColor[colorMode]}
-            variant="nav"
-            _hover={{
-              bg: buttonHoverColor[colorMode],
-              color: buttonTextHoverColor[colorMode],
-            }}
-          >
-            Back
-          </Button>
-        </Link>
-        <Flex>
+
+        <Flex justifyContent="center" alignItems="center">
           <Box
+            width={{ base: "100%", sm: "75%", md: "70%", lg: "65%" }}
             bg="rgba(255,255,255,0.1)"
             boxShadow="inset 0 0 1000px rgba(255, 255, 255, .2)"
             dropShadow="0px 0px 10px rgba(0, 0, 0, 0.5)"
             backdropFilter="blur(5px)"
             color="white"
             borderRadius="lg"
-            justifyContent={{ base: "center", sm: "center", md: "center" }}
-            alignItems={{ base: "center", sm: "center", md: "center" }}
-            m={{ sm: 4, md: 16, lg: 10 }}
-            p={{ sm: 5, md: 5, lg: 16 }}
+            m={{ base: 2, sm: 10, md: 16, lg: 5 }}
+            p={{ base: 2, sm: 5, md: 5, lg: 5 }}
           >
-            <Box p={4}>
+            <Link href="/" passHref>
+              <Button
+                as="a"
+                color={textColor[colorMode]}
+                variant="nav"
+                _hover={{
+                  bg: buttonHoverColor[colorMode],
+                  color: buttonTextHoverColor[colorMode],
+                }}
+              >
+                Back
+              </Button>
+            </Link>
+            <Box p={4} alignItems="flex-start">
               <DarkModeSwitchNA />
-              <Wrap spacing={{ base: 20, sm: 3, md: 5, lg: 20 }}>
+              <Wrap
+                spacing={{ base: 20, sm: 3, md: 5, lg: 20 }}
+                justifyContent={{ base: "center", sm: "center", md: "center" }}
+                alignItems={{ base: "center", sm: "center", md: "center" }}
+              >
                 <WrapItem>
                   <Box>
-                    <Heading>Contact</Heading>
+                    <Heading alignItems="center" justifyContent="center">
+                      Contact
+                    </Heading>
                     <Text mt={{ sm: 3, md: 3, lg: 5 }} color="gray.500">
                       Hit ya boy up.
                     </Text>
@@ -123,93 +145,93 @@ export default function Contact() {
                     </Box>
                   </Box>
                 </WrapItem>
-                <WrapItem>
-                  <Box bg="white" borderRadius="lg">
-                    <Box m={8} color="#0B0E3F">
-                      <VStack spacing={5}>
-                        <FormControl id="name">
-                          <FormLabel>Your Name</FormLabel>
-                          <InputGroup borderColor="#E0E1E7">
-                            <InputLeftElement
-                              pointerEvents="none"
-                              children={<BsPerson color="gray.800" />}
-                            />
-                            <Input type="text" size="md" />
-                          </InputGroup>
-                        </FormControl>
-                        <FormControl id="name">
-                          <FormLabel>Mail</FormLabel>
-                          <InputGroup borderColor="#E0E1E7">
-                            <InputLeftElement
-                              pointerEvents="none"
-                              children={<MdOutlineEmail color="gray.800" />}
-                            />
-                            <Input type="text" size="md" />
-                          </InputGroup>
-                        </FormControl>
-                        <FormControl id="name">
-                          <FormLabel>Message</FormLabel>
-                          <Textarea></Textarea>
-                        </FormControl>
-                        <FormControl id="name" float="right">
-                          <Button
-                            variant="solid"
-                            bg="#0D74FF"
-                            color="white"
-                            _hover={{}}
-                          >
-                            Send Message
-                          </Button>
-                        </FormControl>
-                      </VStack>
-                    </Box>
-                  </Box>
-                </WrapItem>
               </Wrap>
+              <HStack
+                flexDirection="row"
+                flexWrap="wrap"
+                mt={{ base: 10, sm: 10, md: 15, lg: 20 }}
+                spacing={{ base: 10, sm: 10, md: 15, lg: 20 }}
+                px={5}
+                alignItems="center"
+              >
+                <IconButton
+                  onClick={onOpen}
+                  aria-label="discord"
+                  color="rgba(255,255,255,0.5)"
+                  border="hidden"
+                  borderColor="none"
+                  isRound={true}
+                  _hover={{ color: "#0D74FF" }}
+                  icon={<BsDiscord size="60px" />}
+                />
+
+                <Modal
+                  isOpen={isOpen}
+                  onClose={onClose}
+                  motionPreset="slideInBottom"
+                  isCentered
+                >
+                  <ModalOverlay backdropFilter="blur(2px)" />
+                  <ModalContent>
+                    <ModalHeader>Discord Handle</ModalHeader>
+                    <ModalCloseButton />
+                    <ModalBody pb={6}>
+                      <Flex mb={2}>
+                        <Input value={value} isReadOnly placeholder="Welcome" />
+                        <Button onClick={onCopy} ml={2}>
+                          {hasCopied ? "Copied" : "Copy"}
+                        </Button>
+                      </Flex>
+                    </ModalBody>
+                  </ModalContent>
+                </Modal>
+                <ChakraLink
+                  href="https://github.com/ZachCodedThat"
+                  target="_blank"
+                >
+                  <IconButton
+                    aria-label="GitHub"
+                    color="rgba(255,255,255,0.5)"
+                    border="hidden"
+                    borderColor="none"
+                    isRound={true}
+                    _hover={{ color: "#0D74FF" }}
+                    icon={<BsGithub size="60px" />}
+                  />
+                </ChakraLink>
+                <ChakraLink
+                  href="https://github.com/ZachCodedThat"
+                  target="_blank"
+                >
+                  <IconButton
+                    aria-label="GitHub"
+                    color="rgba(255,255,255,0.5)"
+                    border="hidden"
+                    borderColor="none"
+                    isRound={true}
+                    _hover={{ color: "#0D74FF" }}
+                    icon={<BsGithub size="60px" />}
+                  />
+                </ChakraLink>
+                <ChakraLink
+                  href="https://github.com/ZachCodedThat"
+                  target="_blank"
+                >
+                  <IconButton
+                    aria-label="GitHub"
+                    color="rgba(255,255,255,0.5)"
+                    border="hidden"
+                    borderColor="none"
+                    isRound={true}
+                    _hover={{ color: "#0D74FF" }}
+                    icon={<BsGithub size="60px" />}
+                  />
+                </ChakraLink>
+              </HStack>
             </Box>
           </Box>
         </Flex>
       </Container>
-
-      <HStack
-        mt={{ base: 10, sm: 10, md: 15, lg: 20 }}
-        spacing={{ base: 10, sm: 10, md: 15, lg: 20 }}
-        px={5}
-        alignItems="center"
-        justifyContent="center"
-      >
-        <IconButton
-          aria-label="facebook"
-          color="rgba(255,255,255,0.5)"
-          backdropFilter="blur(5px)"
-          size="60px"
-          borderColor="rgba(255,255,255,0.5)"
-          isRound={true}
-          _hover={{ color: "#0D74FF" }}
-          icon={<MdFacebook size="60px" />}
-        />
-        <IconButton
-          aria-label="github"
-          color="rgba(255,255,255,0.5)"
-          backdropFilter="blur(5px)"
-          size="60px"
-          borderColor="rgba(255,255,255,0.5)"
-          isRound={true}
-          _hover={{ color: "#0D74FF" }}
-          icon={<BsGithub size="60px" />}
-        />
-        <IconButton
-          aria-label="discord"
-          color="rgba(255,255,255,0.5)"
-          backdropFilter="blur(5px)"
-          border="hidden"
-          borderColor="none"
-          size="60px"
-          isRound={true}
-          _hover={{ color: "#0D74FF" }}
-          icon={<BsDiscord size="60px" />}
-        />
-      </HStack>
     </>
   );
 }

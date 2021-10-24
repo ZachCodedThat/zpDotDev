@@ -60,3 +60,7 @@ export const animatedBGColor = {
   light: "secondary",
   dark: "primary",
 };
+export const animatedBGColorAlt = {
+  light: "accentColor",
+  dark: "accentColor",
+};

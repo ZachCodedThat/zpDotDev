@@ -93,6 +93,22 @@
   animation-duration: 11s;
 }
 
+.circles li:nth-child(11) {
+  left: 36%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 5s;
+  animation-duration: 20s;
+}
+
+.circles li:nth-child(12) {
+  left: 10%;
+  width: 100px;
+  height: 100px;
+  animation-delay: 7s;
+  animation-duration: 9s;
+}
+
 @keyframes animate {
   0% {
     transform: translateY(0) rotate(0deg);
