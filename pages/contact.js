@@ -33,17 +33,27 @@ import {
   MdFacebook,
   MdOutlineEmail,
 } from "react-icons/md";
-import { BsGithub, BsDiscord, BsPerson, BsLinkedin } from "react-icons/bs";
+import {
+  BsGithub,
+  BsDiscord,
+  BsPerson,
+  BsLinkedin,
+  BsTwitter,
+  BsTwitch,
+  BsCalendar3,
+} from "react-icons/bs";
 import Link from "next/link";
 import Background from "@styles/Background/AnimatedBG";
 
 import {
   bgColor,
   textColor,
+  iconColor,
   buttonColor,
   buttonHoverColor,
   buttonTextHoverColor,
   accentColor,
+  glassCardBGColor,
 } from "@styles/colorModeStyles";
 import DarkModeSwitchNA from "@components/DarkModeSwitchNA";
 import BackgroundReverse from "@styles/Background/AnimatedBGReverse";
@@ -54,6 +64,8 @@ export default function Contact() {
   const { colorMode } = useColorMode();
   const [discordValue, setValue] = React.useState("ZachStrikesBack#3732");
   const { hasCopied, onCopy } = useClipboard(discordValue);
+  const [steamValue, setSteamValue] = React.useState("292809946");
+  const { hasCopiedSteam, onCopySteam } = useClipboard(steamValue);
   return (
     <>
       <BackgroundReverse />
@@ -74,29 +86,34 @@ export default function Contact() {
             md: "fit-content",
             lg: "fit-content",
           }}
-          bg="rgba(255,255,255,0.1)"
-          boxShadow="inset 0 0 1000px rgba(255, 255, 255, .2)"
-          dropShadow="0px 0px 10px rgba(0, 0, 0, 0.5)"
+          bg={glassCardBGColor[colorMode]}
+          boxShadow={
+            colorMode === "light"
+              ? "inset 0 0 300px rgba(46, 49, 49, .3)"
+              : "inset 0 0 300px rgba(255, 255, 255, .1) "
+          }
           backdropFilter="blur(5px)"
           color="white"
           borderRadius="lg"
           m={{ base: 4, sm: 8, md: 16, lg: 5 }}
           p={{ base: 4, sm: 5, md: 6, lg: 7 }}
         >
-          <Link href="/" passHref>
-            <Button
-              as="a"
-              color={textColor[colorMode]}
-              variant="nav"
-              _hover={{
-                bg: buttonHoverColor[colorMode],
-                color: buttonTextHoverColor[colorMode],
-              }}
-            >
-              Back
-            </Button>
-          </Link>
-          <DarkModeSwitchNA />
+          <Flex justifyContent="space-between">
+            <Link href="/" passHref>
+              <Button
+                as="a"
+                color={textColor[colorMode]}
+                variant="nav"
+                _hover={{
+                  bg: buttonHoverColor[colorMode],
+                  color: buttonTextHoverColor[colorMode],
+                }}
+              >
+                Back
+              </Button>
+            </Link>
+            <DarkModeSwitchNA />
+          </Flex>
           <Box alignItems="center" justifyContent="center">
             <Wrap
               spacing={{ base: 10, sm: 3, md: 5, lg: 20 }}
@@ -105,14 +122,10 @@ export default function Contact() {
             >
               <WrapItem>
                 <Box>
-                  <Heading textAlign="center">Contact</Heading>
-                  <Text
-                    textAlign="center"
-                    mt={{ sm: 3, md: 3, lg: 5 }}
-                    color="gray.500"
-                  >
-                    Hit ya boy up.
-                  </Text>
+                  <Heading color={textColor[colorMode]} textAlign="center">
+                    Contact Me
+                  </Heading>
+
                   <Box p={{ base: 0, sm: 5, md: 8, lg: 10 }}>
                     <VStack pl={0} spacing={3} alignItems="center">
                       <Button
@@ -120,8 +133,10 @@ export default function Contact() {
                         height="48px"
                         width="200px"
                         variant="ghost"
-                        color="#DCE2FF"
-                        _hover={{ border: "2px solid #1C6FEB" }}
+                        cursor="auto"
+                        _active="none"
+                        color={textColor[colorMode]}
+                        _hover="none"
                         leftIcon={<MdPhone color="#1970F1" size="20px" />}
                       >
                         1-609-254-2652
@@ -131,10 +146,10 @@ export default function Contact() {
                         height="48px"
                         width="310px"
                         variant="ghost"
-                        color="#DCE2FF"
-                        _hover={{
-                          border: "2px solid #1C6FEB",
-                        }}
+                        cursor="auto"
+                        _active="none"
+                        color={textColor[colorMode]}
+                        _hover="none"
                         leftIcon={<MdEmail color="#1970F1" size="20px" />}
                       >
                         Zachary.Przybilski@gmail.com
@@ -144,8 +159,10 @@ export default function Contact() {
                         height="48px"
                         width="200px"
                         variant="ghost"
-                        color="#DCE2FF"
-                        _hover={{ border: "2px solid #1C6FEB" }}
+                        cursor="auto"
+                        _active="none"
+                        color={textColor[colorMode]}
+                        _hover="none"
                         leftIcon={<MdLocationOn color="#1970F1" size="20px" />}
                       >
                         Philadelphia
@@ -181,7 +198,7 @@ export default function Contact() {
                 border="hidden"
                 borderColor="none"
                 isRound={true}
-                _hover={{ color: "accentColor" }}
+                _hover={{ color: iconColor[colorMode] }}
                 icon={<BsDiscord size="60px" />}
               />
               <Modal
@@ -208,6 +225,7 @@ export default function Contact() {
                   </ModalBody>
                 </ModalContent>
               </Modal>
+
               <ChakraLink
                 href="https://github.com/ZachCodedThat"
                 target="_blank"
@@ -218,7 +236,7 @@ export default function Contact() {
                   border="hidden"
                   borderColor="none"
                   isRound={true}
-                  _hover={{ color: "accentColor" }}
+                  _hover={{ color: iconColor[colorMode] }}
                   icon={<BsGithub size="60px" />}
                 />
               </ChakraLink>
@@ -232,70 +250,52 @@ export default function Contact() {
                   border="hidden"
                   borderColor="none"
                   isRound={true}
-                  _hover={{ color: "accentColor" }}
+                  _hover={{ color: iconColor[colorMode] }}
                   icon={<BsLinkedin size="60px" />}
                 />
               </ChakraLink>
-              <IconButton
-                onClick={onOpen}
-                aria-label="steam"
-                color="rgba(255,255,255,0.5)"
-                border="hidden"
-                borderColor="none"
-                isRound={true}
-                _hover={{ color: "accentColor" }}
-                icon={<SiSteam size="60px" />}
-              />
-              <IconButton
-                onClick={onOpen}
-                aria-label="discord"
-                color="rgba(255,255,255,0.5)"
-                border="hidden"
-                borderColor="none"
-                isRound={true}
-                _hover={{ color: "accentColor" }}
-                icon={<BsDiscord size="60px" />}
-              />
-              <IconButton
-                onClick={onOpen}
-                aria-label="discord"
-                color="rgba(255,255,255,0.5)"
-                border="hidden"
-                borderColor="none"
-                isRound={true}
-                _hover={{ color: "accentColor" }}
-                icon={<BsDiscord size="60px" />}
-              />
-              <IconButton
-                onClick={onOpen}
-                aria-label="discord"
-                color="rgba(255,255,255,0.5)"
-                border="hidden"
-                borderColor="none"
-                isRound={true}
-                _hover={{ color: "accentColor" }}
-                icon={<BsDiscord size="60px" />}
-              />
-              <IconButton
-                onClick={onOpen}
-                aria-label="discord"
-                color="rgba(255,255,255,0.5)"
-                border="hidden"
-                borderColor="none"
-                isRound={true}
-                _hover={{ color: "accentColor" }}
-                icon={<BsDiscord size="60px" />}
-              />
-              <IconButton
-                onClick={onOpen}
-                aria-label="discord"
-                color="rgba(255,255,255,0.5)"
-                border="hidden"
-                borderColor="none"
-                isRound={true}
-                _hover={{ color: "accentColor" }}
-                icon={<BsDiscord size="60px" />}
-              />
+              <ChakraLink
+                href="https://twitter.com/TweetZachBack"
+                target="_blank"
+              >
+                <IconButton
+                  aria-label="Twitter"
+                  color="rgba(255,255,255,0.5)"
+                  border="hidden"
+                  borderColor="none"
+                  isRound={true}
+                  _hover={{ color: iconColor[colorMode] }}
+                  icon={<BsTwitter size="60px" />}
+                />
+              </ChakraLink>
+              <ChakraLink
+                href="https://www.twitch.tv/zach_strikes_back"
+                target="_blank"
+              >
+                <IconButton
+                  aria-label="Twitch"
+                  color="rgba(255,255,255,0.5)"
+                  border="hidden"
+                  borderColor="none"
+                  isRound={true}
+                  _hover={{ color: iconColor[colorMode] }}
+                  icon={<BsTwitch size="60px" />}
+                />
+              </ChakraLink>
+              <ChakraLink
+                href="https://calendly.com/zachary-przybilski"
+                target="_blank"
+              >
+                <IconButton
+                  aria-label="Twitch"
+                  color="rgba(255,255,255,0.5)"
+                  border="hidden"
+                  borderColor="none"
+                  isRound={true}
+                  _hover={{ color: iconColor[colorMode] }}
+                  icon={<BsCalendar3 size="60px" />}
+                />
+              </ChakraLink>
             </Grid>
           </Box>
         </Box>

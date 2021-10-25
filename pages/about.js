@@ -1,5 +1,5 @@
 import React from "react";
-import { useColorMode, Box, Button } from "@chakra-ui/react";
+import { useColorMode, Box, Button, Heading } from "@chakra-ui/react";
 import {
   textColor,
   buttonHoverColor,
@@ -18,7 +18,7 @@ const About = () => {
         transform="translate(-50%, -50%)"
         color={textColor[colorMode]}
       >
-        About
+        <Heading size="2xl">The princess is in another castle...</Heading>
       </Box>
       <Link href="/" passHref>
         <Button

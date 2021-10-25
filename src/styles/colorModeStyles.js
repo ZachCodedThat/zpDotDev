@@ -64,3 +64,7 @@ export const animatedBGColorAlt = {
   light: "accentColor",
   dark: "accentColor",
 };
+export const glassCardBGColor = {
+  light: "glassCardBgColorLight",
+  dark: "glassCardBgColorDark",
+};
