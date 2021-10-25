@@ -48,12 +48,12 @@
   animation-duration: 18s;
 }
 
-.circles li:nth-child(5) {
+/* .circles li:nth-child(5) {
   left: 65%;
   width: 20px;
   height: 20px;
   animation-delay: 0s;
-}
+} */
 
 .circles li:nth-child(6) {
   left: 75%;
@@ -102,11 +102,19 @@
 }
 
 .circles li:nth-child(12) {
-  left: 10%;
+  left: 15%;
   width: 100px;
   height: 100px;
   animation-delay: 7s;
   animation-duration: 9s;
+}
+
+.circles li:nth-child(13) {
+  left: 7%;
+  width: 65px;
+  height: 65px;
+  animation-delay: 10s;
+  animation-duration: 15s;
 }
 
 @keyframes animate {

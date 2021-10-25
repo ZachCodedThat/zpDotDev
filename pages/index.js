@@ -16,6 +16,8 @@ import Link from "next/link";
 
 import { useRef, useEffect } from "react";
 
+import useWindowDimensions from "@utils/Hooks/useWindowDimension";
+
 import {
   bgColor,
   textColor,
@@ -26,13 +28,13 @@ import {
 } from "@styles/colorModeStyles";
 
 import { motion } from "framer-motion";
-import Background from "@styles/Background/AnimatedBG";
+
 const Home = () => {
   const rendered = useRef(false);
   const MotionButton = rendered.current ? Button : motion(Button);
   const MotionBox = rendered.current ? Box : motion(Box);
   // const SigImage = rendered.current ? "/SignatureStatic.svg" : "/Signature.svg";
-
+  const { width } = useWindowDimensions();
   useEffect(() => {
     rendered.current = true;
   }, []);
@@ -103,7 +105,7 @@ const Home = () => {
             initial="hidden"
             animate="visible"
             exit="exit"
-            marginTop="-32"
+            marginTop={["-10", "-15", "-20", "-25", "-32"]}
           >
             <Heading
               fontWeight={600}
@@ -173,9 +175,9 @@ const Home = () => {
                 Contact
               </MotionButton>
             </Link>
-
-            <DarkModeSwitch />
+            {width > 600 ? <DarkModeSwitch /> : null}
           </Flex>
+          {width < 600 ? <DarkModeSwitch /> : null}
         </Stack>
       </Container>
     </>
