@@ -31,8 +31,8 @@ import { motion } from "framer-motion";
 
 const Home = () => {
   const rendered = useRef(false);
-  const MotionButton = rendered.current ? Button : motion(Button);
-  const MotionBox = rendered.current ? Box : motion(Box);
+  const MotionButton = motion(Button);
+  // const MotionBox = rendered.current ? Box : motion(Box);
   // const SigImage = rendered.current ? "/SignatureStatic.svg" : "/Signature.svg";
   const { width } = useWindowDimensions();
   useEffect(() => {
@@ -40,50 +40,6 @@ const Home = () => {
   }, []);
 
   const { colorMode } = useColorMode();
-
-  const buttonAnimation = {
-    hidden: {
-      y: 50,
-      opacity: 0,
-    },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-        delay: 1.9,
-        type: "spring",
-        damping: 30,
-        stiffness: 100,
-      },
-    },
-    exit: {
-      y: 0,
-      opacity: 1,
-    },
-  };
-  const headerAnimation = {
-    hidden: {
-      x: 50,
-      opacity: 0,
-    },
-    visible: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-        delay: 1.5,
-        type: "spring",
-        damping: 30,
-        stiffness: 100,
-        when: "beforeChildren",
-      },
-    },
-    exit: {
-      x: 0,
-      opacity: 1,
-    },
-  };
 
   return (
     <>
@@ -100,8 +56,7 @@ const Home = () => {
           spacing={{ base: 8, md: 14 }}
           // marginTop="-32"
         >
-          <MotionBox
-            variants={headerAnimation}
+          <Box
             initial="hidden"
             animate="visible"
             exit="exit"
@@ -115,7 +70,7 @@ const Home = () => {
             >
               Front End Web Developer
             </Heading>
-          </MotionBox>
+          </Box>
 
           <Flex
             flexDirection={"row"}
@@ -126,13 +81,8 @@ const Home = () => {
             <Link href="./about" passHref>
               <MotionButton
                 color={textColor[colorMode]}
-                // margin={0}
                 variant="nav"
                 whileTap={{ scale: 0.9 }}
-                variants={buttonAnimation}
-                initial="hidden"
-                animate="visible"
-                exit="exit"
                 _hover={{
                   bg: buttonHoverColor[colorMode],
                   color: buttonTextHoverColor[colorMode],
@@ -146,10 +96,6 @@ const Home = () => {
                 color={textColor[colorMode]}
                 whileTap={{ scale: 0.9 }}
                 variant="nav"
-                variants={buttonAnimation}
-                initial="hidden"
-                animate="visible"
-                exit="exit"
                 _hover={{
                   bg: buttonHoverColor[colorMode],
                   color: buttonTextHoverColor[colorMode],
@@ -163,10 +109,6 @@ const Home = () => {
                 color={textColor[colorMode]}
                 variant="nav"
                 whileTap={{ scale: 0.9 }}
-                variants={buttonAnimation}
-                initial="hidden"
-                animate="visible"
-                exit="exit"
                 _hover={{
                   bg: buttonHoverColor[colorMode],
                   color: buttonTextHoverColor[colorMode],

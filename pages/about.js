@@ -11,15 +11,6 @@ const About = () => {
   const { colorMode } = useColorMode();
   return (
     <>
-      <Box
-        position="fixed"
-        top="50%"
-        left="50%"
-        transform="translate(-50%, -50%)"
-        color={textColor[colorMode]}
-      >
-        <Heading size="2xl">The princess is in another castle...</Heading>
-      </Box>
       <Link href="/" passHref>
         <Button
           as="a"
@@ -33,6 +24,11 @@ const About = () => {
           Back
         </Button>
       </Link>
+      <Box display="flex" h="100vh" justifyContent="center" alignItems="center">
+        <Heading display="inline-block" color={textColor[colorMode]}>
+          Cool
+        </Heading>
+      </Box>
     </>
   );
 };

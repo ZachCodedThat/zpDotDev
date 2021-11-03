@@ -2,8 +2,8 @@ import {
   Box,
   Button,
   Heading,
-  Avatar,
-  IconButton,
+  Stack,
+  Text,
   useColorMode,
 } from "@chakra-ui/react";
 import React from "react";
@@ -14,11 +14,11 @@ import {
   buttonHoverColor,
 } from "@styles/colorModeStyles";
 import Link from "next/link";
-import useSound from "use-sound";
+
+import SimpleThreeColumns from "@components/ProjectCards";
+import DarkModeSwitchNA from "@components/DarkModeSwitchNA";
 
 const Projects = () => {
-  const soundBite = "/KEKW.mp3";
-  const [play] = useSound(soundBite, { volume: 0.05 });
   const { colorMode } = useColorMode();
   return (
     <>
@@ -35,24 +35,25 @@ const Projects = () => {
           Back
         </Button>
       </Link>
-      <Box
-        position="fixed"
-        top="50%"
-        left="50%"
-        transform="translate(-50%, -50%)"
-        color={textColor[colorMode]}
-      >
-        <Heading size="2xl">
-          Nope not here either...
-          <Avatar
-            bg="none"
-            onMouseDown={play}
-            size="md"
-            src="/kekw-emote.jpg"
-            cursor="pointer"
-          ></Avatar>
+      <DarkModeSwitchNA />
+      <Stack textAlign={"center"} py={{ base: 20, md: 15 }}>
+        <Heading
+          fontWeight={600}
+          fontSize={{ base: "3xl", sm: "4xl", md: "6xl" }}
+          lineHeight={"110%"}
+        >
+          Meeting scheduling <Text color={"orange.400"}>made easy</Text>
         </Heading>
-      </Box>
+        <Box
+          py={{ base: 20, md: 15 }}
+          display={"flex"}
+          alignItems={"center"}
+          justifyContent="center"
+          color={textColor[colorMode]}
+        >
+          <SimpleThreeColumns />
+        </Box>
+      </Stack>
     </>
   );
 };

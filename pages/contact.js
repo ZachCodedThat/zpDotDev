@@ -64,8 +64,7 @@ export default function Contact() {
   const { colorMode } = useColorMode();
   const [discordValue, setValue] = React.useState("ZachStrikesBack#3732");
   const { hasCopied, onCopy } = useClipboard(discordValue);
-  const [steamValue, setSteamValue] = React.useState("292809946");
-  const { hasCopiedSteam, onCopySteam } = useClipboard(steamValue);
+
   return (
     <>
       <BackgroundReverse />
