@@ -24,6 +24,7 @@ const Projects = () => {
     <>
       <Link href="/" passHref>
         <Button
+          position="sticky"
           as="a"
           color={textColor[colorMode]}
           variant="nav"
@@ -35,14 +36,15 @@ const Projects = () => {
           Back
         </Button>
       </Link>
-      <DarkModeSwitchNA />
+      <DarkModeSwitchNA position="sticky" />
       <Stack textAlign={"center"} py={{ base: 20, md: 15 }}>
         <Heading
           fontWeight={600}
           fontSize={{ base: "3xl", sm: "4xl", md: "6xl" }}
           lineHeight={"110%"}
+          color={textColor[colorMode]}
         >
-          Meeting scheduling <Text color={"orange.400"}>made easy</Text>
+          Projects
         </Heading>
         <Box
           py={{ base: 20, md: 15 }}

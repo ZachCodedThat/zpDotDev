@@ -1,13 +1,10 @@
 import {
-  Container,
   Flex,
   Box,
   Heading,
-  Text,
   IconButton,
   Button,
   VStack,
-  HStack,
   Wrap,
   WrapItem,
   Grid,
@@ -17,26 +14,18 @@ import {
   ModalOverlay,
   ModalContent,
   ModalHeader,
-  ModalFooter,
   ModalBody,
   ModalCloseButton,
   useDisclosure,
   useClipboard,
   Link as ChakraLink,
 } from "@chakra-ui/react";
-import { SiSteam } from "react-icons/si";
+
 import React from "react";
-import {
-  MdPhone,
-  MdEmail,
-  MdLocationOn,
-  MdFacebook,
-  MdOutlineEmail,
-} from "react-icons/md";
+import { MdPhone, MdEmail, MdLocationOn } from "react-icons/md";
 import {
   BsGithub,
   BsDiscord,
-  BsPerson,
   BsLinkedin,
   BsTwitter,
   BsTwitch,
@@ -46,13 +35,10 @@ import Link from "next/link";
 import Background from "@styles/Background/AnimatedBG";
 
 import {
-  bgColor,
   textColor,
   iconColor,
-  buttonColor,
   buttonHoverColor,
   buttonTextHoverColor,
-  accentColor,
   glassCardBGColor,
 } from "@styles/colorModeStyles";
 import DarkModeSwitchNA from "@components/DarkModeSwitchNA";
@@ -302,3 +288,5 @@ export default function Contact() {
     </>
   );
 }
+
+// TODO: refactor this mess and break out everything I can into a separate file.

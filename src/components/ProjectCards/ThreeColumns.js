@@ -9,6 +9,11 @@ import {
   chakraIcon,
   nextjsIcon,
   nextjsIconAlt,
+  gitHubIcon,
+  codeSandboxIcon,
+  supabaseIcon,
+  gitHubIconAlt,
+  vercelIcon,
 } from "./Icons";
 
 export default function SimpleThreeColumns() {
@@ -29,7 +34,18 @@ export default function SimpleThreeColumns() {
           tag={[
             colorMode === "light" ? nextjsIcon : nextjsIconAlt,
             slateIcon,
+            reactIcon,
             chakraIcon,
+          ]}
+          icon={[
+            colorMode === "light"
+              ? gitHubIcon(
+                  "https://github.com/ZachCodedThat/Zachs-Blog/tree/Slate-rework/src/components/Editor"
+                )
+              : gitHubIconAlt(
+                  "https://github.com/ZachCodedThat/Zachs-Blog/tree/Slate-rework/src/components/Editor"
+                ),
+            codeSandboxIcon,
           ]}
         />
         <Feature
@@ -38,7 +54,22 @@ export default function SimpleThreeColumns() {
           text={
             "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
           }
-          tag={[, "slateJS", jsIcon, "ChakraUI"]}
+          tag={[
+            colorMode === "light" ? nextjsIcon : nextjsIconAlt,
+            slateIcon,
+            chakraIcon,
+            supabaseIcon,
+          ]}
+          icon={[
+            colorMode === "light"
+              ? gitHubIcon(
+                  "https://github.com/ZachCodedThat/Zachs-Blog/tree/Slate-rework"
+                )
+              : gitHubIconAlt(
+                  "https://github.com/ZachCodedThat/Zachs-Blog/tree/Slate-rework"
+                ),
+            vercelIcon("https://zachs-blog.vercel.app/"),
+          ]}
         />
         <Feature
           image="/sample.jpg"
@@ -46,7 +77,21 @@ export default function SimpleThreeColumns() {
           text={
             "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
           }
-          tag={[reactIcon, "slateJS", "markdown", chakraIcon]}
+          tag={[
+            colorMode === "light" ? nextjsIcon : nextjsIconAlt,
+            reactIcon,
+            chakraIcon,
+          ]}
+          icon={[
+            colorMode === "light"
+              ? gitHubIcon(
+                  "https://github.com/ZachCodedThat/portfolio/tree/adding-pages"
+                )
+              : gitHubIconAlt(
+                  "https://github.com/ZachCodedThat/portfolio/tree/adding-pages"
+                ),
+            vercelIcon("/"),
+          ]}
         />
       </SimpleGrid>
     </Box>
