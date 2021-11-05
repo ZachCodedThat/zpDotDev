@@ -14,6 +14,7 @@ import {
   supabaseIcon,
   gitHubIconAlt,
   vercelIcon,
+  vercelIconAlt,
 } from "./Icons";
 
 export default function SimpleThreeColumns() {
@@ -68,7 +69,10 @@ export default function SimpleThreeColumns() {
               : gitHubIconAlt(
                   "https://github.com/ZachCodedThat/Zachs-Blog/tree/Slate-rework"
                 ),
-            vercelIcon("https://zachs-blog.vercel.app/"),
+            ,
+            colorMode === "light"
+              ? vercelIcon("https://zachs-blog.vercel.app/")
+              : vercelIconAlt("https://zachs-blog.vercel.app/"),
           ]}
         />
         <Feature
@@ -90,7 +94,7 @@ export default function SimpleThreeColumns() {
               : gitHubIconAlt(
                   "https://github.com/ZachCodedThat/portfolio/tree/adding-pages"
                 ),
-            vercelIcon("/"),
+            colorMode === "light" ? vercelIcon("/") : vercelIconAlt("/"),
           ]}
         />
       </SimpleGrid>

@@ -249,17 +249,15 @@ export const vercelIcon = (vercelLink) => (
 
 export const vercelIconAlt = (vercelLink) => (
   <ChakraLink href={vercelLink} target="_blank">
-    <MotionIconButton
+    <MotionAvatar
       whileHover={{
         scale: 1.2,
         transition: { duration: 0.5 },
       }}
-      aria-label="GitHub"
-      color="#FFECD1"
-      border="hidden"
-      borderColor="none"
-      isRound={true}
-      icon={<BsGithub size="md" />}
+      size="sm"
+      borderRadius="none"
+      bg="transparent"
+      src="/vercel-logoAlt.svg"
     />
   </ChakraLink>
 );
