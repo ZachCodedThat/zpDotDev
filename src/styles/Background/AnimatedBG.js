@@ -1,12 +1,7 @@
 import styles from "./BG.module.css";
-import {
-  UnorderedList,
-  ListItem,
-  chakra,
-  useColorMode,
-} from "@chakra-ui/react";
+import { chakra, useColorMode } from "@chakra-ui/react";
 import { animatedBGColor, animatedBGColorAlt } from "@styles/colorModeStyles";
-import BackgroundReverse from "./AnimatedBGReverse";
+
 const Background = () => {
   const { colorMode } = useColorMode();
   return (

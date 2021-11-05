@@ -1,9 +1,18 @@
-import { Box, SimpleGrid, Icon, Image } from "@chakra-ui/react";
-import { FcAssistant, FcDonate, FcInTransit } from "react-icons/fc";
+import { Box, SimpleGrid, Divider, useColorMode } from "@chakra-ui/react";
 
 import { Feature } from "./projectFeatureCard";
 
+import {
+  reactIcon,
+  slateIcon,
+  jsIcon,
+  chakraIcon,
+  nextjsIcon,
+  nextjsIconAlt,
+} from "./Icons";
+
 export default function SimpleThreeColumns() {
+  const { colorMode } = useColorMode();
   return (
     <Box p={{ base: 2, sm: 3, md: 6, lg: 8, xl: 20 }}>
       <SimpleGrid
@@ -17,6 +26,11 @@ export default function SimpleThreeColumns() {
           text={
             "Fully custom Slate editor capable of live MD preview which will show you exactly what your post will look like on the page."
           }
+          tag={[
+            colorMode === "light" ? nextjsIcon : nextjsIconAlt,
+            slateIcon,
+            chakraIcon,
+          ]}
         />
         <Feature
           image="/sample.jpg"
@@ -24,6 +38,7 @@ export default function SimpleThreeColumns() {
           text={
             "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
           }
+          tag={[, "slateJS", jsIcon, "ChakraUI"]}
         />
         <Feature
           image="/sample.jpg"
@@ -31,6 +46,7 @@ export default function SimpleThreeColumns() {
           text={
             "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
           }
+          tag={[reactIcon, "slateJS", "markdown", chakraIcon]}
         />
       </SimpleGrid>
     </Box>
