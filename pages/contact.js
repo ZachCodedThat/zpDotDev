@@ -1,8 +1,6 @@
 import {
   SimpleGrid,
   Text,
-  HStack,
-  Avatar,
   Flex,
   Center,
   Stack,
@@ -10,10 +8,6 @@ import {
   Heading,
   IconButton,
   Button,
-  VStack,
-  Wrap,
-  WrapItem,
-  Grid,
   Input,
   useColorMode,
   Modal,
@@ -28,7 +22,6 @@ import {
 } from "@chakra-ui/react";
 
 import React from "react";
-import { MdPhone, MdEmail, MdLocationOn } from "react-icons/md";
 import {
   BsGithub,
   BsDiscord,
@@ -38,19 +31,15 @@ import {
   BsCalendar3,
 } from "react-icons/bs";
 import Link from "next/link";
-import Background from "@styles/Background/AnimatedBG";
 
 import {
   textColor,
   iconColor,
   buttonHoverColor,
   buttonTextHoverColor,
-  glassCardBGColor,
 } from "@styles/colorModeStyles";
 import DarkModeSwitchNA from "@components/DarkModeSwitchNA";
-import BackgroundReverse from "@styles/Background/AnimatedBGReverse";
 import useWindowDimensions from "@utils/Hooks/useWindowDimension";
-import { DownloadIcon } from "@chakra-ui/icons";
 
 export default function Contact() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -58,7 +47,7 @@ export default function Contact() {
   const [discordValue, setValue] = React.useState("ZachStrikesBack#3732");
   const { hasCopied, onCopy } = useClipboard(discordValue);
   const { colorMode } = useColorMode();
-  const { width } = useWindowDimensions();
+
   return (
     <>
       <Center py={6}>
@@ -82,7 +71,7 @@ export default function Contact() {
           <Box
             h={"180px"}
             w={"full"}
-            backgroundImage="/AbstractBG.jpg"
+            backgroundImage="/AbstractBG4.jpg"
             backgroundAttachment="fixed"
             backgroundSize="cover"
             backgroundPosition="center"
@@ -201,7 +190,7 @@ export default function Contact() {
           <Box
             h={"200px"}
             w={"full"}
-            backgroundImage="/AbstractBG.jpg"
+            backgroundImage="/AbstractBG4.jpg"
             backgroundAttachment="fixed"
             backgroundSize="cover"
             backgroundPosition="center"
@@ -351,7 +340,7 @@ export default function Contact() {
           <Box
             h={"50px"}
             w={"full"}
-            backgroundImage="/AbstractBG.jpg"
+            backgroundImage="/AbstractBG4.jpg"
             backgroundAttachment="fixed"
             backgroundSize="cover"
             backgroundPosition="center"

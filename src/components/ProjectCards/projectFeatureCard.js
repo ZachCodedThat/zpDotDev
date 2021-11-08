@@ -26,7 +26,7 @@ export const Feature = ({ title, text, image, tag, icon }) => {
           : null}
       </HStack>
       <Flex align={"center"} justify={"center"} mb={1}>
-        <ChakraImage src={image} borderRadius="5%" p="10px" />
+        <ChakraImage srcSet={image} borderRadius="5%" p="10px" />
       </Flex>
       <Text
         fontWeight={600}
