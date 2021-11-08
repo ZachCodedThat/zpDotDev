@@ -12,7 +12,6 @@ import {
   Stack,
   Button,
   IconButton,
-  Link,
 } from "@chakra-ui/react";
 import {
   textColor,
@@ -20,6 +19,7 @@ import {
   buttonTextHoverColor,
   glassCardBGColor,
 } from "@styles/colorModeStyles";
+import Link from "next/link";
 import DarkModeSwitchNA from "@components/DarkModeSwitchNA";
 import { DownloadIcon } from "@chakra-ui/icons";
 import useWindowDimensions from "@utils/Hooks/useWindowDimension";
@@ -59,7 +59,7 @@ const About = () => {
           <Box
             maxW={"1200px"}
             w={"full"}
-            bg={glassCardBGColor[colorMode]}
+            bg={"rgba(30, 49, 60, 1)"}
             boxShadow={"2xl"}
             rounded={"md"}
           >
@@ -80,8 +80,8 @@ const About = () => {
                 />
                 <Stack spacing={0} m={4} mt={14}>
                   <Heading
-                    fontSize={"2xl"}
-                    fontWeight={500}
+                    fontSize={{ base: "2xl", sm: "3xl", md: "4xl" }}
+                    fontWeight={{ base: 500, sm: 600, md: 650 }}
                     fontFamily={"body"}
                     align={{ base: "center", sm: "center", md: "flex-start" }}
                     backgroundImage="/AbstractBG.jpg"
@@ -92,21 +92,17 @@ const About = () => {
                   >
                     Zach Przybilski
                   </Heading>
-                  <Text color={textColor[colorMode]}>Frontend Developer</Text>
+                  <Text color="#FFECD1">Frontend Developer</Text>
                   {width < 800 ? (
                     <Flex alignItems="center">
-                      <Text
-                        fontWeight={200}
-                        fontSize={"xs"}
-                        color={textColor[colorMode]}
-                      >
+                      <Text fontWeight={200} fontSize={"xs"} color="#FFECD1">
                         Resume
                       </Text>
                       <Link href="/zachsResume2021.pdf" target="_blank">
                         <IconButton
                           m={0}
                           variant="ghost"
-                          color={textColor[colorMode]}
+                          color="#FFECD1"
                           icon={<DownloadIcon />}
                           _hover={{
                             bg: "none",
@@ -124,18 +120,14 @@ const About = () => {
               </Flex>
               {width > 800 ? (
                 <Flex alignItems="center">
-                  <Text
-                    fontWeight={200}
-                    fontSize={"xs"}
-                    color={textColor[colorMode]}
-                  >
+                  <Text fontWeight={200} fontSize={"xs"} color="#FFECD1">
                     Resume
                   </Text>
                   <Link href="/zachsResume2021.pdf" target="_blank">
                     <IconButton
                       m={0}
                       variant="ghost"
-                      color={textColor[colorMode]}
+                      color="#FFECD1"
                       icon={<DownloadIcon />}
                       _hover={{
                         bg: "none",
@@ -162,12 +154,14 @@ const About = () => {
                 w={"fit-content"}
                 align={"flex-start"}
                 border={"1px solid"}
-                borderColor={textColor[colorMode]}
+                bordercolor="#FFECD1"
                 borderRadius="md"
                 p={2}
               >
-                <Text fontWeight={600}>About:</Text>
-                <Text fontSize={"sm"} color={textColor[colorMode]}>
+                <Text fontWeight={600} color="#FFECD1">
+                  About:
+                </Text>
+                <Text fontSize={"sm"} color="#FFECD1">
                   I am a Frontend Developer with a passion for creating
                   beautiful, intuitive, and responsive user experiences. I have
                   a background in business management and a love for learning
@@ -180,12 +174,14 @@ const About = () => {
                 spacing={0}
                 alignItems="center"
                 border={"1px solid"}
-                borderColor={textColor[colorMode]}
+                bordercolor="#FFECD1"
                 borderRadius="md"
                 p={2}
               >
-                <Text fontWeight={600}>About:</Text>
-                <Text fontSize={"sm"} color={textColor[colorMode]}>
+                <Text fontWeight={600} color="#FFECD1">
+                  About:
+                </Text>
+                <Text fontSize={"sm"} color="#FFECD1">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Vulputate ut pharetra sit amet aliquam id. Augue eget arcu
@@ -206,13 +202,15 @@ const About = () => {
                 spacing={0}
                 alignItems="center"
                 border={"1px solid"}
-                borderColor={textColor[colorMode]}
+                bordercolor="#FFECD1"
                 borderRadius="md"
                 m={6}
                 p={2}
               >
-                <Text fontWeight={600}>About2:</Text>
-                <Text fontSize={"md"} color={textColor[colorMode]}>
+                <Text fontWeight={600} color="#FFECD1">
+                  About2:
+                </Text>
+                <Text fontSize={"md"} color="#FFECD1">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Vulputate ut pharetra sit amet aliquam id. Augue eget arcu
@@ -239,7 +237,7 @@ const About = () => {
           <Box
             maxW={"1200px"}
             w={"full"}
-            bg={glassCardBGColor[colorMode]}
+            bg={"rgba(30, 49, 60, 1)"}
             boxShadow={"2xl"}
             rounded={"md"}
             overflow={"hidden"}
@@ -256,6 +254,7 @@ const About = () => {
                     fontSize={"3xl"}
                     fontWeight={500}
                     fontFamily={"body"}
+                    color="#FFECD1"
                   >
                     Skills
                   </Heading>
@@ -275,12 +274,14 @@ const About = () => {
                 spacing={0}
                 alignItems="center"
                 border={"1px solid"}
-                borderColor={textColor[colorMode]}
+                bordercolor="#FFECD1"
                 borderRadius="md"
                 p={2}
               >
-                <Text fontWeight={600}>Test:</Text>
-                <Text fontSize={"md"} color={textColor[colorMode]}>
+                <Text fontWeight={600} color="#FFECD1">
+                  Test:
+                </Text>
+                <Text fontSize={"md"} color="#FFECD1">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco
