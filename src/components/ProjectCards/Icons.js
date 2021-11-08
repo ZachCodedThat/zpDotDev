@@ -5,7 +5,7 @@ import {
   IconButton,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import { BsGithub, BsCodeSandbox } from "react-icons/bs";
+import { BsGithub } from "react-icons/bs";
 
 const MotionAvatar = motion(Avatar);
 const MotionIconButton = motion(IconButton);
@@ -186,6 +186,9 @@ export const gitHubIcon = (gitHubLink) => (
         transition: { duration: 0.5 },
       }}
       aria-label="GitHub"
+      _hover={{
+        bg: "none",
+      }}
       color="#001524"
       border="hidden"
       borderColor="none"
@@ -201,6 +204,9 @@ export const gitHubIconAlt = (gitHubLink) => (
       whileHover={{
         scale: 1.2,
         transition: { duration: 0.5 },
+      }}
+      _hover={{
+        bg: "none",
       }}
       aria-label="GitHub"
       color="#FFECD1"

@@ -5,12 +5,9 @@ import {
   Image as ChakraImage,
   Tag,
   HStack,
-  Divider,
-  useColorMode,
 } from "@chakra-ui/react";
-import { borderColor } from "@styles/colorModeStyles";
+
 import { motion } from "framer-motion";
-import { codeSandboxIcon, gitHubIcon } from "./Icons";
 
 const MotionStack = motion(Stack);
 

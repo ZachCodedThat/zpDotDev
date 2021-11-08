@@ -6,38 +6,37 @@ import {
   Stack,
   Container,
   Heading,
-  Text,
   Button,
-  Icon,
 } from "@chakra-ui/react";
 import DarkModeSwitch from "@components/DarkModeSwitch";
 
 import Link from "next/link";
 
-import { useRef, useEffect } from "react";
+// import { useRef, useEffect } from "react";
 
 import useWindowDimensions from "@utils/Hooks/useWindowDimension";
 
 import {
-  bgColor,
   textColor,
-  buttonColor,
   buttonHoverColor,
   buttonTextHoverColor,
-  accentColor,
 } from "@styles/colorModeStyles";
 
 import { motion } from "framer-motion";
 
 const Home = () => {
-  const rendered = useRef(false);
-  const MotionButton = motion(Button);
+  // const rendered = useRef(false);
+
   // const MotionBox = rendered.current ? Box : motion(Box);
   // const SigImage = rendered.current ? "/SignatureStatic.svg" : "/Signature.svg";
+
+  // useEffect(() => {
+  //   rendered.current = true;
+  // }, []);
+
+  const MotionButton = motion(Button);
+
   const { width } = useWindowDimensions();
-  useEffect(() => {
-    rendered.current = true;
-  }, []);
 
   const { colorMode } = useColorMode();
 

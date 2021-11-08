@@ -1,5 +1,11 @@
 import {
+  SimpleGrid,
+  Text,
+  HStack,
+  Avatar,
   Flex,
+  Center,
+  Stack,
   Box,
   Heading,
   IconButton,
@@ -43,46 +49,20 @@ import {
 } from "@styles/colorModeStyles";
 import DarkModeSwitchNA from "@components/DarkModeSwitchNA";
 import BackgroundReverse from "@styles/Background/AnimatedBGReverse";
+import useWindowDimensions from "@utils/Hooks/useWindowDimension";
+import { DownloadIcon } from "@chakra-ui/icons";
 
 export default function Contact() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  const { colorMode } = useColorMode();
   const [discordValue, setValue] = React.useState("ZachStrikesBack#3732");
   const { hasCopied, onCopy } = useClipboard(discordValue);
-
+  const { colorMode } = useColorMode();
+  const { width } = useWindowDimensions();
   return (
     <>
-      <BackgroundReverse />
-      <Background />
-
-      <Flex justifyContent="center" alignItems="center" boxSizing="border-box">
-        <Box
-          width="100%"
-          maxW={{
-            base: "fit-content",
-            sm: "fit-content",
-            md: "fit-content",
-            lg: "fit-content",
-          }}
-          maxH={{
-            base: "full",
-            sm: "fit-content",
-            md: "fit-content",
-            lg: "fit-content",
-          }}
-          bg={glassCardBGColor[colorMode]}
-          boxShadow={
-            colorMode === "light"
-              ? "inset 0 0 300px rgba(46, 49, 49, .3)"
-              : "inset 0 0 300px rgba(255, 255, 255, .1) "
-          }
-          backdropFilter="blur(5px)"
-          color="white"
-          borderRadius="lg"
-          m={{ base: 4, sm: 8, md: 16, lg: 5 }}
-          p={{ base: 4, sm: 5, md: 6, lg: 7 }}
-        >
+      <Center py={6}>
+        <Stack direction={"column"} m={5}>
           <Flex justifyContent="space-between">
             <Link href="/" passHref>
               <Button
@@ -99,192 +79,294 @@ export default function Contact() {
             </Link>
             <DarkModeSwitchNA />
           </Flex>
-          <Box alignItems="center" justifyContent="center">
-            <Wrap
-              spacing={{ base: 10, sm: 3, md: 5, lg: 20 }}
-              justifyContent={{ base: "center", sm: "center", md: "center" }}
-              alignItems={{ base: "center", sm: "center", md: "center" }}
-            >
-              <WrapItem>
-                <Box>
-                  <Heading color={textColor[colorMode]} textAlign="center">
-                    Contact Me
+          <Box
+            h={"180px"}
+            w={"full"}
+            backgroundImage="/AbstractBG.jpg"
+            backgroundAttachment="fixed"
+            backgroundSize="cover"
+            backgroundPosition="center"
+            rounded={"md"}
+          />
+          <Box
+            maxW={"1200px"}
+            w={"full"}
+            bg={"rgba(30, 49, 60, 1)"}
+            boxShadow={"2xl"}
+            rounded={"md"}
+          >
+            <Flex justify={"center"} mt={-12} pl={2}>
+              <Flex>
+                <Stack spacing={0} m={4} mt={14}>
+                  <Heading
+                    fontSize={"6xl"}
+                    fontWeight={700}
+                    fontFamily={"body"}
+                    backgroundImage="/AbstractBG.jpg"
+                    backgroundAttachment="fixed"
+                    backgroundSize="cover"
+                    backgroundPosition="center"
+                    backgroundClip="text"
+                  >
+                    Contact me
                   </Heading>
+                </Stack>
+              </Flex>
+            </Flex>
 
-                  <Box p={{ base: 0, sm: 5, md: 8, lg: 10 }}>
-                    <VStack pl={0} spacing={3} alignItems="center">
-                      <Button
-                        size="md"
-                        height="48px"
-                        width="200px"
-                        variant="ghost"
-                        cursor="auto"
-                        _active="none"
-                        color={textColor[colorMode]}
-                        _hover="none"
-                        leftIcon={<MdPhone color="#1970F1" size="20px" />}
-                      >
-                        1-609-254-2652
-                      </Button>
-                      <Button
-                        size="md"
-                        height="48px"
-                        width="310px"
-                        variant="ghost"
-                        cursor="auto"
-                        _active="none"
-                        color={textColor[colorMode]}
-                        _hover="none"
-                        leftIcon={<MdEmail color="#1970F1" size="20px" />}
-                      >
-                        Zachary.Przybilski@gmail.com
-                      </Button>
-                      <Button
-                        size="md"
-                        height="48px"
-                        width="200px"
-                        variant="ghost"
-                        cursor="auto"
-                        _active="none"
-                        color={textColor[colorMode]}
-                        _hover="none"
-                        leftIcon={<MdLocationOn color="#1970F1" size="20px" />}
-                      >
-                        Philadelphia
-                      </Button>
-                    </VStack>
-                  </Box>
-                </Box>
-              </WrapItem>
-            </Wrap>
-
-            <Grid
-              marginTop={5}
-              templateColumns="repeat(3, 1fr)"
-              templateRows="repeat(3 fr)"
-              rowGap={{ base: 6, sm: 6, md: 8, lg: 10 }}
-              columnGap={{ base: 10, sm: 10, md: 15, lg: 20 }}
-              // maxWidth="fit-content"
-              justifyContent={{ base: "center", sm: "center", md: "center" }}
-              width="100%"
+            <Stack
+              direction={{ base: "column", sm: "column", md: "row" }}
+              justify={{ base: "center", sm: "center", md: "center" }}
+              spacing={6}
+              p={6}
             >
-              {/* <HStack
-                  flexDirection="row"
-                  flexWrap="wrap"
-                  mt={{ base: 10, sm: 10, md: 15, lg: 20 }}
-                  spacing={{ base: 7, sm: 10, md: 15, lg: 20 }}
-                  px={5}
-                  alignItems="center"
-                > */}
-              <IconButton
-                onClick={onOpen}
-                aria-label="discord"
-                color="rgba(255,255,255,0.5)"
-                border="hidden"
-                borderColor="none"
-                isRound={true}
-                _hover={{ color: iconColor[colorMode] }}
-                icon={<BsDiscord size="60px" />}
-              />
-              <Modal
-                isOpen={isOpen}
-                onClose={onClose}
-                motionPreset="slideInBottom"
-                isCentered
+              <Stack
+                spacing={0}
+                w={"fit-content"}
+                align={"flex-start"}
+                border={"1px solid"}
+                borderColor="#FFECD1"
+                borderRadius="md"
+                p={2}
               >
-                <ModalOverlay backdropFilter="blur(2px)" />
-                <ModalContent>
-                  <ModalHeader>Discord Handle</ModalHeader>
-                  <ModalCloseButton />
-                  <ModalBody pb={6}>
-                    <Flex mb={2}>
-                      <Input
-                        value={discordValue}
-                        isReadOnly
-                        placeholder="Welcome"
-                      />
-                      <Button onClick={onCopy} ml={2}>
-                        {hasCopied ? "Copied" : "Copy"}
-                      </Button>
-                    </Flex>
-                  </ModalBody>
-                </ModalContent>
-              </Modal>
-
-              <ChakraLink
-                href="https://github.com/ZachCodedThat"
-                target="_blank"
+                <Text fontWeight={600} color="#FFECD1">
+                  MD:
+                </Text>
+                <Text fontSize={"md"} color="#FFECD1">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Vulputate ut pharetra sit amet aliquam id. Augue eget arcu
+                  dictum varius duis at consectetur. Interdum velit laoreet id
+                  donec ultrices tincidunt arcu non. In eu mi bibendum neque
+                  egestas congue quisque egestas diam. Odio aenean sed
+                  adipiscing diam donec adipiscing tristique risus nec. Lobortis
+                  mattis aliquam faucibus purus in. Euismod nisi porta lorem
+                  mollis. Tincidunt tortor aliquam nulla facilisi cras
+                  fermentum. At in tellus integer feugiat scelerisque varius.
+                </Text>
+              </Stack>
+              <Stack
+                w={"fit-content"}
+                wrap={{ base: "wrap", sm: "wrap", md: "nowrap" }}
+                spacing={0}
+                alignItems="center"
+                border={"1px solid"}
+                borderColor="#FFECD1"
+                borderRadius="md"
+                p={2}
               >
-                <IconButton
-                  aria-label="GitHub"
-                  color="rgba(255,255,255,0.5)"
-                  border="hidden"
-                  borderColor="none"
-                  isRound={true}
-                  _hover={{ color: iconColor[colorMode] }}
-                  icon={<BsGithub size="60px" />}
-                />
-              </ChakraLink>
-              <ChakraLink
-                href="https://www.linkedin.com/in/zachary-przybilski-475186208/"
-                target="_blank"
+                <Text fontWeight={600} color="#FFECD1">
+                  LG:
+                </Text>
+                <Text fontSize={"lg"} color="#FFECD1">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Vulputate ut pharetra sit amet aliquam id. Augue eget arcu
+                  dictum varius duis at consectetur. Interdum velit laoreet id
+                  donec ultrices tincidunt arcu non. In eu mi bibendum neque
+                  egestas congue quisque egestas diam. Odio aenean sed
+                  adipiscing diam donec adipiscing tristique risus nec. Lobortis
+                  mattis aliquam faucibus purus in. Euismod nisi porta lorem
+                  mollis. Tincidunt tortor aliquam nulla facilisi cras
+                  fermentum. At in tellus integer feugiat scelerisque varius.
+                </Text>
+              </Stack>
+            </Stack>
+            <Center>
+              <Stack
+                w={"fit-content"}
+                wrap={{ base: "wrap", sm: "wrap", md: "nowrap" }}
+                spacing={0}
+                alignItems="center"
+                border={"1px solid"}
+                borderColor="#FFECD1"
+                borderRadius="md"
+                m={6}
+                p={2}
               >
-                <IconButton
-                  aria-label="linkedIn"
-                  color="rgba(255,255,255,0.5)"
-                  border="hidden"
-                  borderColor="none"
-                  isRound={true}
-                  _hover={{ color: iconColor[colorMode] }}
-                  icon={<BsLinkedin size="60px" />}
-                />
-              </ChakraLink>
-              <ChakraLink
-                href="https://twitter.com/TweetZachBack"
-                target="_blank"
-              >
-                <IconButton
-                  aria-label="Twitter"
-                  color="rgba(255,255,255,0.5)"
-                  border="hidden"
-                  borderColor="none"
-                  isRound={true}
-                  _hover={{ color: iconColor[colorMode] }}
-                  icon={<BsTwitter size="60px" />}
-                />
-              </ChakraLink>
-              <ChakraLink
-                href="https://www.twitch.tv/zach_strikes_back"
-                target="_blank"
-              >
-                <IconButton
-                  aria-label="Twitch"
-                  color="rgba(255,255,255,0.5)"
-                  border="hidden"
-                  borderColor="none"
-                  isRound={true}
-                  _hover={{ color: iconColor[colorMode] }}
-                  icon={<BsTwitch size="60px" />}
-                />
-              </ChakraLink>
-              <ChakraLink
-                href="https://calendly.com/zachary-przybilski"
-                target="_blank"
-              >
-                <IconButton
-                  aria-label="Twitch"
-                  color="rgba(255,255,255,0.5)"
-                  border="hidden"
-                  borderColor="none"
-                  isRound={true}
-                  _hover={{ color: iconColor[colorMode] }}
-                  icon={<BsCalendar3 size="60px" />}
-                />
-              </ChakraLink>
-            </Grid>
+                <Text fontWeight={600} color="#FFECD1">
+                  XL:
+                </Text>
+                <Text fontSize={"xl"} color="#FFECD1">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Vulputate ut pharetra sit amet aliquam id. Augue eget arcu
+                  dictum varius duis at consectetur. Interdum velit laoreet id
+                  donec ultrices tincidunt arcu non. In eu mi bibendum neque
+                  egestas congue quisque egestas diam. Odio aenean sed
+                  adipiscing diam donec adipiscing tristique risus nec. Lobortis
+                  mattis aliquam faucibus purus in. Euismod nisi porta lorem
+                  mollis. Tincidunt tortor aliquam nulla facilisi cras
+                  fermentum. At in tellus integer feugiat scelerisque varius.
+                </Text>
+              </Stack>
+            </Center>
           </Box>
-        </Box>
-      </Flex>
+          <Box
+            h={"200px"}
+            w={"full"}
+            backgroundImage="/AbstractBG.jpg"
+            backgroundAttachment="fixed"
+            backgroundSize="cover"
+            backgroundPosition="center"
+            rounded={"md"}
+          />
+          <Box
+            maxW={"1200px"}
+            w={"full"}
+            bg={"rgba(30, 49, 60, 1)"}
+            boxShadow={"2xl"}
+            rounded={"md"}
+            overflow={"hidden"}
+            mb={5}
+          >
+            <Flex
+              justify={{ base: "center", sm: "center", md: "center" }}
+              mt={-12}
+              pl={2}
+            >
+              <Flex>
+                <Stack spacing={0} m={2} mt={12}>
+                  <Heading
+                    fontSize={"6xl"}
+                    fontWeight={700}
+                    fontFamily={"body"}
+                    backgroundImage="/AbstractBG.jpg"
+                    backgroundAttachment="fixed"
+                    backgroundSize="cover"
+                    backgroundPosition="center"
+                    backgroundClip="text"
+                  >
+                    Links
+                  </Heading>
+                </Stack>
+              </Flex>
+            </Flex>
+            <Flex justify={"center"}>
+              <SimpleGrid
+                columns={{ base: "3", sm: "6", md: "6" }}
+                spacing={{ base: 10, sm: 10, md: 20 }}
+                p={8}
+              >
+                <IconButton
+                  onClick={onOpen}
+                  aria-label="discord"
+                  color="rgba(255,255,255,0.5)"
+                  border="hidden"
+                  borderColor="none"
+                  isRound={true}
+                  _hover={{ color: iconColor[colorMode] }}
+                  icon={<BsDiscord size="60px" />}
+                />
+                <Modal
+                  isOpen={isOpen}
+                  onClose={onClose}
+                  motionPreset="slideInBottom"
+                  isCentered
+                >
+                  <ModalOverlay backdropFilter="blur(2px)" />
+                  <ModalContent>
+                    <ModalHeader>Discord Handle</ModalHeader>
+                    <ModalCloseButton />
+                    <ModalBody pb={6}>
+                      <Flex mb={2}>
+                        <Input
+                          value={discordValue}
+                          isReadOnly
+                          placeholder="Welcome"
+                        />
+                        <Button onClick={onCopy} ml={2}>
+                          {hasCopied ? "Copied" : "Copy"}
+                        </Button>
+                      </Flex>
+                    </ModalBody>
+                  </ModalContent>
+                </Modal>
+
+                <ChakraLink
+                  href="https://github.com/ZachCodedThat"
+                  target="_blank"
+                >
+                  <IconButton
+                    aria-label="GitHub"
+                    color="rgba(255,255,255,0.5)"
+                    border="hidden"
+                    borderColor="none"
+                    isRound={true}
+                    _hover={{ color: iconColor[colorMode] }}
+                    icon={<BsGithub size="60px" />}
+                  />
+                </ChakraLink>
+                <ChakraLink
+                  href="https://www.linkedin.com/in/zachary-przybilski-475186208/"
+                  target="_blank"
+                >
+                  <IconButton
+                    aria-label="linkedIn"
+                    color="rgba(255,255,255,0.5)"
+                    border="hidden"
+                    borderColor="none"
+                    isRound={true}
+                    _hover={{ color: iconColor[colorMode] }}
+                    icon={<BsLinkedin size="60px" />}
+                  />
+                </ChakraLink>
+                <ChakraLink
+                  href="https://twitter.com/TweetZachBack"
+                  target="_blank"
+                >
+                  <IconButton
+                    aria-label="Twitter"
+                    color="rgba(255,255,255,0.5)"
+                    border="hidden"
+                    borderColor="none"
+                    isRound={true}
+                    _hover={{ color: iconColor[colorMode] }}
+                    icon={<BsTwitter size="60px" />}
+                  />
+                </ChakraLink>
+                <ChakraLink
+                  href="https://www.twitch.tv/zach_strikes_back"
+                  target="_blank"
+                >
+                  <IconButton
+                    aria-label="Twitch"
+                    color="rgba(255,255,255,0.5)"
+                    border="hidden"
+                    borderColor="none"
+                    isRound={true}
+                    _hover={{ color: iconColor[colorMode] }}
+                    icon={<BsTwitch size="60px" />}
+                  />
+                </ChakraLink>
+                <ChakraLink
+                  href="https://calendly.com/zachary-przybilski"
+                  target="_blank"
+                >
+                  <IconButton
+                    aria-label="Twitch"
+                    color="rgba(255,255,255,0.5)"
+                    border="hidden"
+                    borderColor="none"
+                    isRound={true}
+                    _hover={{ color: iconColor[colorMode] }}
+                    icon={<BsCalendar3 size="60px" />}
+                  />
+                </ChakraLink>
+              </SimpleGrid>
+            </Flex>
+          </Box>
+          <Box
+            h={"50px"}
+            w={"full"}
+            backgroundImage="/AbstractBG.jpg"
+            backgroundAttachment="fixed"
+            backgroundSize="cover"
+            backgroundPosition="center"
+            rounded={"md"}
+          />
+        </Stack>
+      </Center>
     </>
   );
 }
