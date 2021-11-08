@@ -56,3 +56,15 @@ export const dmIconColor = {
   light: "secondary",
   dark: "yellow",
 };
+export const animatedBGColor = {
+  light: "secondary",
+  dark: "primary",
+};
+export const animatedBGColorAlt = {
+  light: "accentColor",
+  dark: "accentColor",
+};
+export const glassCardBGColor = {
+  light: "glassCardBgColorLight",
+  dark: "glassCardBgColorDark",
+};

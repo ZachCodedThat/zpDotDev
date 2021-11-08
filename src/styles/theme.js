@@ -42,10 +42,14 @@ const colors = {
   textLight: "#001524",
   textDark: "#FFECD1",
   accentColor: "#15616D",
+  glassCardBgColorDark: "rgba(255, 255, 255, 0.1)",
+  glassCardBgColorLight: "rgba(46, 49, 49, .5)",
+  glassCardBoxShadowDark: "rgba(255, 255, 255, .1)",
+  glassCardBoxShadowLight: "rgba(255, 255, 255, .5)",
 };
 
 const config = {
-  initialColorMode: "dark",
+  initialColorMode: "light",
   useSystemColorMode: false,
 };
 
@@ -54,7 +58,7 @@ const overrides = {
   fonts,
   colors,
   breakpoints,
-  // config,
+  config,
 };
 
 const Button = {
@@ -105,7 +109,6 @@ const Button = {
 };
 
 const customTheme = extendTheme(overrides, {
-  config,
   components: {
     Button,
   },
