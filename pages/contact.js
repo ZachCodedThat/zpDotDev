@@ -47,6 +47,7 @@ export default function Contact() {
   const [discordValue, setValue] = React.useState("ZachStrikesBack#3732");
   const { hasCopied, onCopy } = useClipboard(discordValue);
   const { colorMode } = useColorMode();
+  const { width } = useWindowDimensions();
 
   return (
     <>
@@ -68,15 +69,24 @@ export default function Contact() {
             </Link>
             <DarkModeSwitchNA />
           </Flex>
-          <Box
-            h={"180px"}
-            w={"full"}
-            backgroundImage="/AbstractBG.jpg"
-            backgroundAttachment="fixed"
-            backgroundSize="cover"
-            backgroundPosition="center"
-            rounded={"md"}
-          />
+          {width < 800 ? (
+            <Box
+              h={"180px"}
+              w={"full"}
+              bgGradient="linear(to-tl, rgba(117,2,136,1) 0%, rgba(9,9,121,1) 55%, rgba(132,0,255,1) 100%)"
+              rounded={"md"}
+            />
+          ) : (
+            <Box
+              h={"180px"}
+              w={"full"}
+              backgroundImage="/AbstractBG.jpg"
+              backgroundAttachment="fixed"
+              backgroundSize="cover"
+              backgroundPosition="center"
+              rounded={"md"}
+            />
+          )}
           <Box
             maxW={"1200px"}
             w={"full"}
@@ -187,15 +197,24 @@ export default function Contact() {
               </Stack>
             </Center>
           </Box>
-          <Box
-            h={"200px"}
-            w={"full"}
-            backgroundImage="/AbstractBG.jpg"
-            backgroundAttachment="fixed"
-            backgroundSize="cover"
-            backgroundPosition="center"
-            rounded={"md"}
-          />
+          {width < 800 ? (
+            <Box
+              h={"200px"}
+              w={"full"}
+              bgGradient="linear(to-tl, rgba(117,2,136,1) 0%, rgba(9,9,121,1) 55%, rgba(132,0,255,1) 100%)"
+              rounded={"md"}
+            />
+          ) : (
+            <Box
+              h={"200px"}
+              w={"full"}
+              backgroundImage="/AbstractBG.jpg"
+              backgroundAttachment="fixed"
+              backgroundSize="cover"
+              backgroundPosition="center"
+              rounded={"md"}
+            />
+          )}
           <Box
             maxW={"1200px"}
             w={"full"}
@@ -337,15 +356,24 @@ export default function Contact() {
               </SimpleGrid>
             </Flex>
           </Box>
-          <Box
-            h={"50px"}
-            w={"full"}
-            backgroundImage="/AbstractBG.jpg"
-            backgroundAttachment="fixed"
-            backgroundSize="cover"
-            backgroundPosition="center"
-            rounded={"md"}
-          />
+          {width < 800 ? (
+            <Box
+              h={"25px"}
+              w={"full"}
+              bgGradient="linear(to-tl, rgba(117,2,136,1) 0%, rgba(9,9,121,1) 55%, rgba(132,0,255,1) 100%)"
+              rounded={"md"}
+            />
+          ) : (
+            <Box
+              h={"25px"}
+              w={"full"}
+              backgroundImage="/AbstractBG.jpg"
+              backgroundAttachment="fixed"
+              backgroundSize="cover"
+              backgroundPosition="center"
+              rounded={"md"}
+            />
+          )}
         </Stack>
       </Center>
     </>

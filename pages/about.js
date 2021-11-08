@@ -47,15 +47,24 @@ const About = () => {
             </Link>
             <DarkModeSwitchNA />
           </Flex>
-          <Box
-            h={"200px"}
-            w={"full"}
-            backgroundImage="/AbstractBG.jpg"
-            backgroundAttachment="fixed"
-            backgroundSize="cover"
-            backgroundPosition="center"
-            rounded={"md"}
-          />
+          {width < 800 ? (
+            <Box
+              h={"150px"}
+              w={"full"}
+              bgGradient="linear(to-tl, rgba(117,2,136,1) 0%, rgba(9,9,121,1) 55%, rgba(132,0,255,1) 100%)"
+              rounded={"md"}
+            />
+          ) : (
+            <Box
+              h={"150px"}
+              w={"full"}
+              backgroundImage="/AbstractBG.jpg"
+              backgroundAttachment="fixed"
+              backgroundSize="cover"
+              backgroundPosition="center"
+              rounded={"md"}
+            />
+          )}
           <Box
             maxW={"1200px"}
             w={"full"}
@@ -225,15 +234,24 @@ const About = () => {
               </Stack>
             </Center>
           </Box>
-          <Box
-            h={"200px"}
-            w={"full"}
-            backgroundImage="/AbstractBG.jpg"
-            backgroundAttachment="fixed"
-            backgroundSize="cover"
-            backgroundPosition="center"
-            rounded={"md"}
-          />
+          {width < 800 ? (
+            <Box
+              h={"200px"}
+              w={"full"}
+              bgGradient="linear(to-tl, rgba(117,2,136,1) 0%, rgba(9,9,121,1) 55%, rgba(132,0,255,1) 100%)"
+              rounded={"md"}
+            />
+          ) : (
+            <Box
+              h={"200px"}
+              w={"full"}
+              backgroundImage="/AbstractBG.jpg"
+              backgroundAttachment="fixed"
+              backgroundSize="cover"
+              backgroundPosition="center"
+              rounded={"md"}
+            />
+          )}
           <Box
             maxW={"1200px"}
             w={"full"}
@@ -294,15 +312,24 @@ const About = () => {
               </Stack>
             </Stack>
           </Box>
-          <Box
-            h={"25px"}
-            w={"full"}
-            backgroundImage="/AbstractBG.jpg"
-            backgroundAttachment="fixed"
-            backgroundSize="cover"
-            backgroundPosition="center"
-            rounded={"md"}
-          />
+          {width < 800 ? (
+            <Box
+              h={"25px"}
+              w={"full"}
+              bgGradient="linear(to-tl, rgba(117,2,136,1) 0%, rgba(9,9,121,1) 55%, rgba(132,0,255,1) 100%)"
+              rounded={"md"}
+            />
+          ) : (
+            <Box
+              h={"25px"}
+              w={"full"}
+              backgroundImage="/AbstractBG.jpg"
+              backgroundAttachment="fixed"
+              backgroundSize="cover"
+              backgroundPosition="center"
+              rounded={"md"}
+            />
+          )}
         </Stack>
       </Center>
     </>
