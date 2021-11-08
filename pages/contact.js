@@ -71,7 +71,7 @@ export default function Contact() {
           <Box
             h={"180px"}
             w={"full"}
-            backgroundImage="/AbstractBG4.jpg"
+            backgroundImage="/AbstractBG.jpg"
             backgroundAttachment="fixed"
             backgroundSize="cover"
             backgroundPosition="center"
@@ -190,7 +190,7 @@ export default function Contact() {
           <Box
             h={"200px"}
             w={"full"}
-            backgroundImage="/AbstractBG4.jpg"
+            backgroundImage="/AbstractBG.jpg"
             backgroundAttachment="fixed"
             backgroundSize="cover"
             backgroundPosition="center"
@@ -340,7 +340,7 @@ export default function Contact() {
           <Box
             h={"50px"}
             w={"full"}
-            backgroundImage="/AbstractBG4.jpg"
+            backgroundImage="/AbstractBG.jpg"
             backgroundAttachment="fixed"
             backgroundSize="cover"
             backgroundPosition="center"
