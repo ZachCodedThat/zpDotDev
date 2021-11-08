@@ -102,11 +102,7 @@ export default function Contact() {
                     fontSize={"6xl"}
                     fontWeight={700}
                     fontFamily={"body"}
-                    backgroundImage="/AbstractBG.jpg"
-                    backgroundAttachment="fixed"
-                    backgroundSize="cover"
-                    backgroundPosition="center"
-                    backgroundClip="text"
+                    color="#FFECD1"
                   >
                     Contact me
                   </Heading>
@@ -231,11 +227,7 @@ export default function Contact() {
                     fontSize={"6xl"}
                     fontWeight={700}
                     fontFamily={"body"}
-                    backgroundImage="/AbstractBG.jpg"
-                    backgroundAttachment="fixed"
-                    backgroundSize="cover"
-                    backgroundPosition="center"
-                    backgroundClip="text"
+                    color="#FFECD1"
                   >
                     Links
                   </Heading>
