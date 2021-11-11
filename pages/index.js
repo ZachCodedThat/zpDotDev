@@ -8,7 +8,6 @@ import {
   Heading,
   Button,
 } from "@chakra-ui/react";
-import DarkModeSwitch from "@components/DarkModeSwitch";
 
 import Link from "next/link";
 
@@ -23,6 +22,7 @@ import {
 } from "@styles/colorModeStyles";
 
 import { motion } from "framer-motion";
+import DarkModeSwitchNA from "@components/DarkModeSwitchNA";
 
 const Home = () => {
   // const rendered = useRef(false);
@@ -116,9 +116,9 @@ const Home = () => {
                 Contact
               </MotionButton>
             </Link>
-            {width > 600 ? <DarkModeSwitch /> : null}
+            {width > 600 ? <DarkModeSwitchNA /> : null}
           </Flex>
-          {width < 600 ? <DarkModeSwitch /> : null}
+          {width < 600 ? <DarkModeSwitchNA /> : null}
         </Stack>
       </Container>
     </>

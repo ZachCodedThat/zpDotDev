@@ -1,12 +1,10 @@
-import React from "react";
 import {
   useColorMode,
-  useColorModeValue,
   Heading,
   Avatar,
   Box,
   Center,
-  Image,
+  HStack,
   Flex,
   Text,
   Stack,
@@ -17,12 +15,12 @@ import {
   textColor,
   buttonHoverColor,
   buttonTextHoverColor,
-  glassCardBGColor,
 } from "@styles/colorModeStyles";
 import Link from "next/link";
 import DarkModeSwitchNA from "@components/DarkModeSwitchNA";
 import { DownloadIcon } from "@chakra-ui/icons";
 import useWindowDimensions from "@utils/Hooks/useWindowDimension";
+import MapElement from "@components/MapCard";
 
 const About = () => {
   const { colorMode } = useColorMode();
@@ -155,84 +153,47 @@ const About = () => {
             <Stack
               direction={{ base: "column", sm: "column", md: "row" }}
               justify={{ base: "center", sm: "center", md: "center" }}
-              spacing={6}
-              p={6}
+              p={{ base: 0, sm: 3, md: 6 }}
             >
-              <Stack
-                spacing={0}
-                w={"fit-content"}
-                align={"flex-start"}
-                border={"1px solid"}
-                bordercolor="#FFECD1"
-                borderRadius="md"
-                p={2}
-              >
-                <Text fontWeight={600} color="#FFECD1">
-                  About:
-                </Text>
-                <Text fontSize={"sm"} color="#FFECD1">
-                  I am a Frontend Developer with a passion for creating
+              <Stack spacing={10} w={"fit-content"} align={"flex-start"} p={2}>
+                <Text
+                  textAlign={"center"}
+                  fontSize={{ base: "lg", sm: "lg", md: "xl" }}
+                  fontWeight={500}
+                  color="#FFECD1"
+                >
+                  I'm a Frontend Developer with a passion for creating
                   beautiful, intuitive, and responsive user experiences. I have
                   a background in business management and a love for learning
                   new technologies.
                 </Text>
-              </Stack>
-              <Stack
-                w={"fit-content"}
-                wrap={{ base: "wrap", sm: "wrap", md: "nowrap" }}
-                spacing={0}
-                alignItems="center"
-                border={"1px solid"}
-                bordercolor="#FFECD1"
-                borderRadius="md"
-                p={2}
-              >
-                <Text fontWeight={600} color="#FFECD1">
-                  About:
-                </Text>
-                <Text fontSize={"sm"} color="#FFECD1">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Vulputate ut pharetra sit amet aliquam id. Augue eget arcu
-                  dictum varius duis at consectetur. Interdum velit laoreet id
-                  donec ultrices tincidunt arcu non. In eu mi bibendum neque
-                  egestas congue quisque egestas diam. Odio aenean sed
-                  adipiscing diam donec adipiscing tristique risus nec. Lobortis
-                  mattis aliquam faucibus purus in. Euismod nisi porta lorem
-                  mollis. Tincidunt tortor aliquam nulla facilisi cras
-                  fermentum. At in tellus integer feugiat scelerisque varius.
+
+                <Text textAlign={"center"} fontSize={"lg"} color="#FFECD1">
+                  I have found a passion for web development and have been able
+                  to combine the soft skills with the hard skills to be the
+                  complete package for any team.
                 </Text>
               </Stack>
+              <Center>
+                <Stack m={4}>
+                  <Heading
+                    textAlign="center"
+                    fontSize={"4xl"}
+                    fontWeight={800}
+                    color="#FFECD1"
+                  >
+                    Based out of
+                  </Heading>
+
+                  <Box
+                    h={["300px", "300px", "350px", "400px"]}
+                    w={["300px", "300px", "350px", "400px"]}
+                  >
+                    <MapElement />
+                  </Box>
+                </Stack>
+              </Center>
             </Stack>
-            <Center>
-              <Stack
-                w={"fit-content"}
-                wrap={{ base: "wrap", sm: "wrap", md: "nowrap" }}
-                spacing={0}
-                alignItems="center"
-                border={"1px solid"}
-                bordercolor="#FFECD1"
-                borderRadius="md"
-                m={6}
-                p={2}
-              >
-                <Text fontWeight={600} color="#FFECD1">
-                  About2:
-                </Text>
-                <Text fontSize={"md"} color="#FFECD1">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Vulputate ut pharetra sit amet aliquam id. Augue eget arcu
-                  dictum varius duis at consectetur. Interdum velit laoreet id
-                  donec ultrices tincidunt arcu non. In eu mi bibendum neque
-                  egestas congue quisque egestas diam. Odio aenean sed
-                  adipiscing diam donec adipiscing tristique risus nec. Lobortis
-                  mattis aliquam faucibus purus in. Euismod nisi porta lorem
-                  mollis. Tincidunt tortor aliquam nulla facilisi cras
-                  fermentum. At in tellus integer feugiat scelerisque varius.
-                </Text>
-              </Stack>
-            </Center>
           </Box>
           {width < 800 ? (
             <Box
@@ -296,19 +257,7 @@ const About = () => {
                 borderRadius="md"
                 p={2}
               >
-                <Text fontWeight={600} color="#FFECD1">
-                  Test:
-                </Text>
-                <Text fontSize={"md"} color="#FFECD1">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                  cupidatat non proident, sunt in culpa qui officia deserunt
-                  mollit anim id est laborum.{" "}
-                </Text>
+                <HStack></HStack>
               </Stack>
             </Stack>
           </Box>
