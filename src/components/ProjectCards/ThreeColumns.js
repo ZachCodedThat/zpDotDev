@@ -88,11 +88,9 @@ export default function SimpleThreeColumns() {
           ]}
           icon={[
             colorMode === "light"
-              ? gitHubIcon(
-                  "https://github.com/ZachCodedThat/portfolio/tree/adding-pages"
-                )
+              ? gitHubIcon("https://github.com/ZachCodedThat/portfolio/tree/V2")
               : gitHubIconAlt(
-                  "https://github.com/ZachCodedThat/portfolio/tree/adding-pages"
+                  "https://github.com/ZachCodedThat/portfolio/tree/V2"
                 ),
             colorMode === "light" ? vercelIcon("/") : vercelIconAlt("/"),
           ]}

@@ -19,7 +19,7 @@ export const SkillsBar = (props) => {
   };
   return (
     <>
-      <Box width={{ base: "300px", md: "650px", lg: "1000px" }}>
+      <Box width={{ base: "300px", md: "650px", lg: "1100px" }}>
         <Slider {...settings}>
           <Box>
             <Box>
