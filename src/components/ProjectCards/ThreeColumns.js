@@ -53,7 +53,7 @@ export default function SimpleThreeColumns() {
           image="/sample.jpg"
           title={"Personal Blog"}
           text={
-            "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
+            "Blog platform built on NextJS and hooked to a Supabase backend. This also utilizes my custom Slate editor to provide me with an easy dev only way to post content and see how it will look before it is posted."
           }
           tag={[
             colorMode === "light" ? nextjsIcon : nextjsIconAlt,
@@ -79,7 +79,7 @@ export default function SimpleThreeColumns() {
           image="/sample.jpg"
           title={"Personal Portfolio"}
           text={
-            "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
+            "My personal portfolio built on NextJS and themed using Chakra-UI"
           }
           tag={[
             colorMode === "light" ? nextjsIcon : nextjsIconAlt,

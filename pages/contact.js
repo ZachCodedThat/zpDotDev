@@ -277,7 +277,7 @@ export default function Contact() {
                     }
                   />
                 </PopoverTrigger>
-                <PopoverContent color="white" w="max-content">
+                <PopoverContent color={textColor[colorMode]} w="max-content">
                   <PopoverHeader fontWeight="semibold">Email:</PopoverHeader>
                   <PopoverArrow />
 
@@ -296,7 +296,7 @@ export default function Contact() {
                     }
                   />
                 </PopoverTrigger>
-                <PopoverContent color="white" w="max-content">
+                <PopoverContent color={textColor[colorMode]} w="max-content">
                   <PopoverHeader fontWeight="semibold">Phone#:</PopoverHeader>
                   <PopoverArrow />
 
