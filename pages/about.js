@@ -151,7 +151,7 @@ const About = () => {
                     color="#FFECD1"
                     fontWeight={700}
                   >
-                    Hello! The names
+                    Hello! The name's
                   </Text>
                   <Text
                     textAlign={{ base: "center", lg: "left" }}
