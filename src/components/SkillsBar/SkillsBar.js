@@ -1,18 +1,17 @@
-import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Box, Avatar, Tooltip } from "@chakra-ui/react";
-import { reactIcon } from "@components/ProjectCards/Icons";
+import { Box, Avatar, Tooltip, useColorMode } from "@chakra-ui/react";
 
 export const SkillsBar = (props) => {
+  const { colorMode } = useColorMode();
   const settings = {
     dots: false,
     infinite: true,
     autoplay: true,
     autoplaySpeed: 3000,
-    slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToShow: 4,
+    slidesToScroll: 1,
     arrows: false,
     initialSlide: 0,
     pauseonHover: true,
@@ -43,8 +42,8 @@ export const SkillsBar = (props) => {
             </Box>
           </Box>
           <Box>
-            <Box className="skills-bar__bar">
-              <Box className="skills-bar__bar__css">
+            <Box>
+              <Box>
                 <Tooltip
                   hasArrow
                   offset={[0, 8]}
@@ -64,8 +63,8 @@ export const SkillsBar = (props) => {
             </Box>
           </Box>
           <Box>
-            <Box className="skills-bar__bar">
-              <Box className="skills-bar__bar__js">
+            <Box>
+              <Box>
                 <Tooltip
                   hasArrow
                   offset={[0, 8]}
@@ -86,39 +85,113 @@ export const SkillsBar = (props) => {
             </Box>
           </Box>
           <Box>
-            <Box className="skills-bar__bar">
-              <Box className="skills-bar__bar__react">
-                <Avatar
-                  size="lg"
-                  name="react"
-                  bg="transparent"
-                  src="/nextjsicon.svg"
-                />
+            <Box>
+              <Box>
+                <Tooltip
+                  hasArrow
+                  offset={[0, 8]}
+                  label="NextJS"
+                  placement="bottom"
+                  openDelay={345}
+                  closeOnClick={false}
+                >
+                  <Avatar
+                    size="lg"
+                    name="NextJS"
+                    bg="transparent"
+                    src="/NextJS.png"
+                  />
+                </Tooltip>
               </Box>
             </Box>
           </Box>
           <Box>
-            <Box className="skills-bar__bar">
-              <Box className="skills-bar__bar__node">
-                <Avatar
-                  size="lg"
-                  borderRadius="0%"
-                  name="react"
-                  bg="transparent"
-                  src="/slate.avif"
-                />
+            <Box>
+              <Box>
+                <Tooltip
+                  hasArrow
+                  offset={[0, 8]}
+                  label="SlateJS"
+                  placement="bottom"
+                  openDelay={345}
+                  closeOnClick={false}
+                >
+                  <Avatar
+                    size="lg"
+                    borderRadius="0%"
+                    name="SlateJS"
+                    bg="transparent"
+                    src="/slate.jpg"
+                  />
+                </Tooltip>
               </Box>
             </Box>
           </Box>
           <Box>
-            <Box className="skills-bar__bar">
-              <Box className="skills-bar__bar__mongodb">
-                <Avatar
-                  size="lg"
-                  name="react"
-                  bg="transparent"
-                  src="/react.png"
-                />
+            <Box>
+              <Box>
+                <Tooltip
+                  hasArrow
+                  offset={[0, 8]}
+                  label="supabase"
+                  placement="bottom"
+                  openDelay={345}
+                  closeOnClick={false}
+                >
+                  <Avatar
+                    size="lg"
+                    name="supabase"
+                    bg="transparent"
+                    src="/supabase.png"
+                  />
+                </Tooltip>
+              </Box>
+            </Box>
+          </Box>
+          <Box>
+            <Box>
+              <Box>
+                <Tooltip
+                  hasArrow
+                  offset={[0, 8]}
+                  label="Chakra-ui"
+                  placement="bottom"
+                  openDelay={345}
+                  closeOnClick={false}
+                >
+                  <Avatar
+                    size="lg"
+                    name="chakraui"
+                    bg="transparent"
+                    src="/chakraui.svg"
+                  />
+                </Tooltip>
+              </Box>
+            </Box>
+          </Box>
+          <Box>
+            <Box>
+              <Box>
+                <Tooltip
+                  hasArrow
+                  offset={[0, 8]}
+                  label="Vercel"
+                  placement="bottom"
+                  openDelay={345}
+                  closeOnClick={false}
+                >
+                  <Avatar
+                    size="lg"
+                    name="Vercel"
+                    bg="transparent"
+                    borderRadius="0%"
+                    src={
+                      colorMode === "light"
+                        ? "/vercel-icon-dark.png"
+                        : "/vercel-icon-light.png"
+                    }
+                  />
+                </Tooltip>
               </Box>
             </Box>
           </Box>

@@ -132,6 +132,7 @@ export default function Contact() {
                         borderColor="none"
                         isRound={true}
                         _hover={{ color: iconColor[colorMode] }}
+                        _active={{ color: "none" }}
                         icon={<BsDiscord size="60px" />}
                       />
                       <Modal
@@ -170,6 +171,7 @@ export default function Contact() {
                           borderColor="none"
                           isRound={true}
                           _hover={{ color: iconColor[colorMode] }}
+                          _active={{ color: "none" }}
                           icon={<BsGithub size="60px" />}
                         />
                       </ChakraLink>
@@ -184,6 +186,7 @@ export default function Contact() {
                           borderColor="none"
                           isRound={true}
                           _hover={{ color: iconColor[colorMode] }}
+                          _active={{ color: "none" }}
                           icon={<BsLinkedin size="60px" />}
                         />
                       </ChakraLink>
@@ -198,6 +201,7 @@ export default function Contact() {
                           borderColor="none"
                           isRound={true}
                           _hover={{ color: iconColor[colorMode] }}
+                          _active={{ color: "none" }}
                           icon={<BsTwitter size="60px" />}
                         />
                       </ChakraLink>
@@ -212,6 +216,7 @@ export default function Contact() {
                           borderColor="none"
                           isRound={true}
                           _hover={{ color: iconColor[colorMode] }}
+                          _active={{ color: "none" }}
                           icon={<BsTwitch size="60px" />}
                         />
                       </ChakraLink>
@@ -226,6 +231,7 @@ export default function Contact() {
                           borderColor="none"
                           isRound={true}
                           _hover={{ color: iconColor[colorMode] }}
+                          _active={{ color: "none" }}
                           icon={<BsCalendar3 size="60px" />}
                         />
                       </ChakraLink>
@@ -262,19 +268,22 @@ export default function Contact() {
             overflow={"hidden"}
             mb={5}
           >
-            <Flex m={5} flexDirection="row" justifyContent="space-between">
+            <Flex
+              m={5}
+              flexDirection={"row"}
+              justifyContent={"space-between"}
+              alignItems={"center"}
+            >
               <Popover placement="right">
                 <PopoverTrigger>
-                  <Avatar
-                    as="icon"
-                    size="lg"
-                    bg="none"
-                    icon={
-                      <MdOutlineEmail
-                        size="60px"
-                        color="rgba(255,255,255,0.5)"
-                      />
-                    }
+                  <IconButton
+                    aria-label="phone number"
+                    color="rgba(255,255,255,0.5)"
+                    border="hidden"
+                    borderColor="none"
+                    _hover={{ color: iconColor[colorMode] }}
+                    _active={{ color: "none" }}
+                    icon={<MdOutlineEmail size="60px" />}
                   />
                 </PopoverTrigger>
                 <PopoverContent color={textColor[colorMode]} w="max-content">
@@ -287,13 +296,14 @@ export default function Contact() {
 
               <Popover placement="left">
                 <PopoverTrigger>
-                  <Avatar
-                    as="icon"
-                    size="lg"
-                    bg="none"
-                    icon={
-                      <MdLocalPhone size="60px" color="rgba(255,255,255,0.5)" />
-                    }
+                  <IconButton
+                    aria-label="Phone Number"
+                    color="rgba(255,255,255,0.5)"
+                    border="hidden"
+                    borderColor="none"
+                    _hover={{ color: iconColor[colorMode] }}
+                    _active={{ color: "none" }}
+                    icon={<MdLocalPhone size="60px" />}
                   />
                 </PopoverTrigger>
                 <PopoverContent color={textColor[colorMode]} w="max-content">
