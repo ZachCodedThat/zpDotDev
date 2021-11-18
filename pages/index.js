@@ -44,7 +44,7 @@ const Home = () => {
     <>
       <Container maxW={"3xl"}>
         <Image
-          srcSet="/Signature.svg"
+          srcSet={width > 1000 ? "/Signature.svg" : "/SignatureStatic.svg"}
           height={[500, 500, 600, 700, 900]}
           width={[500, 500, 600, 700, 900]}
           marginTop={["-25", "-25", "-25", "-15", "-10"]}
