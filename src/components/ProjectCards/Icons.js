@@ -10,7 +10,7 @@ import { BsGithub } from "react-icons/bs";
 const MotionAvatar = motion(Avatar);
 const MotionIconButton = motion(IconButton);
 
-export const reactIcon = (
+export const reactIcon = (filter) => (
   <Tooltip
     hasArrow
     offset={[0, 8]}
@@ -25,7 +25,7 @@ export const reactIcon = (
         scale: 1.2,
         transition: { duration: 0.5 },
       }}
-      filter="grayscale(100%)"
+      filter={filter}
       size="md"
       name="react"
       bg="transparent"
@@ -34,7 +34,7 @@ export const reactIcon = (
   </Tooltip>
 );
 
-export const slateIcon = (
+export const slateIcon = (filter) => (
   <Tooltip
     hasArrow
     offset={[0, 12]}
@@ -50,7 +50,7 @@ export const slateIcon = (
         transition: { duration: 0.5 },
       }}
       size="sm"
-      filter="grayscale(100%)"
+      filter={filter}
       borderRadius="2px"
       name="react"
       bg="transparent"
@@ -59,7 +59,7 @@ export const slateIcon = (
   </Tooltip>
 );
 
-export const jsIcon = (
+export const jsIcon = (filter) => (
   <Tooltip
     hasArrow
     offset={[0, 12]}
@@ -75,7 +75,7 @@ export const jsIcon = (
         transition: { duration: 0.5 },
       }}
       size="sm"
-      filter="grayscale(100%)"
+      filter={filter}
       borderRadius="none"
       name="react"
       bg="transparent"
@@ -84,7 +84,7 @@ export const jsIcon = (
   </Tooltip>
 );
 
-export const chakraIcon = (
+export const chakraIcon = (filter) => (
   <Tooltip
     hasArrow
     offset={[0, 12]}
@@ -100,7 +100,7 @@ export const chakraIcon = (
         transition: { duration: 0.5 },
       }}
       size="sm"
-      filter="grayscale(100%)"
+      filter={filter}
       borderRadius="none"
       name="react"
       bg="transparent"
@@ -108,7 +108,7 @@ export const chakraIcon = (
     />
   </Tooltip>
 );
-export const nextjsIcon = (
+export const nextjsIcon = (filter) => (
   <Tooltip
     hasArrow
     offset={[0, 12]}
@@ -124,14 +124,14 @@ export const nextjsIcon = (
         transition: { duration: 0.5 },
       }}
       size="sm"
-      filter="grayscale(100%)"
+      filter={filter}
       borderRadius="none"
       bg="transparent"
-      src="/nextjsIcon.svg"
+      src="/NextJS.png"
     />
   </Tooltip>
 );
-export const nextjsIconAlt = (
+export const nextjsIconAlt = (filter) => (
   <Tooltip
     hasArrow
     offset={[0, 12]}
@@ -147,14 +147,13 @@ export const nextjsIconAlt = (
         transition: { duration: 0.5 },
       }}
       size="sm"
-      filter="grayscale(100%)"
-      borderRadius="none"
-      bg="transparent"
-      src="/nextjsIconAlt.svg"
+      filter={filter}
+      src="/NextJS.png"
+      bg="#FFECD1"
     />
   </Tooltip>
 );
-export const supabaseIcon = (
+export const supabaseIcon = (filter) => (
   <Tooltip
     hasArrow
     offset={[0, 12]}
@@ -170,10 +169,10 @@ export const supabaseIcon = (
         transition: { duration: 0.5 },
       }}
       size="sm"
-      filter="grayscale(100%)"
+      filter={filter}
       borderRadius="none"
       bg="transparent"
-      src="/supabase.svg"
+      src="/supabase.png"
     />
   </Tooltip>
 );
@@ -248,7 +247,7 @@ export const vercelIcon = (vercelLink) => (
       size="sm"
       borderRadius="none"
       bg="transparent"
-      src="/vercel-logo.svg"
+      src="/vercel-icon-dark.png"
     />
   </ChakraLink>
 );
@@ -263,7 +262,7 @@ export const vercelIconAlt = (vercelLink) => (
       size="sm"
       borderRadius="none"
       bg="transparent"
-      src="/vercel-logoAlt.svg"
+      src="/vercel-icon-light.png"
     />
   </ChakraLink>
 );

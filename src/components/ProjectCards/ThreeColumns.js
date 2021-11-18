@@ -1,4 +1,4 @@
-import { Box, SimpleGrid, Divider, useColorMode } from "@chakra-ui/react";
+import { Box, SimpleGrid, Avatar, useColorMode } from "@chakra-ui/react";
 
 import { Feature } from "./projectFeatureCard";
 
@@ -17,10 +17,15 @@ import {
   vercelIconAlt,
 } from "./Icons";
 
+import useWindowDimensions from "@utils/Hooks/useWindowDimension";
+
 export default function SimpleThreeColumns() {
   const { colorMode } = useColorMode();
+
+  const { width } = useWindowDimensions();
+
   return (
-    <Box p={{ base: 2, sm: 3, md: 6, lg: 8, xl: 20 }}>
+    <Box p={{ base: 2, sm: 3, md: 6, lg: 8, xl: 25 }}>
       <SimpleGrid
         columns={{ base: 1, md: 3 }}
         columnGap={20}
@@ -32,12 +37,25 @@ export default function SimpleThreeColumns() {
           text={
             "Fully custom Slate editor capable of live MD preview which will show you exactly what your post will look like on the page."
           }
-          tag={[
-            colorMode === "light" ? nextjsIcon : nextjsIconAlt,
-            slateIcon,
-            reactIcon,
-            chakraIcon,
-          ]}
+          tag={
+            width > 1100
+              ? [
+                  colorMode === "light"
+                    ? nextjsIcon("grayscale(100%)")
+                    : nextjsIconAlt("grayscale(100%)"),
+                  slateIcon("grayscale(100%)"),
+                  reactIcon("grayscale(100%)"),
+                  chakraIcon("grayscale(100%)"),
+                ]
+              : [
+                  colorMode === "light"
+                    ? nextjsIcon("grayscale(0%)")
+                    : nextjsIconAlt("grayscale(0%)"),
+                  slateIcon("grayscale(0%)"),
+                  reactIcon("grayscale(0%)"),
+                  chakraIcon("grayscale(0%)"),
+                ]
+          }
           icon={[
             colorMode === "light"
               ? gitHubIcon(
@@ -55,12 +73,27 @@ export default function SimpleThreeColumns() {
           text={
             "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
           }
-          tag={[
-            colorMode === "light" ? nextjsIcon : nextjsIconAlt,
-            slateIcon,
-            chakraIcon,
-            supabaseIcon,
-          ]}
+          tag={
+            width > 1100
+              ? [
+                  colorMode === "light"
+                    ? nextjsIcon("grayscale(100%)")
+                    : nextjsIconAlt("grayscale(100%)"),
+                  slateIcon("grayscale(100%)"),
+                  reactIcon("grayscale(100%)"),
+                  chakraIcon("grayscale(100%)"),
+                  supabaseIcon("grayscale(100%)"),
+                ]
+              : [
+                  colorMode === "light"
+                    ? nextjsIcon("grayscale(0%)")
+                    : nextjsIconAlt("grayscale(0%)"),
+                  slateIcon("grayscale(0%)"),
+                  reactIcon("grayscale(0%)"),
+                  chakraIcon("grayscale(0%)"),
+                  supabaseIcon("grayscale(0%)"),
+                ]
+          }
           icon={[
             colorMode === "light"
               ? gitHubIcon(
@@ -81,11 +114,23 @@ export default function SimpleThreeColumns() {
           text={
             "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
           }
-          tag={[
-            colorMode === "light" ? nextjsIcon : nextjsIconAlt,
-            reactIcon,
-            chakraIcon,
-          ]}
+          tag={
+            width > 1100
+              ? [
+                  colorMode === "light"
+                    ? nextjsIcon("grayscale(100%)")
+                    : nextjsIconAlt("grayscale(100%)"),
+                  reactIcon("grayscale(100%)"),
+                  chakraIcon("grayscale(100%)"),
+                ]
+              : [
+                  colorMode === "light"
+                    ? nextjsIcon("grayscale(0%)")
+                    : nextjsIconAlt("grayscale(0%)"),
+                  reactIcon("grayscale(0%)"),
+                  chakraIcon("grayscale(0%)"),
+                ]
+          }
           icon={[
             colorMode === "light"
               ? gitHubIcon(
