@@ -54,7 +54,7 @@ export const slateIcon = (filter) => (
       borderRadius="2px"
       name="react"
       bg="transparent"
-      src="/slate.avif"
+      src="/slate.jpg"
     />
   </Tooltip>
 );
