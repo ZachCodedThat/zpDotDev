@@ -104,8 +104,12 @@ export default function SimpleThreeColumns() {
                 ),
             ,
             colorMode === "light"
-              ? vercelIcon("https://zachs-blog.vercel.app/")
-              : vercelIconAlt("https://zachs-blog.vercel.app/"),
+              ? vercelIcon(
+                  "https://zachs-blog-71vvpyowm-zachcodedthat.vercel.app/"
+                )
+              : vercelIconAlt(
+                  "https://zachs-blog-71vvpyowm-zachcodedthat.vercel.app/"
+                ),
           ]}
         />
         <Feature

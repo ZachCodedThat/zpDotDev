@@ -147,7 +147,7 @@ const About = () => {
                   <Text
                     textAlign={{ base: "center", md: "left" }}
                     justifyContent={"center"}
-                    fontSize={"70px"}
+                    fontSize={{ base: "2xl", md: "3xl", lg: "6xl", xl: "70px" }}
                     color="#FFECD1"
                     fontWeight={700}
                   >
@@ -156,7 +156,7 @@ const About = () => {
                   <Text
                     textAlign={{ base: "center", lg: "left" }}
                     justifyContent={"center"}
-                    fontSize={"70px"}
+                    fontSize={{ base: "4xl", md: "4xl", lg: "6xl", xl: "70px" }}
                     color="#FFECD1"
                     fontWeight={700}
                   >
@@ -241,7 +241,7 @@ const About = () => {
               pl={2}
             >
               <Flex>
-                <Stack spacing={0} m={2} mt={12}>
+                <Stack m={2} mt={12}>
                   <Heading
                     fontSize={"3xl"}
                     fontWeight={500}
