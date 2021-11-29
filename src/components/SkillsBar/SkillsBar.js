@@ -19,201 +19,184 @@ export const SkillsBar = (props) => {
   };
   return (
     <>
-      <Box width={{ base: "300px", md: "650px", lg: "900px", xl: "1100px" }}>
+      <Box
+        width={{ base: "300px", md: "650px", lg: "900px", xl: "1100px" }}
+        transform={{
+          base: "translateX(10px)",
+          md: "translateX(60px)",
+          lg: "translateX(80px)",
+          xl: "translateX(80px)",
+        }}
+      >
         <Slider {...settings}>
-          <Flex>
-            <Tooltip
-              hasArrow
-              offset={[0, 8]}
-              label="React"
-              placement="bottom"
-              openDelay={345}
-              closeOnClick={false}
-            >
-              <Avatar
-                size="lg"
-                name="react"
-                bg="transparent"
-                src="/react.png"
-              />
-            </Tooltip>
-          </Flex>
+          <Tooltip
+            hasArrow
+            offset={[0, 8]}
+            label="React"
+            placement="bottom"
+            openDelay={345}
+            closeOnClick={false}
+          >
+            <Avatar size="lg" name="react" bg="transparent" src="/react.png" />
+          </Tooltip>
 
-          <Flex alignItems={"center"} justifyContent={"center"}>
-            <Tooltip
-              hasArrow
-              offset={[0, 8]}
-              label="CSS"
-              placement="bottom"
-              openDelay={345}
-              closeOnClick={false}
-            >
-              <Avatar size="lg" name="react" bg="transparent" src="/css.png" />
-            </Tooltip>
-          </Flex>
+          <Tooltip
+            hasArrow
+            offset={[0, 8]}
+            label="CSS"
+            placement="bottom"
+            openDelay={345}
+            closeOnClick={false}
+          >
+            <Avatar size="lg" name="react" bg="transparent" src="/css.png" />
+          </Tooltip>
 
-          <Flex alignItems={"center"} justifyContent={"center"}>
-            <Tooltip
-              hasArrow
-              offset={[0, 8]}
-              label="JavaScript"
-              placement="bottom"
-              openDelay={345}
-              closeOnClick={false}
-            >
-              <Avatar
-                size="lg"
-                borderRadius="0%"
-                name="Javascript"
-                bg="transparent"
-                src="/JSicon.jpg"
-              />
-            </Tooltip>
-          </Flex>
+          <Tooltip
+            hasArrow
+            offset={[0, 8]}
+            label="JavaScript"
+            placement="bottom"
+            openDelay={345}
+            closeOnClick={false}
+          >
+            <Avatar
+              size="lg"
+              borderRadius="0%"
+              name="Javascript"
+              bg="transparent"
+              src="/JSicon.jpg"
+            />
+          </Tooltip>
 
-          <Flex alignItems={"center"} justifyContent={"center"}>
-            <Tooltip
-              hasArrow
-              offset={[0, 8]}
-              label="NextJS"
-              placement="bottom"
-              openDelay={345}
-              closeOnClick={false}
-            >
-              <Avatar
-                size="lg"
-                name="NextJS"
-                bg="transparent"
-                src="/NextJS.png"
-              />
-            </Tooltip>
-          </Flex>
+          <Tooltip
+            hasArrow
+            offset={[0, 8]}
+            label="NextJS"
+            placement="bottom"
+            openDelay={345}
+            closeOnClick={false}
+          >
+            <Avatar
+              size="lg"
+              name="NextJS"
+              bg="transparent"
+              src="/NextJS.png"
+            />
+          </Tooltip>
 
-          <Flex alignItems={"center"} justifyContent={"center"}>
-            <Tooltip
-              hasArrow
-              offset={[0, 8]}
-              label="SlateJS"
-              placement="bottom"
-              openDelay={345}
-              closeOnClick={false}
-            >
-              <Avatar
-                size="lg"
-                borderRadius="0%"
-                name="SlateJS"
-                bg="transparent"
-                src="/slate.jpg"
-              />
-            </Tooltip>
-          </Flex>
+          <Tooltip
+            hasArrow
+            offset={[0, 8]}
+            label="SlateJS"
+            placement="bottom"
+            openDelay={345}
+            closeOnClick={false}
+          >
+            <Avatar
+              size="lg"
+              borderRadius="0%"
+              name="SlateJS"
+              bg="transparent"
+              src="/slate.jpg"
+            />
+          </Tooltip>
 
-          <Flex alignItems={"center"} justifyContent={"center"}>
-            <Tooltip
-              hasArrow
-              offset={[0, 8]}
-              label="supabase"
-              placement="bottom"
-              openDelay={345}
-              closeOnClick={false}
-            >
-              <Avatar
-                size="lg"
-                name="supabase"
-                bg="transparent"
-                src="/supabase.png"
-              />
-            </Tooltip>
-          </Flex>
+          <Tooltip
+            hasArrow
+            offset={[0, 8]}
+            label="supabase"
+            placement="bottom"
+            openDelay={345}
+            closeOnClick={false}
+          >
+            <Avatar
+              size="lg"
+              name="supabase"
+              bg="transparent"
+              src="/supabase.png"
+            />
+          </Tooltip>
 
-          <Flex alignItems={"center"} justifyContent={"center"}>
-            <Tooltip
-              hasArrow
-              offset={[0, 8]}
-              label="Chakra-ui"
-              placement="bottom"
-              openDelay={345}
-              closeOnClick={false}
-            >
-              <Avatar
-                size="lg"
-                name="chakraui"
-                bg="transparent"
-                src="/chakraui.svg"
-              />
-            </Tooltip>
-          </Flex>
-          <Flex alignItems={"center"} justifyContent={"center"}>
-            <Tooltip
-              hasArrow
-              offset={[0, 8]}
-              label="NodeJs"
-              placement="bottom"
-              openDelay={345}
-              closeOnClick={false}
-            >
-              <Avatar
-                size="lg"
-                name="NodeJs"
-                bg="transparent"
-                src="/nodeJs.png"
-              />
-            </Tooltip>
-          </Flex>
-          <Flex alignItems={"center"} justifyContent={"center"}>
-            <Tooltip
-              hasArrow
-              offset={[0, 8]}
-              label="Git"
-              placement="bottom"
-              openDelay={345}
-              closeOnClick={false}
-            >
-              <Avatar size="lg" name="Git" bg="transparent" src="/Git.png" />
-            </Tooltip>
-          </Flex>
+          <Tooltip
+            hasArrow
+            offset={[0, 8]}
+            label="Chakra-ui"
+            placement="bottom"
+            openDelay={345}
+            closeOnClick={false}
+          >
+            <Avatar
+              size="lg"
+              name="chakraui"
+              bg="transparent"
+              src="/chakraui.svg"
+            />
+          </Tooltip>
 
-          <Flex alignItems={"center"}>
-            <Tooltip
-              hasArrow
-              offset={[0, 8]}
-              label="HTML5"
-              placement="bottom"
-              openDelay={345}
-              closeOnClick={false}
-            >
-              <Avatar
-                size="md"
-                name="HTML5"
-                bg="transparent"
-                borderRadius="0%"
-                src="/Html.png"
-              />
-            </Tooltip>
-          </Flex>
+          <Tooltip
+            hasArrow
+            offset={[0, 8]}
+            label="NodeJs"
+            placement="bottom"
+            openDelay={345}
+            closeOnClick={false}
+          >
+            <Avatar
+              size="lg"
+              name="NodeJs"
+              bg="transparent"
+              src="/nodeJs.png"
+            />
+          </Tooltip>
 
-          <Flex alignItems={"center"} justifyContent={"center"}>
-            <Tooltip
-              hasArrow
-              offset={[0, 8]}
-              label="Vercel"
-              placement="bottom"
-              openDelay={345}
-              closeOnClick={false}
-            >
-              <Avatar
-                size="lg"
-                name="Vercel"
-                bg="transparent"
-                borderRadius="0%"
-                src={
-                  colorMode === "light"
-                    ? "/vercel-icon-dark.png"
-                    : "/vercel-icon-light.png"
-                }
-              />
-            </Tooltip>
-          </Flex>
+          <Tooltip
+            hasArrow
+            offset={[0, 8]}
+            label="Git"
+            placement="bottom"
+            openDelay={345}
+            closeOnClick={false}
+          >
+            <Avatar size="lg" name="Git" bg="transparent" src="/Git.png" />
+          </Tooltip>
+
+          <Tooltip
+            hasArrow
+            offset={[0, 8]}
+            label="HTML5"
+            placement="bottom"
+            openDelay={345}
+            closeOnClick={false}
+          >
+            <Avatar
+              size="md"
+              name="HTML5"
+              bg="transparent"
+              borderRadius="0%"
+              src="/Html.png"
+            />
+          </Tooltip>
+
+          <Tooltip
+            hasArrow
+            offset={[0, 8]}
+            label="Vercel"
+            placement="bottom"
+            openDelay={345}
+            closeOnClick={false}
+          >
+            <Avatar
+              size="lg"
+              name="Vercel"
+              bg="transparent"
+              borderRadius="0%"
+              src={
+                colorMode === "light"
+                  ? "/vercel-icon-dark.png"
+                  : "/vercel-icon-light.png"
+              }
+            />
+          </Tooltip>
         </Slider>
       </Box>
     </>
