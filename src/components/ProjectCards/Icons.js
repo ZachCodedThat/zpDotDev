@@ -131,6 +131,31 @@ export const nextjsIcon = (filter) => (
     />
   </Tooltip>
 );
+
+export const htmlIcon = (filter) => (
+  <Tooltip
+    hasArrow
+    offset={[0, 12]}
+    label="HTML5"
+    placement="bottom"
+    openDelay={345}
+    closeOnClick={false}
+  >
+    <MotionAvatar
+      whileHover={{
+        filter: "grayscale(0%)",
+        scale: 1.2,
+        transition: { duration: 0.5 },
+      }}
+      size="sm"
+      filter={filter}
+      borderRadius="none"
+      bg="transparent"
+      src="/html.png"
+    />
+  </Tooltip>
+);
+
 export const nextjsIconAlt = (filter) => (
   <Tooltip
     hasArrow

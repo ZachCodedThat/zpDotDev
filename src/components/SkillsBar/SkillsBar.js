@@ -143,6 +143,54 @@ export const SkillsBar = (props) => {
               />
             </Tooltip>
           </Flex>
+          <Flex alignItems={"center"} justifyContent={"center"}>
+            <Tooltip
+              hasArrow
+              offset={[0, 8]}
+              label="NodeJs"
+              placement="bottom"
+              openDelay={345}
+              closeOnClick={false}
+            >
+              <Avatar
+                size="lg"
+                name="NodeJs"
+                bg="transparent"
+                src="/nodeJs.png"
+              />
+            </Tooltip>
+          </Flex>
+          <Flex alignItems={"center"} justifyContent={"center"}>
+            <Tooltip
+              hasArrow
+              offset={[0, 8]}
+              label="Git"
+              placement="bottom"
+              openDelay={345}
+              closeOnClick={false}
+            >
+              <Avatar size="lg" name="Git" bg="transparent" src="/Git.png" />
+            </Tooltip>
+          </Flex>
+
+          <Flex alignItems={"center"}>
+            <Tooltip
+              hasArrow
+              offset={[0, 8]}
+              label="HTML5"
+              placement="bottom"
+              openDelay={345}
+              closeOnClick={false}
+            >
+              <Avatar
+                size="md"
+                name="HTML5"
+                bg="transparent"
+                borderRadius="0%"
+                src="/Html.png"
+              />
+            </Tooltip>
+          </Flex>
 
           <Flex alignItems={"center"} justifyContent={"center"}>
             <Tooltip
