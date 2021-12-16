@@ -105,10 +105,10 @@ export default function SimpleThreeColumns() {
             ,
             colorMode === "light"
               ? vercelIcon(
-                  "https://zachs-blog-71vvpyowm-zachcodedthat.vercel.app/"
+                  "https://zachs-blog-bxzhdxv85-zachcodedthat.vercel.app/"
                 )
               : vercelIconAlt(
-                  "https://zachs-blog-71vvpyowm-zachcodedthat.vercel.app/"
+                  "https://zachs-blog-bxzhdxv85-zachcodedthat.vercel.app/"
                 ),
           ]}
         />
