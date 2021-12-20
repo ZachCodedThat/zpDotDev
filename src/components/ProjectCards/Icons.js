@@ -54,7 +54,7 @@ export const slateIcon = (filter) => (
       borderRadius="2px"
       name="react"
       bg="transparent"
-      src="/slate.jpg"
+      src="/slate.png"
     />
   </Tooltip>
 );
@@ -79,7 +79,7 @@ export const jsIcon = (filter) => (
       borderRadius="none"
       name="react"
       bg="transparent"
-      src="/JSicon.jpg"
+      src="/JSicon.png"
     />
   </Tooltip>
 );

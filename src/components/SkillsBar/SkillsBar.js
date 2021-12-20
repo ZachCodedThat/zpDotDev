@@ -64,7 +64,7 @@ export const SkillsBar = (props) => {
               borderRadius="0%"
               name="Javascript"
               bg="transparent"
-              src="/JSicon.jpg"
+              src="/JSicon.png"
             />
           </Tooltip>
 
@@ -97,7 +97,7 @@ export const SkillsBar = (props) => {
               borderRadius="0%"
               name="SlateJS"
               bg="transparent"
-              src="/slate.jpg"
+              src="/slate.png"
             />
           </Tooltip>
 

@@ -11,7 +11,7 @@ import { motion } from "framer-motion";
 
 const MotionStack = motion(Stack);
 
-export const Feature = ({ title, text, image, tag, icon }) => {
+export const Feature = ({ title, text, image, tag, icon, preview }) => {
   return (
     <MotionStack>
       <HStack alignItems="flex-start" justifyContent="space-between">
@@ -28,6 +28,11 @@ export const Feature = ({ title, text, image, tag, icon }) => {
       <Flex align={"center"} justify={"center"} mb={1}>
         <ChakraImage srcSet={image} borderRadius="5%" p="10px" />
       </Flex>
+      {preview ? (
+        <Flex align={"center"} justify={"center"} mb={1}>
+          <iframe title="custom editor" src={preview} />
+        </Flex>
+      ) : null}
       <Text
         fontWeight={600}
         fontSize={{ base: "lg", sm: "xl" }}

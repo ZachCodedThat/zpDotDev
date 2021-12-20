@@ -82,7 +82,7 @@ const About = () => {
               <Flex>
                 <Avatar
                   size={"2xl"}
-                  src={"/headshot.JPG"}
+                  src={"/headshot.webp"}
                   alt={"Zach"}
                   ml={{ base: "0", sm: "2", md: "2" }}
                   css={{

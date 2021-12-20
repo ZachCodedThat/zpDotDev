@@ -28,7 +28,7 @@ const Home = () => {
   // const rendered = useRef(false);
 
   // const MotionBox = rendered.current ? Box : motion(Box);
-  // const SigImage = rendered.current ? "/SignatureStatic.svg" : "/Signature.svg";
+  // const SigImage = rendered.current ? "/signatureStatic.png" : "/Signature.svg";
 
   // useEffect(() => {
   //   rendered.current = true;
@@ -43,12 +43,21 @@ const Home = () => {
   return (
     <>
       <Container maxW={"3xl"}>
-        <Image
-          srcSet={width > 1000 ? "/Signature.svg" : "/SignatureStatic.svg"}
-          height={[500, 500, 600, 700, 900]}
-          width={[500, 500, 600, 700, 900]}
-          marginTop={["-25", "-25", "-25", "-15", "-10"]}
-        />
+        {width > 1000 ? (
+          <Image
+            srcSet="/Signature.svg"
+            height={[500, 500, 600, 700, 900]}
+            width={[500, 500, 600, 700, 900]}
+            marginTop={["-25", "-25", "-25", "-15", "-10"]}
+          />
+        ) : (
+          <Image
+            srcSet="/signatureStatic.png"
+            height="auto"
+            width="auto"
+            m="auto"
+          />
+        )}
         <Stack
           as={Box}
           textAlign={"center"}
@@ -59,7 +68,7 @@ const Home = () => {
             initial="hidden"
             animate="visible"
             exit="exit"
-            marginTop={["-10", "-15", "-20", "-25", "-32"]}
+            marginTop={["10", "15", "20", "-25", "-32"]}
           >
             <Heading
               fontWeight={600}
