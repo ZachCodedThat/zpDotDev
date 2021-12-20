@@ -52,7 +52,7 @@ const Home = () => {
           />
         ) : (
           <Image
-            srcSet="/signatureStatic.png"
+            srcSet="/SignatureStatic.png"
             height="auto"
             width="auto"
             m="auto"
