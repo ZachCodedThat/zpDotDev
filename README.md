@@ -1,34 +1,34 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# [![Website](https://img.shields.io/website?label=zacharyp.dev&url=https%3A%2F%2Fwww.zacharyp.dev%2F)](https://www.zacharyp.dev/) 👈 Check it out!!
 
-## Getting Started
+[![Twitter Follow](https://img.shields.io/twitter/follow/TweetZachBack?style=social)](https://twitter.com/TweetZachBack)
 
-First, run the development server:
+## This is my personal portfolio
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- A home for all my contact and current projects.
+- New branches will be used to try out new tech
+- 2022 🥅: - Fully integrate my [blogs][blog] feed into main page, explore a single page design,
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### Built using:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+<img align="left" alt="Visual Studio Code" width="50px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/visual-studio-code/visual-studio-code.png" title="VScode"/>
+<img align="left" alt="NextJS" width="50px" src="https://api.iconify.design/akar-icons/nextjs-fill.svg?color=white" title="Next.JS" />
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+<img align="left" alt="React" width="50px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png" title="React" />
+<img align="left" alt="Node.js" width="50px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png" title="Node.JS" />
 
-## Learn More
+<img align="left" alt="Chakra-ui" width="50px" src="https://api.iconify.design/simple-icons/chakraui.svg?color=white" title="Chakra-UI" />
 
-To learn more about Next.js, take a look at the following resources:
+<img align="left" alt="Supabase" width="50px" src="https://api.iconify.design/simple-icons/supabase.svg?color=white" title="Supabase" />
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<br />
+<br />
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[website]: https://zacharyp.dev
+[websitecontact]: https://www.zacharyp.dev/contact
+[twitter]: https://twitter.com/TweetZachBack
+[linkedin]: https://www.linkedin.com/in/zachary-przybilski/
+[blog]: https://dev.to/zacharyp
