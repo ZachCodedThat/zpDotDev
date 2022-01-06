@@ -40,7 +40,10 @@ const Home = () => {
 
   const { colorMode } = useColorMode();
 
+  console.log("rendered");
+
   return (
+    // TODO: Make clean static image and replace this mess with it
     <>
       <Container maxW={"3xl"}>
         {width > 1000 ? (
