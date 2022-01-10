@@ -7,11 +7,26 @@ import {
   HStack,
 } from "@chakra-ui/react";
 
+import { useState } from "react";
+
 import { motion } from "framer-motion";
 
 const MotionStack = motion(Stack);
 
-export const Feature = ({ title, text, image, tag, icon, preview }) => {
+export const Feature = ({
+  title,
+  text,
+  image,
+  tag,
+  icon,
+  preview,
+  staticImage,
+}) => {
+  const [isHovered, setIsHovered] = useState(false);
+  console.log(isHovered);
+
+  const handleMouse = () => setIsHovered(!isHovered);
+
   return (
     <MotionStack>
       <HStack alignItems="flex-start" justifyContent="space-between">
@@ -26,7 +41,13 @@ export const Feature = ({ title, text, image, tag, icon, preview }) => {
           : null}
       </HStack>
       <Flex align={"center"} justify={"center"} mb={1}>
-        <ChakraImage srcSet={image} borderRadius="5%" p="10px" />
+        <ChakraImage
+          src={isHovered ? image : staticImage}
+          onMouseEnter={handleMouse}
+          onMouseLeave={handleMouse}
+          borderRadius="5%"
+          p="10px"
+        />
       </Flex>
       {preview ? (
         <Flex align={"center"} justify={"center"} mb={1}>

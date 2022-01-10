@@ -32,7 +32,8 @@ export default function SimpleThreeColumns() {
         rowGap={{ base: 10 }}
       >
         <Feature
-          image="/sample.jpg"
+          image="https://res.cloudinary.com/dey85zjmf/image/upload/v1641841650/blog/editorGif_o1suhb.gif"
+          staticImage="https://res.cloudinary.com/dey85zjmf/image/upload/v1641844710/blog/blogPlatformStatic_fdssjq.png"
           title={"Customized Slate Editor"}
           text={
             "Fully custom Slate editor capable of live MD preview which will show you exactly what your post will look like on the page."
@@ -68,7 +69,8 @@ export default function SimpleThreeColumns() {
           ]}
         />
         <Feature
-          image="/sample.jpg"
+          image="https://res.cloudinary.com/dey85zjmf/image/upload/v1641842995/blog/blogGif_e5pxzt.gif"
+          staticImage="https://res.cloudinary.com/dey85zjmf/image/upload/v1641844710/blog/blogStatic_abzsea.png"
           title={"Personal Blog"}
           text={
             "Blog platform built on NextJS and hooked to a Supabase backend. This also utilizes my custom Slate editor to provide me with an easy dev only way to post content and see how it will look before it is posted."
@@ -113,7 +115,8 @@ export default function SimpleThreeColumns() {
           ]}
         />
         <Feature
-          image="/sample.jpg"
+          image="https://res.cloudinary.com/dey85zjmf/image/upload/v1641842941/blog/profileGif_dys6kh.gif"
+          staticImage="https://res.cloudinary.com/dey85zjmf/image/upload/v1641844710/blog/PortfolioStatic_vsxtg8.png"
           title={"Personal Portfolio"}
           text={
             "My personal portfolio built on NextJS and themed using Chakra-UI"
