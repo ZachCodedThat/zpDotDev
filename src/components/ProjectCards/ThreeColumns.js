@@ -33,7 +33,7 @@ export default function SimpleThreeColumns() {
       >
         <Feature
           image="https://res.cloudinary.com/dey85zjmf/image/upload/v1641841650/blog/editorGif_o1suhb.gif"
-          staticImage="https://res.cloudinary.com/dey85zjmf/image/upload/v1641844710/blog/blogPlatformStatic_fdssjq.png"
+          staticImage="https://res.cloudinary.com/dey85zjmf/image/upload/v1641851034/blog/blogPlatformStatic_hg5qmf.png"
           title={"Customized Slate Editor"}
           text={
             "Fully custom Slate editor capable of live MD preview which will show you exactly what your post will look like on the page."
