@@ -140,10 +140,8 @@ export default function SimpleThreeColumns() {
           }
           icon={[
             colorMode === "light"
-              ? gitHubIcon("https://github.com/ZachCodedThat/portfolio/tree/V2")
-              : gitHubIconAlt(
-                  "https://github.com/ZachCodedThat/portfolio/tree/V2"
-                ),
+              ? gitHubIcon("https://github.com/ZachCodedThat/portfolio")
+              : gitHubIconAlt("https://github.com/ZachCodedThat/portfolio"),
             colorMode === "light" ? vercelIcon("/") : vercelIconAlt("/"),
           ]}
         />
@@ -151,6 +149,6 @@ export default function SimpleThreeColumns() {
     </Box>
   );
 }
-
+//TODO:Fix Github Icon for project cards, does not work on mobile platforms
 // https://codesandbox.io/s/custom-slatejs-editor-wggz8?file=/src/components/CreatePost.js
 // Code sandbox for editor.
