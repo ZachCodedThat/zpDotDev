@@ -46,21 +46,13 @@ const Home = () => {
     // TODO: Make clean static image and replace this mess with it
     <>
       <Container maxW={"3xl"}>
-        {width > 1000 ? (
-          <Image
-            src="/Signature.svg"
-            height={[500, 500, 600, 700, 900]}
-            width={[500, 500, 600, 700, 900]}
-            marginTop={["-25", "-25", "-25", "-15", "-10"]}
-          />
-        ) : (
-          <Image
-            src="/SignatureStatic.png"
-            height="auto"
-            width="auto"
-            m="auto"
-          />
-        )}
+        <Image
+          src={width < 1000 ? "/SignatureStatic.png" : "/Signature.svg"}
+          height={[500, 500, 600, 700, 900]}
+          width={[500, 500, 600, 700, 900]}
+          marginTop={["-25", "-25", "-25", "-15", "-10"]}
+        />
+
         <Stack
           as={Box}
           textAlign={"center"}
