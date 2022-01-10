@@ -43,14 +43,15 @@ const Home = () => {
   console.log("rendered");
 
   return (
-    // TODO: Make clean static image and replace this mess with it
     <>
       <Container maxW={"3xl"}>
         <Image
           src={width < 1000 ? "/SignatureStatic.png" : "/Signature.svg"}
-          height={[500, 500, 600, 700, 900]}
-          width={[500, 500, 600, 700, 900]}
-          marginTop={["-25", "-25", "-25", "-15", "-10"]}
+          height={[300, 400, 500, 600, 900]}
+          width={[300, 400, 500, 600, 900]}
+          mt={["25", "25", "25", "15", "-25"]}
+          mb={["25", "20", "15", "10", "0"]}
+          mx="auto"
         />
 
         <Stack
