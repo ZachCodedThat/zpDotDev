@@ -1,5 +1,7 @@
 import { Box, Button, Heading, Stack, useColorMode } from "@chakra-ui/react";
 
+import { NextSeo } from "next-seo";
+
 import {
   textColor,
   buttonTextHoverColor,
@@ -14,6 +16,13 @@ const Projects = () => {
   const { colorMode } = useColorMode();
   return (
     <>
+      <NextSeo
+        title="Zachs - Projects"
+        description="This page shows off some of my current projects."
+        openGraph={{
+          url: "https://www.zacharyp.dev/projects",
+        }}
+      />
       <Link href="/" passHref>
         <Button
           position="sticky"

@@ -1,16 +1,11 @@
 import {
   SimpleGrid,
-  Avatar,
-  Icon,
-  Text,
   Popover,
   PopoverTrigger,
   PopoverContent,
   PopoverHeader,
   PopoverBody,
-  PopoverFooter,
   PopoverArrow,
-  PopoverCloseButton,
   Flex,
   Center,
   Stack,
@@ -39,7 +34,6 @@ import {
   BsTwitter,
   BsTwitch,
   BsCalendar3,
-  BsEmail,
 } from "react-icons/bs";
 import { MdOutlineEmail, MdLocalPhone } from "react-icons/md";
 import Link from "next/link";
@@ -53,6 +47,8 @@ import {
 import DarkModeSwitchNA from "@components/DarkModeSwitchNA";
 import useWindowDimensions from "@utils/Hooks/useWindowDimension";
 
+import { NextSeo } from "next-seo";
+
 export default function Contact() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
@@ -63,6 +59,13 @@ export default function Contact() {
 
   return (
     <>
+      <NextSeo
+        title="Zachs - Contact"
+        description="This page contains all of my contact information."
+        openGraph={{
+          url: "https://www.zacharyp.dev/contact",
+        }}
+      />
       <Center py={6}>
         <Stack direction={"column"} m={5}>
           <Flex justifyContent="space-between">

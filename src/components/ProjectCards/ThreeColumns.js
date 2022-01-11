@@ -1,4 +1,4 @@
-import { Box, SimpleGrid, Avatar, useColorMode } from "@chakra-ui/react";
+import { Box, SimpleGrid, useColorMode } from "@chakra-ui/react";
 
 import { Feature } from "./projectFeatureCard";
 
@@ -33,6 +33,7 @@ export default function SimpleThreeColumns() {
       >
         <Feature
           image="https://res.cloudinary.com/dey85zjmf/image/upload/v1641841650/blog/editorGif_o1suhb.gif"
+          altText={"Preview of the custom Slate editor"}
           staticImage="https://res.cloudinary.com/dey85zjmf/image/upload/v1641851034/blog/blogPlatformStatic_hg5qmf.png"
           title={"Customized Slate Editor"}
           text={
@@ -70,6 +71,7 @@ export default function SimpleThreeColumns() {
         />
         <Feature
           image="https://res.cloudinary.com/dey85zjmf/image/upload/v1641842995/blog/blogGif_e5pxzt.gif"
+          altText={"Preview of my personal blog platform"}
           staticImage="https://res.cloudinary.com/dey85zjmf/image/upload/v1641844710/blog/blogStatic_abzsea.png"
           title={"Personal Blog"}
           text={
@@ -116,6 +118,7 @@ export default function SimpleThreeColumns() {
         />
         <Feature
           image="https://res.cloudinary.com/dey85zjmf/image/upload/v1641842941/blog/profileGif_dys6kh.gif"
+          altText={"Preview of my personal portfolio"}
           staticImage="https://res.cloudinary.com/dey85zjmf/image/upload/v1641844710/blog/PortfolioStatic_vsxtg8.png"
           title={"Personal Portfolio"}
           text={

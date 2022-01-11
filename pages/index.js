@@ -11,7 +11,7 @@ import {
 
 import Link from "next/link";
 
-// import { useRef, useEffect } from "react";
+import { NextSeo } from "next-seo";
 
 import useWindowDimensions from "@utils/Hooks/useWindowDimension";
 
@@ -25,15 +25,6 @@ import { motion } from "framer-motion";
 import DarkModeSwitchNA from "@components/DarkModeSwitchNA";
 
 const Home = () => {
-  // const rendered = useRef(false);
-
-  // const MotionBox = rendered.current ? Box : motion(Box);
-  // const SigImage = rendered.current ? "/signatureStatic.png" : "/Signature.svg";
-
-  // useEffect(() => {
-  //   rendered.current = true;
-  // }, []);
-
   const MotionButton = motion(Button);
 
   const { width } = useWindowDimensions();
@@ -44,9 +35,17 @@ const Home = () => {
 
   return (
     <>
+      <NextSeo
+        title="Welcome to zacharyp.dev"
+        description="This is my personal portfolio used as a landing pad for all of my projects and a centralized location for all of my contact information."
+        openGraph={{
+          url: "https://www.zacharyp.dev/",
+        }}
+      />
       <Container maxW={"3xl"}>
         <Image
           src={width < 1000 ? "/SignatureStatic.png" : "/Signature.svg"}
+          alt="Animated Signature"
           height={[300, 400, 500, 600, 900]}
           width={[300, 400, 500, 600, 900]}
           mt={["25", "25", "25", "15", "-25"]}

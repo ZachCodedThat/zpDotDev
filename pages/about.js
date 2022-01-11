@@ -4,13 +4,11 @@ import {
   Avatar,
   Box,
   Center,
-  HStack,
   Flex,
   Text,
   Stack,
   Button,
   IconButton,
-  useMediaQuery,
 } from "@chakra-ui/react";
 import {
   textColor,
@@ -23,13 +21,20 @@ import { DownloadIcon } from "@chakra-ui/icons";
 import useWindowDimensions from "@utils/Hooks/useWindowDimension";
 import MapElement from "@components/MapCard";
 import SkillsBar from "@components/SkillsBar";
+import { NextSeo } from "next-seo";
 
 const About = () => {
-  const isSmallerScreen = useMediaQuery("(max-width: 768px)");
   const { colorMode } = useColorMode();
   const { width } = useWindowDimensions();
   return (
     <>
+      <NextSeo
+        title="Zachs - About"
+        description="This page contains personal information about myself and my skill set along with a link to my resume."
+        openGraph={{
+          url: "https://www.zacharyp.dev/about",
+        }}
+      />
       <Center py={6}>
         <Stack direction={"column"} m={5}>
           <Flex justifyContent="space-between">
@@ -83,7 +88,8 @@ const About = () => {
                 <Avatar
                   size={"2xl"}
                   src={"/headshot.webp"}
-                  alt={"Zach"}
+                  alt={"Zachs Headshot"}
+                  name={"Zachs Headshot"}
                   ml={{ base: "0", sm: "2", md: "2" }}
                   css={{
                     border: "none",
@@ -95,9 +101,14 @@ const About = () => {
                       <Text fontWeight={200} fontSize={"xs"} color="#FFECD1">
                         Resume
                       </Text>
-                      <Link href="/zachsResume2021.pdf" target="_blank">
+                      <Link
+                        href="/zachsResume2021.pdf"
+                        target="_blank"
+                        alt="Download Resume"
+                      >
                         <IconButton
                           aria-label="Download Resume"
+                          name="Download Resume"
                           m={0}
                           variant="ghost"
                           color="#FFECD1"

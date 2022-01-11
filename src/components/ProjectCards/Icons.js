@@ -52,7 +52,7 @@ export const slateIcon = (filter) => (
       size="sm"
       filter={filter}
       borderRadius="2px"
-      name="react"
+      name="slate"
       bg="transparent"
       src="/slate.png"
     />
@@ -77,7 +77,7 @@ export const jsIcon = (filter) => (
       size="sm"
       filter={filter}
       borderRadius="none"
-      name="react"
+      name="JavaScript"
       bg="transparent"
       src="/JSicon.png"
     />
@@ -102,7 +102,7 @@ export const chakraIcon = (filter) => (
       size="sm"
       filter={filter}
       borderRadius="none"
-      name="react"
+      name="chakra-ui"
       bg="transparent"
       src="/chakraui.svg"
     />
@@ -128,6 +128,7 @@ export const nextjsIcon = (filter) => (
       borderRadius="none"
       bg="transparent"
       src="/NextJS.png"
+      name="NextJS"
     />
   </Tooltip>
 );
@@ -152,6 +153,7 @@ export const htmlIcon = (filter) => (
       borderRadius="none"
       bg="transparent"
       src="/html.png"
+      name="HTML5"
     />
   </Tooltip>
 );
@@ -175,6 +177,7 @@ export const nextjsIconAlt = (filter) => (
       filter={filter}
       src="/NextJS.png"
       bg="#FFECD1"
+      name="NextJS"
     />
   </Tooltip>
 );
@@ -198,12 +201,13 @@ export const supabaseIcon = (filter) => (
       borderRadius="none"
       bg="transparent"
       src="/supabase.png"
+      name="supabase"
     />
   </Tooltip>
 );
 
 export const gitHubIcon = (gitHubLink) => (
-  <ChakraLink href={gitHubLink} target="_blank">
+  <ChakraLink href={gitHubLink} target="_blank" rel="noopener">
     <MotionIconButton
       whileHover={{
         scale: 1.2,
@@ -223,7 +227,7 @@ export const gitHubIcon = (gitHubLink) => (
 );
 
 export const gitHubIconAlt = (gitHubLink) => (
-  <ChakraLink href={gitHubLink} target="_blank">
+  <ChakraLink href={gitHubLink} target="_blank" rel="noopener">
     <MotionIconButton
       whileHover={{
         scale: 1.2,
@@ -248,6 +252,7 @@ export const codeSandboxIcon = (
       "https://codesandbox.io/s/custom-slatejs-editor-wggz8?file=/pages/index.js"
     }
     target="_blank"
+    rel="noopener"
   >
     <MotionAvatar
       whileHover={{
@@ -258,12 +263,13 @@ export const codeSandboxIcon = (
       borderRadius="none"
       bg="transparent"
       src="/codeSandbox.webp"
+      name="codeSandbox"
     />
   </ChakraLink>
 );
 
 export const vercelIcon = (vercelLink) => (
-  <ChakraLink href={vercelLink} target="_blank">
+  <ChakraLink href={vercelLink} target="_blank" rel="noopener">
     <MotionAvatar
       whileHover={{
         scale: 1.2,
@@ -273,6 +279,7 @@ export const vercelIcon = (vercelLink) => (
       borderRadius="none"
       bg="transparent"
       src="/vercel-icon-dark.png"
+      name="vercelDark"
     />
   </ChakraLink>
 );
@@ -288,6 +295,7 @@ export const vercelIconAlt = (vercelLink) => (
       borderRadius="none"
       bg="transparent"
       src="/vercel-icon-light.png"
+      name="vercelLight"
     />
   </ChakraLink>
 );

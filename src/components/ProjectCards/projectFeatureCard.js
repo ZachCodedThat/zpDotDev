@@ -21,6 +21,7 @@ export const Feature = ({
   icon,
   preview,
   staticImage,
+  altText,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   console.log(isHovered);
@@ -43,6 +44,7 @@ export const Feature = ({
       <Flex align={"center"} justify={"center"} mb={1}>
         <ChakraImage
           src={isHovered ? image : staticImage}
+          alt={altText}
           onMouseEnter={handleMouse}
           onMouseLeave={handleMouse}
           borderRadius="5%"
