@@ -285,7 +285,7 @@ export const vercelIcon = (vercelLink) => (
 );
 
 export const vercelIconAlt = (vercelLink) => (
-  <ChakraLink href={vercelLink} target="_blank">
+  <ChakraLink href={vercelLink} target="_blank" rel="noopener">
     <MotionAvatar
       whileHover={{
         scale: 1.2,

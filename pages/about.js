@@ -65,7 +65,7 @@ const About = () => {
             <Box
               h={"150px"}
               w={"full"}
-              backgroundImage="/AbstractBG.jpg"
+              backgroundImage="/AbstractBG.avif"
               backgroundAttachment="fixed"
               backgroundSize="cover"
               backgroundPosition="center"
@@ -230,7 +230,7 @@ const About = () => {
             <Box
               h={"200px"}
               w={"full"}
-              backgroundImage="/AbstractBG.jpg"
+              backgroundImage="/AbstractBG.avif"
               backgroundAttachment="fixed"
               backgroundSize="cover"
               backgroundPosition="center"
@@ -285,7 +285,7 @@ const About = () => {
             <Box
               h={"25px"}
               w={"full"}
-              backgroundImage="/AbstractBG.jpg"
+              backgroundImage="/AbstractBG.avif"
               backgroundAttachment="fixed"
               backgroundSize="cover"
               backgroundPosition="center"
