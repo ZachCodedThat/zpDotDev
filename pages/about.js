@@ -102,7 +102,7 @@ const About = () => {
                         Resume
                       </Text>
                       <Link
-                        href="/zachsResume2021.pdf"
+                        href="/UpdatedResumeJan_2022.pdf"
                         target="_blank"
                         alt="Download Resume"
                       >
@@ -130,7 +130,7 @@ const About = () => {
                   <Text fontWeight={200} fontSize={"xs"} color="#FFECD1">
                     Resume
                   </Text>
-                  <Link href="/zachsResume2021.pdf" target="_blank">
+                  <Link href="/UpdatedResumeJan_2022.pdf" target="_blank">
                     <IconButton
                       m={0}
                       variant="ghost"
