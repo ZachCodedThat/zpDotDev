@@ -14,7 +14,7 @@ const center = {
 
 function MapElement() {
   return (
-    <LoadScript googleMapsApiKey={process.env.NEXT_PUBLIC_MAP_API_KEY}>
+    <LoadScript googleMapsApiKey={process.env.PUBLIC_MAP_API_KEY}>
       <GoogleMap
         zoom={10}
         center={center}
