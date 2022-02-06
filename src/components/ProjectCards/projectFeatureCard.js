@@ -5,6 +5,8 @@ import {
   Image as ChakraImage,
   Tag,
   HStack,
+  LinkBox,
+  LinkOverlay,
 } from "@chakra-ui/react";
 
 import { useState } from "react";
@@ -18,8 +20,8 @@ export const Feature = ({
   text,
   image,
   tag,
-  icon,
-  preview,
+  previewLink,
+
   staticImage,
   altText,
 }) => {
@@ -30,32 +32,23 @@ export const Feature = ({
 
   return (
     <MotionStack>
-      <HStack alignItems="flex-start" justifyContent="space-between">
-        {icon
-          ? icon.map((item, index) => (
-              <>
-                <Tag bg="transparent" key={index}>
-                  {item}
-                </Tag>
-              </>
-            ))
-          : null}
-      </HStack>
-      <Flex align={"center"} justify={"center"} mb={1}>
-        <ChakraImage
-          src={isHovered ? image : staticImage}
-          alt={altText}
+      <LinkBox border="4px solid" borderRadius="md">
+        <LinkOverlay
+          href={previewLink}
+          isExternal
           onMouseEnter={handleMouse}
           onMouseLeave={handleMouse}
-          borderRadius="5%"
-          p="10px"
-        />
-      </Flex>
-      {preview ? (
-        <Flex align={"center"} justify={"center"} mb={1}>
-          <iframe title="custom editor" src={preview} />
-        </Flex>
-      ) : null}
+        >
+          <ChakraImage
+            src={isHovered ? image : staticImage}
+            alt={altText}
+            borderRadius="5%"
+            p="10px"
+            cursor={"pointer"}
+          />
+        </LinkOverlay>
+      </LinkBox>
+
       <Text
         fontWeight={600}
         fontSize={{ base: "lg", sm: "xl" }}

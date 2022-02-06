@@ -63,7 +63,7 @@ const Home = () => {
             initial="hidden"
             animate="visible"
             exit="exit"
-            marginTop={["10", "15", "20", "-25", "-32"]}
+            marginTop={["8", "15", "20", "-25", "-32"]}
           >
             <Heading
               fontWeight={600}
@@ -81,45 +81,62 @@ const Home = () => {
             alignSelf={"center"}
             marginTop="-10"
           >
-            <Link href="./about" passHref>
-              <MotionButton
-                color={textColor[colorMode]}
-                variant="nav"
-                whileTap={{ scale: 0.9 }}
-                _hover={{
-                  bg: buttonHoverColor[colorMode],
-                  color: buttonTextHoverColor[colorMode],
-                }}
-              >
-                About
-              </MotionButton>
-            </Link>
-            <Link href="/projects" passHref>
-              <MotionButton
-                color={textColor[colorMode]}
-                whileTap={{ scale: 0.9 }}
-                variant="nav"
-                _hover={{
-                  bg: buttonHoverColor[colorMode],
-                  color: buttonTextHoverColor[colorMode],
-                }}
-              >
-                Projects
-              </MotionButton>
-            </Link>
-            <Link href="/contact" passHref>
-              <MotionButton
-                color={textColor[colorMode]}
-                variant="nav"
-                whileTap={{ scale: 0.9 }}
-                _hover={{
-                  bg: buttonHoverColor[colorMode],
-                  color: buttonTextHoverColor[colorMode],
-                }}
-              >
-                Contact
-              </MotionButton>
-            </Link>
+            <Flex flexDirection={{ base: "column", md: "row" }}>
+              <Link href="./about" passHref>
+                <MotionButton
+                  color={textColor[colorMode]}
+                  variant="nav"
+                  whileTap={{ scale: 0.9 }}
+                  _hover={{
+                    bg: buttonHoverColor[colorMode],
+                    color: buttonTextHoverColor[colorMode],
+                  }}
+                >
+                  About
+                </MotionButton>
+              </Link>
+              <Link href="https://zacharyp.blog/">
+                <MotionButton
+                  color={textColor[colorMode]}
+                  variant="nav"
+                  whileTap={{ scale: 0.9 }}
+                  _hover={{
+                    bg: buttonHoverColor[colorMode],
+                    color: buttonTextHoverColor[colorMode],
+                  }}
+                >
+                  Blog
+                </MotionButton>
+              </Link>
+            </Flex>
+            <Flex flexDirection={{ base: "column", md: "row" }}>
+              <Link href="/projects" passHref>
+                <MotionButton
+                  color={textColor[colorMode]}
+                  whileTap={{ scale: 0.9 }}
+                  variant="nav"
+                  _hover={{
+                    bg: buttonHoverColor[colorMode],
+                    color: buttonTextHoverColor[colorMode],
+                  }}
+                >
+                  Projects
+                </MotionButton>
+              </Link>
+              <Link href="/contact" passHref>
+                <MotionButton
+                  color={textColor[colorMode]}
+                  variant="nav"
+                  whileTap={{ scale: 0.9 }}
+                  _hover={{
+                    bg: buttonHoverColor[colorMode],
+                    color: buttonTextHoverColor[colorMode],
+                  }}
+                >
+                  Contact
+                </MotionButton>
+              </Link>
+            </Flex>
             {width > 600 ? <DarkModeSwitchNA /> : null}
           </Flex>
           {width < 600 ? <DarkModeSwitchNA /> : null}

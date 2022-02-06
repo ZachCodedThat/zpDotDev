@@ -5,16 +5,13 @@ import { Feature } from "./projectFeatureCard";
 import {
   reactIcon,
   slateIcon,
-  jsIcon,
   chakraIcon,
   nextjsIcon,
   nextjsIconAlt,
-  gitHubIcon,
-  codeSandboxIcon,
   supabaseIcon,
-  gitHubIconAlt,
-  vercelIcon,
-  vercelIconAlt,
+  nodeIcon,
+  npmIcon,
+  cssIcon,
 } from "./Icons";
 
 import useWindowDimensions from "@utils/Hooks/useWindowDimension";
@@ -33,120 +30,88 @@ export default function SimpleThreeColumns() {
       >
         <Feature
           image="https://res.cloudinary.com/dey85zjmf/image/upload/v1641841650/blog/editorGif_o1suhb.gif"
+          previewLink="https://github.com/ZachCodedThat/Zachs-Blog/tree/Slate-rework/src/components/Editor"
           altText={"Preview of the custom Slate editor"}
           staticImage="https://res.cloudinary.com/dey85zjmf/image/upload/v1641851034/blog/blogPlatformStatic_hg5qmf.png"
           title={"Customized Slate Editor"}
           text={
             "Fully custom Slate editor capable of live MD preview which will show you exactly what your post will look like on the page."
           }
-          tag={
-            width > 1100
-              ? [
-                  colorMode === "light"
-                    ? nextjsIcon("grayscale(100%)")
-                    : nextjsIconAlt("grayscale(100%)"),
-                  slateIcon("grayscale(100%)"),
-                  reactIcon("grayscale(100%)"),
-                  chakraIcon("grayscale(100%)"),
-                ]
-              : [
-                  colorMode === "light"
-                    ? nextjsIcon("grayscale(0%)")
-                    : nextjsIconAlt("grayscale(0%)"),
-                  slateIcon("grayscale(0%)"),
-                  reactIcon("grayscale(0%)"),
-                  chakraIcon("grayscale(0%)"),
-                ]
-          }
-          icon={[
+          tag={[
             colorMode === "light"
-              ? gitHubIcon(
-                  "https://github.com/ZachCodedThat/Zachs-Blog/tree/Slate-rework/src/components/Editor"
-                )
-              : gitHubIconAlt(
-                  "https://github.com/ZachCodedThat/Zachs-Blog/tree/Slate-rework/src/components/Editor"
-                ),
-            codeSandboxIcon,
+              ? nextjsIcon("grayscale(0%)")
+              : nextjsIconAlt("grayscale(0%)"),
+            slateIcon("grayscale(0%)"),
+            reactIcon("grayscale(0%)"),
+            chakraIcon("grayscale(0%)"),
           ]}
         />
+
         <Feature
           image="https://res.cloudinary.com/dey85zjmf/image/upload/v1641842995/blog/blogGif_e5pxzt.gif"
+          previewLink="https://github.com/ZachCodedThat/Zachs-Blog/tree/Slate-rework"
           altText={"Preview of my personal blog platform"}
           staticImage="https://res.cloudinary.com/dey85zjmf/image/upload/v1641844710/blog/blogStatic_abzsea.png"
           title={"Personal Blog"}
           text={
             "Blog platform built on NextJS and hooked to a Supabase backend. This also utilizes my custom Slate editor to provide me with an easy dev only way to post content and see how it will look before it is posted."
           }
-          tag={
-            width > 1100
-              ? [
-                  colorMode === "light"
-                    ? nextjsIcon("grayscale(100%)")
-                    : nextjsIconAlt("grayscale(100%)"),
-                  slateIcon("grayscale(100%)"),
-                  reactIcon("grayscale(100%)"),
-                  chakraIcon("grayscale(100%)"),
-                  supabaseIcon("grayscale(100%)"),
-                ]
-              : [
-                  colorMode === "light"
-                    ? nextjsIcon("grayscale(0%)")
-                    : nextjsIconAlt("grayscale(0%)"),
-                  slateIcon("grayscale(0%)"),
-                  reactIcon("grayscale(0%)"),
-                  chakraIcon("grayscale(0%)"),
-                  supabaseIcon("grayscale(0%)"),
-                ]
-          }
-          icon={[
+          tag={[
             colorMode === "light"
-              ? gitHubIcon(
-                  "https://github.com/ZachCodedThat/Zachs-Blog/tree/Slate-rework"
-                )
-              : gitHubIconAlt(
-                  "https://github.com/ZachCodedThat/Zachs-Blog/tree/Slate-rework"
-                ),
-            ,
-            colorMode === "light"
-              ? vercelIcon(
-                  "https://zachs-blog-bxzhdxv85-zachcodedthat.vercel.app/"
-                )
-              : vercelIconAlt(
-                  "https://zachs-blog-bxzhdxv85-zachcodedthat.vercel.app/"
-                ),
+              ? nextjsIcon("grayscale(0%)")
+              : nextjsIconAlt("grayscale(0%)"),
+            slateIcon("grayscale(0%)"),
+            reactIcon("grayscale(0%)"),
+            chakraIcon("grayscale(0%)"),
+            supabaseIcon("grayscale(0%)"),
           ]}
         />
         <Feature
           image="https://res.cloudinary.com/dey85zjmf/image/upload/v1641842941/blog/profileGif_dys6kh.gif"
+          previewLink="https://github.com/ZachCodedThat/portfolio"
           altText={"Preview of my personal portfolio"}
           staticImage="https://res.cloudinary.com/dey85zjmf/image/upload/v1641844710/blog/PortfolioStatic_vsxtg8.png"
           title={"Personal Portfolio"}
           text={
             "My personal portfolio built on NextJS and themed using Chakra-UI"
           }
-          tag={
-            width > 1100
-              ? [
-                  colorMode === "light"
-                    ? nextjsIcon("grayscale(100%)")
-                    : nextjsIconAlt("grayscale(100%)"),
-                  reactIcon("grayscale(100%)"),
-                  chakraIcon("grayscale(100%)"),
-                ]
-              : [
-                  colorMode === "light"
-                    ? nextjsIcon("grayscale(0%)")
-                    : nextjsIconAlt("grayscale(0%)"),
-                  reactIcon("grayscale(0%)"),
-                  chakraIcon("grayscale(0%)"),
-                ]
-          }
-          icon={[
+          tag={[
             colorMode === "light"
-              ? gitHubIcon("https://github.com/ZachCodedThat/portfolio")
-              : gitHubIconAlt("https://github.com/ZachCodedThat/portfolio"),
-            colorMode === "light" ? vercelIcon("/") : vercelIconAlt("/"),
+              ? nextjsIcon("grayscale(0%)")
+              : nextjsIconAlt("grayscale(0%)"),
+            reactIcon("grayscale(0%)"),
+            chakraIcon("grayscale(0%)"),
           ]}
+        />
+
+        <Feature
+          image="https://res.cloudinary.com/dey85zjmf/image/upload/v1644167944/ezgif.com-gif-maker_4_xglxpc.gif"
+          previewLink="https://github.com/ZachCodedThat/gitHubSearch"
+          altText={"Preview of my GitHub username search"}
+          staticImage="githubSearchStatic.png"
+          title={"Github Username Search"}
+          text={
+            "A tool I created to learn more about how to manage searching data from an API and all of the edge cases that come into play."
+          }
+          tag={[
+            colorMode === "light"
+              ? nextjsIcon("grayscale(0%)")
+              : nextjsIconAlt("grayscale(0%)"),
+            nodeIcon("grayscale(0%)"),
+            reactIcon("grayscale(0%)"),
+            cssIcon("grayscale(0%)"),
+          ]}
+        />
+        <Feature
+          image="/NPM.jpg"
+          previewLink="https://github.com/ZachCodedThat/create-zp-cli-public"
+          altText={"NPM page for create-zp-cli"}
+          staticImage="/NPM.jpg"
+          title={"Create-zp-cli"}
+          text={
+            "A tool I created initally for myself to get projects off of the ground faster and has evolved into something everyone can use. I will be adding features to this over time."
+          }
+          tag={[nodeIcon("grayscale(0%)"), npmIcon("grayscale(0%)")]}
         />
       </SimpleGrid>
     </Box>
