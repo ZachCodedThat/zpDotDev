@@ -84,6 +84,81 @@ export const jsIcon = (filter) => (
   </Tooltip>
 );
 
+export const cssIcon = (filter) => (
+  <Tooltip
+    hasArrow
+    offset={[0, 12]}
+    label="CSS"
+    placement="bottom"
+    openDelay={345}
+    closeOnClick={false}
+  >
+    <MotionAvatar
+      whileHover={{
+        filter: "grayscale(0%)",
+        scale: 1.2,
+        transition: { duration: 0.5 },
+      }}
+      size="sm"
+      filter={filter}
+      borderRadius="none"
+      name="CSS3"
+      bg="transparent"
+      src="/css.png"
+    />
+  </Tooltip>
+);
+
+export const npmIcon = (filter) => (
+  <Tooltip
+    hasArrow
+    offset={[0, 12]}
+    label="Npm"
+    placement="bottom"
+    openDelay={345}
+    closeOnClick={false}
+  >
+    <MotionAvatar
+      whileHover={{
+        filter: "grayscale(0%)",
+        scale: 1.2,
+        transition: { duration: 0.5 },
+      }}
+      size="sm"
+      filter={filter}
+      borderRadius="none"
+      name="Npm"
+      bg="transparent"
+      src="/npmIcon.png"
+    />
+  </Tooltip>
+);
+
+export const nodeIcon = (filter) => (
+  <Tooltip
+    hasArrow
+    offset={[0, 12]}
+    label="NodeJS"
+    placement="bottom"
+    openDelay={345}
+    closeOnClick={false}
+  >
+    <MotionAvatar
+      whileHover={{
+        filter: "grayscale(0%)",
+        scale: 1.2,
+        transition: { duration: 0.5 },
+      }}
+      size="sm"
+      filter={filter}
+      borderRadius="none"
+      name="NodeJS"
+      bg="transparent"
+      src="/nodejs.png"
+    />
+  </Tooltip>
+);
+
 export const chakraIcon = (filter) => (
   <Tooltip
     hasArrow
