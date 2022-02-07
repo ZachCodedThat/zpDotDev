@@ -4,9 +4,10 @@ export default {
   url: "https://www.zacharyp.dev/",
   sameAs: [
     "https://soundcloud.com/zach-przybilski",
-
+    "https://www.zacharyp.blog/",
     "https://www.linkedin.com/in/zachary-przybilski/",
     "https://twitter.com/TweetZachBack",
+    "https://dev.to/zacharyp",
   ],
   openGraph: {
     type: "website",
