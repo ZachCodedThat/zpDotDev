@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import {
   useColorMode,
   Heading,
@@ -16,12 +17,13 @@ import {
   buttonTextHoverColor,
 } from "@styles/colorModeStyles";
 import Link from "next/link";
-import DarkModeSwitchNA from "@components/DarkModeSwitchNA";
+import DarkModeSwitchNA from "@components/Navbar/DarkModeSwitchNA";
 import { DownloadIcon } from "@chakra-ui/icons";
 import useWindowDimensions from "@utils/Hooks/useWindowDimension";
 import MapElement from "@components/MapCard";
 import SkillsBar from "@components/SkillsBar";
 import { NextSeo } from "next-seo";
+import Navbar from "@components/Navbar";
 
 const About = () => {
   const { colorMode } = useColorMode();
@@ -35,25 +37,31 @@ const About = () => {
           url: "https://www.zacharyp.dev/about",
         }}
       />
-      <Center py={6}>
+      <Center py={{ base: 3, md: 10 }}>
         <Stack direction={"column"} m={5}>
-          <Flex justifyContent="space-between">
-            <Link href="/" passHref>
-              <Button
-                aria-label="Go back to home page"
-                as="a"
-                color={textColor[colorMode]}
-                variant="nav"
-                _hover={{
-                  bg: buttonHoverColor[colorMode],
-                  color: buttonTextHoverColor[colorMode],
-                }}
-              >
-                Back
-              </Button>
-            </Link>
-            <DarkModeSwitchNA />
-          </Flex>
+          {width > 1000 ? (
+            <Flex flexDir={"row-reverse"}>
+              <Navbar />
+            </Flex>
+          ) : (
+            <Flex justifyContent="space-between">
+              <Link href="/" passHref>
+                <Button
+                  aria-label="Go back to home page"
+                  as="a"
+                  color={textColor[colorMode]}
+                  variant="nav"
+                  _hover={{
+                    bg: buttonHoverColor[colorMode],
+                    color: buttonTextHoverColor[colorMode],
+                  }}
+                >
+                  Back
+                </Button>
+              </Link>
+              <DarkModeSwitchNA />
+            </Flex>
+          )}
           {width < 800 ? (
             <Box
               h={"150px"}
