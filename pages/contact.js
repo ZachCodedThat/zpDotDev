@@ -44,10 +44,12 @@ import {
   buttonHoverColor,
   buttonTextHoverColor,
 } from "@styles/colorModeStyles";
-import DarkModeSwitchNA from "@components/DarkModeSwitchNA";
+import DarkModeSwitchNA from "@components/Navbar/DarkModeSwitchNA";
 import useWindowDimensions from "@utils/Hooks/useWindowDimension";
 
 import { NextSeo } from "next-seo";
+
+import Navbar from "@components/Navbar";
 
 export default function Contact() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -66,24 +68,30 @@ export default function Contact() {
           url: "https://www.zacharyp.dev/contact",
         }}
       />
-      <Center py={6}>
+      <Center py={{ base: 3, md: 10 }}>
         <Stack direction={"column"} m={5}>
-          <Flex justifyContent="space-between">
-            <Link href="/" passHref>
-              <Button
-                as="a"
-                color={textColor[colorMode]}
-                variant="nav"
-                _hover={{
-                  bg: buttonHoverColor[colorMode],
-                  color: buttonTextHoverColor[colorMode],
-                }}
-              >
-                Back
-              </Button>
-            </Link>
-            <DarkModeSwitchNA />
-          </Flex>
+          {width > 1000 ? (
+            <Flex flexDir={"row-reverse"}>
+              <Navbar />
+            </Flex>
+          ) : (
+            <Flex justifyContent="space-between">
+              <Link href="/" passHref>
+                <Button
+                  as="a"
+                  color={textColor[colorMode]}
+                  variant="nav"
+                  _hover={{
+                    bg: buttonHoverColor[colorMode],
+                    color: buttonTextHoverColor[colorMode],
+                  }}
+                >
+                  Back
+                </Button>
+              </Link>
+              <DarkModeSwitchNA />
+            </Flex>
+          )}
           {width < 800 ? (
             <Box
               h={"100px"}
