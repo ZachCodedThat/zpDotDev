@@ -10,6 +10,7 @@ import {
   Stack,
   Button,
   IconButton,
+  Image,
 } from "@chakra-ui/react";
 import {
   textColor,
@@ -221,7 +222,13 @@ const About = () => {
                     h={["300px", "300px", "350px", "400px"]}
                     w={["300px", "300px", "350px", "400px"]}
                   >
-                    <MapElement />
+                    <Image
+                      src="/mapStatic.png"
+                      borderRadius="10px"
+                      alt="Map of the Philadelphia"
+                      h={["300px", "300px", "350px", "400px"]}
+                      w={["300px", "300px", "350px", "400px"]}
+                    />
                   </Box>
                 </Stack>
               </Center>
