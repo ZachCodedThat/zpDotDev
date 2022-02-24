@@ -30,7 +30,7 @@ export default function SimpleThreeColumns() {
       >
         <Feature
           image="https://res.cloudinary.com/dey85zjmf/image/upload/v1641841650/blog/editorGif_o1suhb.gif"
-          previewLink="https://github.com/ZachCodedThat/Zachs-Blog/tree/Slate-rework/src/components/Editor"
+          previewLink="https://github.com/ZachCodedThat/Zachs-Blog/tree/main/src/components/Editor"
           altText={"Preview of the custom Slate editor"}
           staticImage="https://res.cloudinary.com/dey85zjmf/image/upload/v1641851034/blog/blogPlatformStatic_hg5qmf.png"
           title={"Customized Slate Editor"}
@@ -49,7 +49,7 @@ export default function SimpleThreeColumns() {
 
         <Feature
           image="https://res.cloudinary.com/dey85zjmf/image/upload/v1641842995/blog/blogGif_e5pxzt.gif"
-          previewLink="https://github.com/ZachCodedThat/Zachs-Blog/tree/Slate-rework"
+          previewLink="https://github.com/ZachCodedThat/Zachs-Blog/tree/main"
           altText={"Preview of my personal blog platform"}
           staticImage="https://res.cloudinary.com/dey85zjmf/image/upload/v1641844710/blog/blogStatic_abzsea.png"
           title={"Personal Blog"}
