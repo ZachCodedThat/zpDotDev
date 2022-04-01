@@ -1,27 +1,14 @@
 import {
   Image,
-  Flex,
   Box,
   useColorMode,
   Stack,
   Container,
   Heading,
-  Button,
 } from "@chakra-ui/react";
-
-import Link from "next/link";
-
 import { NextSeo } from "next-seo";
-
 import useWindowDimensions from "@utils/Hooks/useWindowDimension";
-
-import {
-  textColor,
-  buttonHoverColor,
-  buttonTextHoverColor,
-} from "@styles/colorModeStyles";
-
-import { motion } from "framer-motion";
+import { textColor } from "@styles/colorModeStyles";
 import DarkModeSwitchNA from "@components/Navbar/DarkModeSwitchNA";
 import Navbar from "@components/Navbar";
 
@@ -41,11 +28,13 @@ const Home = () => {
       />
       <Container maxW={"3xl"}>
         <Image
-          src={width < 1000 ? "/SignatureStatic.png" : "/Signature.svg"}
-          alt="Animated Signature"
+          src={width < 1000 ? "/SignatureStatic.webp" : "/Signature.svg"}
+          alt={
+            width < 1000 ? "Static Signature Zach" : "Animated Signature Zach"
+          }
           height={[300, 400, 500, 600, 900]}
-          width={[300, 400, 500, 600, 900]}
-          mt={["25", "25", "25", "15", "-25"]}
+          width={[351, 468, 585, 702, 900]}
+          mt={["25", "25", "25", "15", "-30"]}
           mb={["25", "20", "15", "10", "0"]}
           mx="auto"
         />

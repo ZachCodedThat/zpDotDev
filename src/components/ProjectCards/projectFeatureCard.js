@@ -1,7 +1,6 @@
 import {
   Text,
   Stack,
-  Flex,
   Image as ChakraImage,
   Tag,
   HStack,

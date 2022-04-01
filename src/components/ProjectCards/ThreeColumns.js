@@ -19,8 +19,6 @@ import useWindowDimensions from "@utils/Hooks/useWindowDimension";
 export default function SimpleThreeColumns() {
   const { colorMode } = useColorMode();
 
-  const { width } = useWindowDimensions();
-
   return (
     <Box p={{ base: 2, sm: 3, md: 6, lg: 8, xl: 25 }}>
       <SimpleGrid

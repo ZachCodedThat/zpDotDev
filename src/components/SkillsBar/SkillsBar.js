@@ -1,9 +1,9 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Box, Avatar, Tooltip, useColorMode, Flex } from "@chakra-ui/react";
+import { Box, Avatar, Tooltip, useColorMode } from "@chakra-ui/react";
 
-export const SkillsBar = (props) => {
+export const SkillsBar = () => {
   const { colorMode } = useColorMode();
   const settings = {
     dots: false,

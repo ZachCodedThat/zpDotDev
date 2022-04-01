@@ -54,7 +54,7 @@ import Navbar from "@components/Navbar";
 export default function Contact() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  const [discordValue, setValue] = React.useState("ZachStrikesBack#3732");
+  const [discordValue] = React.useState("ZachStrikesBack#3732");
   const { hasCopied, onCopy } = useClipboard(discordValue);
   const { colorMode } = useColorMode();
   const { width } = useWindowDimensions();

@@ -1,4 +1,4 @@
-import { useColorMode, IconButton, useBoolean } from "@chakra-ui/react";
+import { useColorMode, IconButton } from "@chakra-ui/react";
 import { SunIcon, MoonIcon } from "@chakra-ui/icons";
 import { dmIconColor } from "@styles/colorModeStyles";
 
