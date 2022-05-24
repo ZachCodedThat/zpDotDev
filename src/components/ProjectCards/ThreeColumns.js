@@ -12,6 +12,8 @@ import {
   nodeIcon,
   npmIcon,
   cssIcon,
+  rustIcon,
+  tauriIcon,
 } from "./Icons";
 
 import useWindowDimensions from "@utils/Hooks/useWindowDimension";
@@ -28,20 +30,19 @@ export default function SimpleThreeColumns() {
       >
         <Feature
           image="https://res.cloudinary.com/dey85zjmf/image/upload/v1641841650/blog/editorGif_o1suhb.gif"
-          previewLink="https://github.com/ZachCodedThat/Zachs-Blog/tree/main/src/components/Editor"
-          altText={"Preview of the custom Slate editor"}
+          previewLink="https://github.com/ZachCodedThat/EasyBlog"
+          altText={"Zach's EasyBlog"}
           staticImage="https://res.cloudinary.com/dey85zjmf/image/upload/v1641851034/blog/blogPlatformStatic_hg5qmf.png"
-          title={"Customized Slate Editor"}
+          title={"EasyBlog"}
           text={
-            "Fully custom Slate editor capable of live MD preview which will show you exactly what your post will look like on the page."
+            "Fully custom Slate editor capable of live MD preview which will show you exactly what your post will look like on the page. Built in React and compiled into it's own standalone executable using Tauri.studio, all hooked to a Supabase DB.  "
           }
           tag={[
-            colorMode === "light"
-              ? nextjsIcon("grayscale(0%)")
-              : nextjsIconAlt("grayscale(0%)"),
             slateIcon("grayscale(0%)"),
             reactIcon("grayscale(0%)"),
             chakraIcon("grayscale(0%)"),
+            rustIcon("grayscale(0%)"),
+            tauriIcon("grayscale(0%)"),
           ]}
         />
 
@@ -52,7 +53,7 @@ export default function SimpleThreeColumns() {
           staticImage="https://res.cloudinary.com/dey85zjmf/image/upload/v1641844710/blog/blogStatic_abzsea.png"
           title={"Personal Blog"}
           text={
-            "Blog platform built on NextJS and hooked to a Supabase backend. This also utilizes my custom Slate editor to provide me with an easy dev only way to post content and see how it will look before it is posted."
+            "Blog platform built on NextJS and hooked to a Supabase backend. This also utilizes my custom Slate editor to provide me with an easy dev only way to post content and see how it will look before it is posted, in the case that my super over enggineered bespoke solution breaks."
           }
           tag={[
             colorMode === "light"
@@ -71,7 +72,7 @@ export default function SimpleThreeColumns() {
           staticImage="https://res.cloudinary.com/dey85zjmf/image/upload/v1641844710/blog/PortfolioStatic_vsxtg8.png"
           title={"Personal Portfolio"}
           text={
-            "My personal portfolio built on NextJS and themed using Chakra-UI"
+            "My personal portfolio built on NextJS and themed using Chakra-UI. Do I really have to explain this one??"
           }
           tag={[
             colorMode === "light"
@@ -89,7 +90,7 @@ export default function SimpleThreeColumns() {
           staticImage="githubSearchStatic.png"
           title={"Github Username Search"}
           text={
-            "A tool I created to learn more about how to manage searching data from an API and all of the edge cases that come into play."
+            "A tool I created to learn more about how to manage searching data from an API and all of the edge cases that come into play. Life lessons served in the form of Debounbcing and quireies. "
           }
           tag={[
             colorMode === "light"

@@ -183,6 +183,57 @@ export const chakraIcon = (filter) => (
     />
   </Tooltip>
 );
+
+export const rustIcon = (filter) => (
+  <Tooltip
+    hasArrow
+    offset={[0, 12]}
+    label="Rust"
+    placement="bottom"
+    openDelay={345}
+    closeOnClick={false}
+  >
+    <MotionAvatar
+      whileHover={{
+        filter: "grayscale(0%)",
+        scale: 1.2,
+        transition: { duration: 0.5 },
+      }}
+      size="sm"
+      filter={filter}
+      borderRadius="none"
+      name="Rust"
+      bg="transparent"
+      src="/rustIcon.png"
+    />
+  </Tooltip>
+);
+
+export const tauriIcon = (filter) => (
+  <Tooltip
+    hasArrow
+    offset={[0, 12]}
+    label="Tauri.Studio"
+    placement="bottom"
+    openDelay={345}
+    closeOnClick={false}
+  >
+    <MotionAvatar
+      whileHover={{
+        filter: "grayscale(0%)",
+        scale: 1.2,
+        transition: { duration: 0.5 },
+      }}
+      size="sm"
+      filter={filter}
+      borderRadius="none"
+      name="Tauri.Studio"
+      bg="transparent"
+      src="/tauriIcon.png"
+    />
+  </Tooltip>
+);
+
 export const nextjsIcon = (filter) => (
   <Tooltip
     hasArrow

@@ -48,7 +48,88 @@ export const SkillsBar = () => {
             openDelay={345}
             closeOnClick={false}
           >
-            <Avatar size="lg" name="react" bg="transparent" src="/css.png" />
+            <Avatar size="lg" name="CSS" bg="transparent" src="/css.png" />
+          </Tooltip>
+
+          <Tooltip
+            hasArrow
+            offset={[0, 8]}
+            label="Rust"
+            placement="bottom"
+            openDelay={345}
+            closeOnClick={false}
+          >
+            <Avatar
+              size="lg"
+              name="Rust"
+              bg="transparent"
+              src="/rustIcon.png"
+            />
+          </Tooltip>
+
+          <Tooltip
+            hasArrow
+            offset={[0, 8]}
+            label="Tauri.Studio"
+            placement="bottom"
+            openDelay={345}
+            closeOnClick={false}
+          >
+            <Avatar
+              size="lg"
+              name="Tauri.Studio"
+              bg="transparent"
+              src="/tauriIcon.png"
+            />
+          </Tooltip>
+
+          <Tooltip
+            hasArrow
+            offset={[0, 8]}
+            label="Netlify"
+            placement="bottom"
+            openDelay={345}
+            closeOnClick={false}
+          >
+            <Avatar
+              size="lg"
+              name="Netlify"
+              bg="transparent"
+              src="/netlifyIcon.png"
+            />
+          </Tooltip>
+
+          <Tooltip
+            hasArrow
+            offset={[0, 8]}
+            label="GraphQL"
+            placement="bottom"
+            openDelay={345}
+            closeOnClick={false}
+          >
+            <Avatar
+              size="lg"
+              name="graphql"
+              bg="transparent"
+              src="/graphqlIcon.png"
+            />
+          </Tooltip>
+
+          <Tooltip
+            hasArrow
+            offset={[0, 8]}
+            label="REST"
+            placement="bottom"
+            openDelay={345}
+            closeOnClick={false}
+          >
+            <Avatar
+              size="lg"
+              name="REST"
+              bg="transparent"
+              borderRadius="none"
+              src="/restIcon.png"
+            />
           </Tooltip>
 
           <Tooltip

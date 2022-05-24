@@ -31,7 +31,11 @@ export const Feature = ({
 
   return (
     <MotionStack>
-      <LinkBox border="4px solid" borderRadius="md">
+      <LinkBox
+        border="4px solid"
+        borderRadius="md"
+        maxH={isHovered ? "100%" : "auto"}
+      >
         <LinkOverlay
           href={previewLink}
           isExternal
