@@ -349,5 +349,3 @@ export default function Contact() {
     </>
   );
 }
-
-// TODO: refactor this mess and break out everything I can into a separate file.
