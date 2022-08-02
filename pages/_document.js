@@ -7,7 +7,9 @@ export default class MyDocument extends NextDocument {
     return (
       <Html lang="en">
         <GoogleFonts href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" />
-        <Head />
+        <Head>
+          <link rel="shortcut icon" href="/SignatureStatic.webp" />
+        </Head>
         <body>
           <ColorModeScript initialColorMode={theme.config.initialColorMode} />
           <Main />
