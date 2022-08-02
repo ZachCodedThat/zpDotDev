@@ -138,7 +138,7 @@ const About = () => {
                   <Text fontWeight={200} fontSize={"xs"} color="#FFECD1">
                     Resume
                   </Text>
-                  <Link href="/UpdatedResumeJan_2022.pdf" target="_blank">
+                  <Link href="/ZPRes.pdf" target="_blank">
                     <IconButton
                       m={0}
                       variant="ghost"
