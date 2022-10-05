@@ -20,7 +20,7 @@ const Home = () => {
   return (
     <>
       <NextSeo
-        title="Welcome to zacharyp.dev"
+        title="All Things Zachary Przybilski!"
         description="This is my personal portfolio used as a landing pad for all of my projects and a centralized location for all of my contact information."
         openGraph={{
           url: "https://www.zacharyp.dev/",
@@ -52,6 +52,7 @@ const Home = () => {
             marginTop={["8", "15", "20", "-25", "-32"]}
           >
             <Heading
+              as="h1"
               fontWeight={600}
               fontSize={{ base: "2xl", sm: "4xl", md: "6xl" }}
               lineHeight={"110%"}

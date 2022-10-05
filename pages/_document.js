@@ -1,6 +1,5 @@
 import NextDocument, { Html, Head, Main, NextScript } from "next/document";
 import { GoogleFonts } from "next-google-fonts";
-import { ColorModeScript, theme } from "@chakra-ui/react";
 
 export default class MyDocument extends NextDocument {
   render() {
@@ -11,7 +10,6 @@ export default class MyDocument extends NextDocument {
           <link rel="shortcut icon" href="/SignatureStatic.webp" />
         </Head>
         <body>
-          <ColorModeScript initialColorMode={theme.config.initialColorMode} />
           <Main />
           <NextScript />
         </body>

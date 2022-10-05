@@ -43,17 +43,11 @@ const colors = {
   textDark: "#FFECD1",
 };
 
-const config = {
-  initialColorMode: "light",
-  useSystemColorMode: false,
-};
-
 const overrides = {
   ...chakraTheme,
   fonts,
   colors,
   breakpoints,
-  config,
 };
 
 const Button = {

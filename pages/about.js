@@ -17,13 +17,13 @@ import {
   buttonHoverColor,
   buttonTextHoverColor,
 } from "@styles/colorModeStyles";
+import Navbar from "@components/Navbar";
 import Link from "next/link";
 import DarkModeSwitchNA from "@components/Navbar/DarkModeSwitchNA";
 import { DownloadIcon } from "@chakra-ui/icons";
 import useWindowDimensions from "@utils/Hooks/useWindowDimension";
 import SkillsBar from "@components/SkillsBar";
 import { NextSeo } from "next-seo";
-import Navbar from "@components/Navbar";
 
 const About = () => {
   const { colorMode } = useColorMode();
