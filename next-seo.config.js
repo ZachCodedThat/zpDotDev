@@ -1,6 +1,5 @@
 export default {
   type: "Person",
-  link: "./public/supabase.png",
   name: "Zachary Przybilski",
   url: "https://www.zacharyp.dev/",
   sameAs: [
