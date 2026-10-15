@@ -102,10 +102,10 @@ export default function SimpleThreeColumns() {
           ]}
         />
         <Feature
-          image="/NPM.jpg"
+          image="/NPM.JPG"
           previewLink="https://github.com/ZachCodedThat/create-zp-cli-public"
           altText={"NPM page for create-zp-cli"}
-          staticImage="/NPM.jpg"
+          staticImage="/NPM.JPG"
           title={"Create-zp-cli"}
           text={
             "A tool I created initally for myself to get projects off of the ground faster and has evolved into something everyone can use. I will be adding features to this over time."

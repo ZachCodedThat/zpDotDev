@@ -29,8 +29,9 @@ export const Navbar = () => {
       marginTop="-10"
     >
       <Flex flexDirection={{ base: "column", md: "row" }}>
-        <Link href="./about" passHref>
-          <MotionButton
+        <MotionButton
+          as={Link}
+          href="/about"
             color={textColor[colorMode]}
             variant="nav"
             whileTap={{ scale: 0.9 }}
@@ -38,12 +39,12 @@ export const Navbar = () => {
               bg: buttonHoverColor[colorMode],
               color: buttonTextHoverColor[colorMode],
             }}
-          >
-            About
-          </MotionButton>
-        </Link>
-        <Link href="/projects" passHref>
-          <MotionButton
+        >
+          About
+        </MotionButton>
+        <MotionButton
+          as={Link}
+          href="/projects"
             color={textColor[colorMode]}
             whileTap={{ scale: 0.9 }}
             variant="nav"
@@ -51,14 +52,14 @@ export const Navbar = () => {
               bg: buttonHoverColor[colorMode],
               color: buttonTextHoverColor[colorMode],
             }}
-          >
-            Projects
-          </MotionButton>
-        </Link>
+        >
+          Projects
+        </MotionButton>
       </Flex>
       <Flex flexDirection={{ base: "column", md: "row" }}>
-        <Link href="/contact" passHref>
-          <MotionButton
+        <MotionButton
+          as={Link}
+          href="/contact"
             color={textColor[colorMode]}
             variant="nav"
             whileTap={{ scale: 0.9 }}
@@ -66,12 +67,12 @@ export const Navbar = () => {
               bg: buttonHoverColor[colorMode],
               color: buttonTextHoverColor[colorMode],
             }}
-          >
-            Contact
-          </MotionButton>
-        </Link>
-        <Link href="https://zacharyp.blog/">
-          <MotionButton
+        >
+          Contact
+        </MotionButton>
+        <MotionButton
+          as={Link}
+          href="https://zacharyp.blog/"
             color={textColor[colorMode]}
             variant="nav"
             whileTap={{ scale: 0.9 }}
@@ -79,10 +80,9 @@ export const Navbar = () => {
               bg: buttonHoverColor[colorMode],
               color: buttonTextHoverColor[colorMode],
             }}
-          >
-            Blog
-          </MotionButton>
-        </Link>
+        >
+          Blog
+        </MotionButton>
       </Flex>
       {width > 600 ? <DarkModeSwitchNA /> : null}
     </Flex>

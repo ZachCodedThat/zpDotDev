@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Image,
   Box,
@@ -6,7 +8,6 @@ import {
   Container,
   Heading,
 } from "@chakra-ui/react";
-import { NextSeo } from "next-seo";
 import useWindowDimensions from "@utils/Hooks/useWindowDimension";
 import { textColor } from "@styles/colorModeStyles";
 import DarkModeSwitchNA from "@components/Navbar/DarkModeSwitchNA";
@@ -19,13 +20,6 @@ const Home = () => {
 
   return (
     <>
-      <NextSeo
-        title="All Things Zachary Przybilski!"
-        description="This is my personal portfolio used as a landing pad for all of my projects and a centralized location for all of my contact information."
-        openGraph={{
-          url: "https://www.zacharyp.dev/",
-        }}
-      />
       <Container maxW={"3xl"}>
         <Image
           src={width < 1000 ? "/SignatureStatic.webp" : "/Signature.svg"}

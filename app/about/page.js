@@ -1,3 +1,5 @@
+"use client";
+
 /* eslint-disable react/no-unescaped-entities */
 import {
   useColorMode,
@@ -23,20 +25,12 @@ import DarkModeSwitchNA from "@components/Navbar/DarkModeSwitchNA";
 import { DownloadIcon } from "@chakra-ui/icons";
 import useWindowDimensions from "@utils/Hooks/useWindowDimension";
 import SkillsBar from "@components/SkillsBar";
-import { NextSeo } from "next-seo";
 
 const About = () => {
   const { colorMode } = useColorMode();
   const { width } = useWindowDimensions();
   return (
     <>
-      <NextSeo
-        title="Zachs - About"
-        description="This page contains personal information about myself and my skill set along with a link to my resume."
-        openGraph={{
-          url: "https://www.zacharyp.dev/about",
-        }}
-      />
       <Center py={{ base: 3, md: 10 }}>
         <Stack direction={"column"} m={5}>
           {width > 1000 ? (
@@ -45,20 +39,19 @@ const About = () => {
             </Flex>
           ) : (
             <Flex justifyContent="space-between">
-              <Link href="/" passHref>
-                <Button
-                  aria-label="Go back to home page"
-                  as="a"
+              <Button
+                aria-label="Go back to home page"
+                as={Link}
+                href="/"
                   color={textColor[colorMode]}
                   variant="nav"
                   _hover={{
                     bg: buttonHoverColor[colorMode],
                     color: buttonTextHoverColor[colorMode],
                   }}
-                >
-                  Back
-                </Button>
-              </Link>
+              >
+                Back
+              </Button>
               <DarkModeSwitchNA />
             </Flex>
           )}
@@ -109,26 +102,24 @@ const About = () => {
                       <Text fontWeight={200} fontSize={"xs"} color="#FFECD1">
                         Resume
                       </Text>
-                      <Link
-                        href="/UpdatedResumeJan_2022.pdf"
+                      <IconButton
+                        as={Link}
+                        href="/ZPRes.pdf"
                         target="_blank"
-                        alt="Download Resume"
-                      >
-                        <IconButton
-                          aria-label="Download Resume"
-                          name="Download Resume"
-                          m={0}
-                          variant="ghost"
-                          color="#FFECD1"
-                          icon={<DownloadIcon />}
-                          _hover={{
-                            bg: "none",
-                          }}
-                          _active={{
-                            bg: "none",
-                          }}
-                        ></IconButton>
-                      </Link>
+                        download
+                        aria-label="Download Resume"
+                        name="Download Resume"
+                        m={0}
+                        variant="ghost"
+                        color="#FFECD1"
+                        icon={<DownloadIcon />}
+                        _hover={{
+                          bg: "none",
+                        }}
+                        _active={{
+                          bg: "none",
+                        }}
+                      />
                     </Flex>
                   ) : null}
                 </Stack>
@@ -138,20 +129,23 @@ const About = () => {
                   <Text fontWeight={200} fontSize={"xs"} color="#FFECD1">
                     Resume
                   </Text>
-                  <Link href="/ZPRes.pdf" target="_blank">
-                    <IconButton
-                      m={0}
-                      variant="ghost"
-                      color="#FFECD1"
-                      icon={<DownloadIcon />}
-                      _hover={{
-                        bg: "none",
-                      }}
-                      _active={{
-                        bg: "none",
-                      }}
-                    ></IconButton>
-                  </Link>
+                  <IconButton
+                    as={Link}
+                    href="/ZPRes.pdf"
+                    target="_blank"
+                    download
+                    aria-label="Download Resume"
+                    m={0}
+                    variant="ghost"
+                    color="#FFECD1"
+                    icon={<DownloadIcon />}
+                    _hover={{
+                      bg: "none",
+                    }}
+                    _active={{
+                      bg: "none",
+                    }}
+                  />
                 </Flex>
               ) : null}
             </Flex>
