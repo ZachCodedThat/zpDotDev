@@ -1,3 +1,5 @@
+"use client";
+
 import {
   SimpleGrid,
   Popover,
@@ -23,7 +25,6 @@ import {
   ModalCloseButton,
   useDisclosure,
   useClipboard,
-  Link as ChakraLink,
 } from "@chakra-ui/react";
 
 import React from "react";
@@ -47,7 +48,6 @@ import {
 import DarkModeSwitchNA from "@components/Navbar/DarkModeSwitchNA";
 import useWindowDimensions from "@utils/Hooks/useWindowDimension";
 
-import { NextSeo } from "next-seo";
 
 import Navbar from "@components/Navbar";
 
@@ -61,13 +61,6 @@ export default function Contact() {
 
   return (
     <>
-      <NextSeo
-        title="Zachs - Contact"
-        description="This page contains all of my contact information."
-        openGraph={{
-          url: "https://www.zacharyp.dev/contact",
-        }}
-      />
       <Center py={{ base: 3, md: 10 }}>
         <Stack direction={"column"} m={5}>
           {width > 1000 ? (
@@ -76,19 +69,18 @@ export default function Contact() {
             </Flex>
           ) : (
             <Flex justifyContent="space-between">
-              <Link href="/" passHref>
-                <Button
-                  as="a"
+              <Button
+                as={Link}
+                href="/"
                   color={textColor[colorMode]}
                   variant="nav"
                   _hover={{
                     bg: buttonHoverColor[colorMode],
                     color: buttonTextHoverColor[colorMode],
                   }}
-                >
-                  Back
-                </Button>
-              </Link>
+              >
+                Back
+              </Button>
               <DarkModeSwitchNA />
             </Flex>
           )}
@@ -171,81 +163,11 @@ export default function Contact() {
                         </ModalContent>
                       </Modal>
 
-                      <ChakraLink
-                        href="https://github.com/ZachCodedThat"
-                        target="_blank"
-                      >
-                        <IconButton
-                          aria-label="GitHub"
-                          color="rgba(255,255,255,0.5)"
-                          border="hidden"
-                          borderColor="none"
-                          isRound={true}
-                          _hover={{ color: iconColor[colorMode] }}
-                          _active={{ color: "none" }}
-                          icon={<BsGithub size="60px" />}
-                        />
-                      </ChakraLink>
-                      <ChakraLink
-                        href="https://www.linkedin.com/in/zachary-przybilski-475186208/"
-                        target="_blank"
-                      >
-                        <IconButton
-                          aria-label="linkedIn"
-                          color="rgba(255,255,255,0.5)"
-                          border="hidden"
-                          borderColor="none"
-                          isRound={true}
-                          _hover={{ color: iconColor[colorMode] }}
-                          _active={{ color: "none" }}
-                          icon={<BsLinkedin size="60px" />}
-                        />
-                      </ChakraLink>
-                      <ChakraLink
-                        href="https://twitter.com/TweetZachBack"
-                        target="_blank"
-                      >
-                        <IconButton
-                          aria-label="Twitter"
-                          color="rgba(255,255,255,0.5)"
-                          border="hidden"
-                          borderColor="none"
-                          isRound={true}
-                          _hover={{ color: iconColor[colorMode] }}
-                          _active={{ color: "none" }}
-                          icon={<BsTwitter size="60px" />}
-                        />
-                      </ChakraLink>
-                      <ChakraLink
-                        href="https://www.twitch.tv/zach_strikes_back"
-                        target="_blank"
-                      >
-                        <IconButton
-                          aria-label="Twitch"
-                          color="rgba(255,255,255,0.5)"
-                          border="hidden"
-                          borderColor="none"
-                          isRound={true}
-                          _hover={{ color: iconColor[colorMode] }}
-                          _active={{ color: "none" }}
-                          icon={<BsTwitch size="60px" />}
-                        />
-                      </ChakraLink>
-                      <ChakraLink
-                        href="https://calendly.com/zachary-przybilski"
-                        target="_blank"
-                      >
-                        <IconButton
-                          aria-label="Twitch"
-                          color="rgba(255,255,255,0.5)"
-                          border="hidden"
-                          borderColor="none"
-                          isRound={true}
-                          _hover={{ color: iconColor[colorMode] }}
-                          _active={{ color: "none" }}
-                          icon={<BsCalendar3 size="60px" />}
-                        />
-                      </ChakraLink>
+                      <IconButton as="a" href="https://github.com/ZachCodedThat" target="_blank" rel="noopener noreferrer" aria-label="GitHub" color="rgba(255,255,255,0.5)" border="hidden" borderColor="none" isRound={true} _hover={{ color: iconColor[colorMode] }} _active={{ color: "none" }} icon={<BsGithub size="60px" />} />
+                      <IconButton as="a" href="https://www.linkedin.com/in/zachary-przybilski-475186208/" target="_blank" rel="noopener noreferrer" aria-label="linkedIn" color="rgba(255,255,255,0.5)" border="hidden" borderColor="none" isRound={true} _hover={{ color: iconColor[colorMode] }} _active={{ color: "none" }} icon={<BsLinkedin size="60px" />} />
+                      <IconButton as="a" href="https://twitter.com/TweetZachBack" target="_blank" rel="noopener noreferrer" aria-label="Twitter" color="rgba(255,255,255,0.5)" border="hidden" borderColor="none" isRound={true} _hover={{ color: iconColor[colorMode] }} _active={{ color: "none" }} icon={<BsTwitter size="60px" />} />
+                      <IconButton as="a" href="https://www.twitch.tv/zach_strikes_back" target="_blank" rel="noopener noreferrer" aria-label="Twitch" color="rgba(255,255,255,0.5)" border="hidden" borderColor="none" isRound={true} _hover={{ color: iconColor[colorMode] }} _active={{ color: "none" }} icon={<BsTwitch size="60px" />} />
+                      <IconButton as="a" href="https://calendly.com/zachary-przybilski" target="_blank" rel="noopener noreferrer" aria-label="Calendly" color="rgba(255,255,255,0.5)" border="hidden" borderColor="none" isRound={true} _hover={{ color: iconColor[colorMode] }} _active={{ color: "none" }} icon={<BsCalendar3 size="60px" />} />
                     </SimpleGrid>
                   </Flex>
                 </Stack>

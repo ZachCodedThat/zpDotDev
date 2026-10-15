@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Box,
   Button,
@@ -7,7 +9,6 @@ import {
   Flex,
 } from "@chakra-ui/react";
 
-import { NextSeo } from "next-seo";
 
 import {
   textColor,
@@ -26,29 +27,21 @@ const Projects = () => {
   const { width } = useWindowDimensions();
   return (
     <>
-      <NextSeo
-        title="Zachs - Projects"
-        description="This page shows off some of my current projects."
-        openGraph={{
-          url: "https://www.zacharyp.dev/projects",
-        }}
-      />
       {width > 1000 ? null : (
         <>
-          <Link href="/" passHref>
-            <Button
-              position="sticky"
-              as="a"
+          <Button
+            position="sticky"
+            as={Link}
+            href="/"
               color={textColor[colorMode]}
               variant="nav"
               _hover={{
                 bg: buttonHoverColor[colorMode],
                 color: buttonTextHoverColor[colorMode],
               }}
-            >
-              Back
-            </Button>
-          </Link>
+          >
+            Back
+          </Button>
           <DarkModeSwitchNA position="sticky" />
         </>
       )}

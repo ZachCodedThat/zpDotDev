@@ -37,7 +37,7 @@ const GlobalStyle = ({ children }) => {
             min-width: 356px;
             scroll-behavior: smooth;
           }
-          #__next {
+          body {
             position: relative;
             min-height: 100vh;
 

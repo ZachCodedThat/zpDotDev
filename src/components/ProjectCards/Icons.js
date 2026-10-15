@@ -154,7 +154,7 @@ export const nodeIcon = (filter) => (
       borderRadius="none"
       name="NodeJS"
       bg="transparent"
-      src="/nodejs.png"
+          src="/nodeJs.png"
     />
   </Tooltip>
 );
@@ -278,7 +278,7 @@ export const htmlIcon = (filter) => (
       filter={filter}
       borderRadius="none"
       bg="transparent"
-      src="/html.png"
+          src="/Html.png"
       name="HTML5"
     />
   </Tooltip>
@@ -333,8 +333,11 @@ export const supabaseIcon = (filter) => (
 );
 
 export const gitHubIcon = (gitHubLink) => (
-  <ChakraLink href={gitHubLink} target="_blank" rel="noopener">
-    <MotionIconButton
+  <MotionIconButton
+    as="a"
+    href={gitHubLink}
+    target="_blank"
+    rel="noopener noreferrer"
       whileHover={{
         scale: 1.2,
         transition: { duration: 0.5 },
@@ -349,12 +352,14 @@ export const gitHubIcon = (gitHubLink) => (
       isRound={true}
       icon={<BsGithub size="md" />}
     />
-  </ChakraLink>
 );
 
 export const gitHubIconAlt = (gitHubLink) => (
-  <ChakraLink href={gitHubLink} target="_blank" rel="noopener">
-    <MotionIconButton
+  <MotionIconButton
+    as="a"
+    href={gitHubLink}
+    target="_blank"
+    rel="noopener noreferrer"
       whileHover={{
         scale: 1.2,
         transition: { duration: 0.5 },
@@ -369,7 +374,6 @@ export const gitHubIconAlt = (gitHubLink) => (
       isRound={true}
       icon={<BsGithub size="md" />}
     />
-  </ChakraLink>
 );
 
 export const codeSandboxIcon = (
