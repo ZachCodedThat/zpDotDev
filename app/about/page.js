@@ -182,10 +182,11 @@ const About = () => {
                     fontWeight={500}
                     color="#FFECD1"
                   >
-                    I'm a Frontend Developer with an eye for creating beautiful,
-                    intuitive, and responsive user experiences. I have a
-                    background in business management and a love for learning
-                    new technologies.
+                    I use AI as a thinking partner, not an autopilot. It helps
+                    me explore unfamiliar ideas and get unstuck, while I stay
+                    responsible for the work. I’m curious about where
+                    engineering goes next, especially as AI becomes part of how
+                    we build software.
                   </Text>
 
                   <Text
