@@ -52,7 +52,7 @@ const Home = () => {
               lineHeight={"110%"}
               color={textColor[colorMode]}
             >
-              Front End Web Developer
+              Software Engineer
             </Heading>
           </Box>
           <Navbar />

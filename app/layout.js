@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   metadataBase: new URL("https://www.zacharyp.dev"),
   title: {
-    default: "Zachary Przybilski | Front End Web Developer",
+    default: "Zachary Przybilski | Software Engineer",
     template: "%s | Zachary Przybilski",
   },
   description:
